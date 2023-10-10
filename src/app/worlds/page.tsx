@@ -2,6 +2,10 @@ import type { Metadata } from "next"
 import Image from "next/image";
 import logo from '~/images/logos/worlds.png'
 
+async function getWorldsEvents() {
+  // const res = await fetch()
+}
+
 export const metadata: Metadata = {
   title: 'YGOTops | Yu-Gi-Oh! World Championship',
   description: 'YGOTops'

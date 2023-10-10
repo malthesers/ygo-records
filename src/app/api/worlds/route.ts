@@ -1,9 +1,3 @@
-import type { NextApiRequest, NextApiResponse } from "next";
-
-type ResponseData = {
-  data: Array<WorldsEvent>
-}
-
 interface WorldsEvent {
   year: number,
   name: string,
@@ -32,9 +26,7 @@ const worldsEvents: Array<WorldsEvent> = [
   },
 ]
 
-export default function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<ResponseData>
-) {
-  res.status(200).json({ data: worldsEvents })
+
+export async function GET(request: Request) {
+  return Response.json({ worldsEvents })
 }
