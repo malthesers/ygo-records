@@ -6,4 +6,12 @@
   body {
     @apply bg-zinc-800 text-white;
   }
+
+  main {
+    @apply max-w-7xl mx-auto py-8 px-4;
+  }
+
+  h1 {
+    @apply text-4xl;
+  }
 }
