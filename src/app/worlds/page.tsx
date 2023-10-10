@@ -14,7 +14,6 @@ export default function Worlds() {
       <Image
         src={logo}
         alt='Yu-Gi-Oh! World Championship logo'
-        placeholder="blur"
         priority
         className="mx-auto"
       />

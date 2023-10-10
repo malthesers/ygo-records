@@ -14,7 +14,6 @@ export default function YCS() {
       <Image
         src={logo}
         alt='Yu-Gi-Oh! Championship Series logo'
-        placeholder="blur"
         priority
         className="mx-auto"
       />
