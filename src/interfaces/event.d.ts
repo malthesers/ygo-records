@@ -1,7 +1,8 @@
+import { Duelist } from "./duelist";
+
 export interface Event {
   year: number,
-  name: string,
-  deck: string,
   location: string,
-  attendance: number
+  attendance: number,
+  winner: Duelist
 }
