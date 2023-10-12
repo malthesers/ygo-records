@@ -8,6 +8,10 @@ const worldsEvents:Array<Event> = [
     winner: {
       name: 'Paulie Aronson',
       deck: 'Bystial Dragon Link',
+    },
+    structure: {
+      rounds: 7,
+      cutoff: 8
     }
   },
   {
@@ -17,6 +21,10 @@ const worldsEvents:Array<Event> = [
     winner: {
       name: 'Kouki Kosaka',
       deck: 'Salamangreat',
+    },
+    structure: {
+      rounds: 5,
+      cutoff: 8
     }
   },
   {
@@ -26,6 +34,10 @@ const worldsEvents:Array<Event> = [
     winner: {
       name: 'Chia Ching Wang',
       deck: 'Trickstar',
+    },
+    structure: {
+      rounds: 5,
+      cutoff: 8
     }
   },
 ]

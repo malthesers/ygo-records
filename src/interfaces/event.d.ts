@@ -4,5 +4,9 @@ export interface Event {
   year: number,
   location: string,
   attendance: number,
-  winner: Duelist
+  winner: Duelist,
+  structure: {
+    rounds: number,
+    cutoff: number
+  }
 }
