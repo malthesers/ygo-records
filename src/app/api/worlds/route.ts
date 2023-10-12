@@ -3,6 +3,7 @@ import { Event } from "@/interfaces/event"
 const worldsEvents:Array<Event> = [
   {
     year: 2023,
+    date: 'August 5-6',
     location: 'Japan',
     attendance: 28,
     winner: {
@@ -16,6 +17,7 @@ const worldsEvents:Array<Event> = [
   },
   {
     year: 2019,
+    date: 'August 10-11',
     location: 'Germany',
     attendance: 28,
     winner: {
@@ -29,6 +31,7 @@ const worldsEvents:Array<Event> = [
   },
   {
     year: 2018,
+    date: 'August 5-6',
     location: 'Japan',
     attendance: 28,
     winner: {
