@@ -22,5 +22,5 @@ const worldsEvents:Array<Event> = [
 ]
 
 export async function GET() {
-  return Response.json({ worldsEvents })
+  return Response.json( worldsEvents )
 }
