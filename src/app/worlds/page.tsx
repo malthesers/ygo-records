@@ -15,7 +15,7 @@ export default function Worlds() {
         src={logo}
         alt='Yu-Gi-Oh! World Championship logo'
         priority
-        className="mx-auto"
+        className="max-w-md mx-auto"
       />
     </main>
   )
