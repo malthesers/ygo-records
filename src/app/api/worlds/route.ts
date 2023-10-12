@@ -1,11 +1,6 @@
-interface WorldsEvent {
-  year: number,
-  name: string,
-  deck: string,
-  attendance: number
-}
+import { Event } from "@/interfaces/event"
 
-const worldsEvents: Array<WorldsEvent> = [
+const worldsEvents:Array<Event> = [
   {
     year: 2023,
     name: 'Paulie Aronson',
