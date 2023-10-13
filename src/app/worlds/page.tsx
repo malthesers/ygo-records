@@ -16,8 +16,12 @@ async function getWorldsEvents() {
   return data
 }
 
-export default async function Worlds() {
-  // const events = await getWorldsEvents()
+export default function Worlds() {
+  useEffect(() => {
+     fetch('http://localhost:3000/api/worlds')
+     .then((res) => res.json())
+     .then((data) => console.log(data))
+  }, [])
 
   return (
     <main>

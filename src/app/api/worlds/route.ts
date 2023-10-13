@@ -1,4 +1,5 @@
 import { Event } from "@/interfaces/event"
+import { NextResponse } from "next/server"
 
 const worldsEvents:Array<Event> = [
   {
@@ -46,5 +47,7 @@ const worldsEvents:Array<Event> = [
 ]
 
 export async function GET(request: Request) {
-  return Response.json( worldsEvents )
+  return NextResponse.json( worldsEvents, {
+    status: 200
+  })
 }
