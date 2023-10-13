@@ -14,4 +14,9 @@
   h1 {
     @apply text-4xl text-center;
   }
+
+  th,
+  td {
+    @apply p-2;
+  }
 }
