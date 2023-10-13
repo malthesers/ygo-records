@@ -6,7 +6,7 @@ export default function WorldsEvent({ event }: { event: Event}) {
   return (
     <tr className="even:bg-zinc-900">
       <td>
-        <Link href={`worlds/${event.year}`} className="underline">{event.year}</Link>
+        <Link href={`worlds/${event.year}`} className="underline duration-200 hover:opacity-50">{event.year}</Link>
       </td>
       <td>{event.winner.nationality}</td>
       <td>{event.winner.name}</td>
