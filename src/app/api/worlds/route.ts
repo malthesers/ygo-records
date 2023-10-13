@@ -10,6 +10,7 @@ const worldsEvents:Array<Event> = [
     winner: {
       name: 'Paulie Aronson',
       deck: 'Bystial Dragon Link',
+      nationality: 'United States',
     },
     structure: {
       rounds: 7,
@@ -24,6 +25,7 @@ const worldsEvents:Array<Event> = [
     winner: {
       name: 'Kouki Kosaka',
       deck: 'Salamangreat',
+      nationality: 'Japan',
     },
     structure: {
       rounds: 5,
@@ -38,6 +40,7 @@ const worldsEvents:Array<Event> = [
     winner: {
       name: 'Chia Ching Wang',
       deck: 'Trickstar',
+      nationality: 'Taiwan',
     },
     structure: {
       rounds: 5,
