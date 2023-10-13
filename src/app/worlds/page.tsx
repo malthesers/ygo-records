@@ -36,9 +36,21 @@ export default function Worlds() {
         priority
         className="max-w-md mx-auto"
       />
-      {worlds?.map(event =>
-        <WorldsEvent key={event.year} event={event}/>
-      )}
+      <table className="w-full text-center">
+        <thead>
+          <tr>
+            <th>Year</th>
+            <th>Nationality</th>
+            <th>Winner</th>
+            <th>Deck</th>
+          </tr>
+        </thead>
+        <tbody>
+          {worlds?.map(event =>
+            <WorldsEvent key={event.year} event={event}/>
+          )}
+        </tbody>
+      </table>
     </main>
   )
 }
