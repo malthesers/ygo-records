@@ -1,9 +1,10 @@
 'use client'
 
 import type { Metadata } from "next"
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import Image from "next/image";
 import logo from '~/images/logos/worlds.png'
+import { Event } from "@/interfaces/event";
 
 // export const metadata: Metadata = {
 //   title: 'YGOTops | Yu-Gi-Oh! World Championship',
@@ -17,10 +18,12 @@ async function getWorldsEvents() {
 }
 
 export default function Worlds() {
+  const [worlds, setWorlds] = useState<Array<Event>>()
+
   useEffect(() => {
      fetch('http://localhost:3000/api/worlds')
      .then((res) => res.json())
-     .then((data) => console.log(data))
+     .then((data) => setWorlds(data))
   }, [])
 
   return (
@@ -32,6 +35,9 @@ export default function Worlds() {
         priority
         className="max-w-md mx-auto"
       />
+      {worlds?.map(event =>
+        <p key={event.year}>{event.year}</p>  
+      )}
     </main>
   )
 }
