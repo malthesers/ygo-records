@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react'
 import Image from "next/image";
 import logo from '~/images/logos/worlds.png'
 import { Event } from "@/interfaces/event";
+import WorldsEvent from "@/components/worlds/WorldsEvent";
 
 // export const metadata: Metadata = {
 //   title: 'YGOTops | Yu-Gi-Oh! World Championship',
@@ -36,7 +37,7 @@ export default function Worlds() {
         className="max-w-md mx-auto"
       />
       {worlds?.map(event =>
-        <p key={event.year}>{event.year}</p>  
+        <WorldsEvent key={event.year} event={event}/>
       )}
     </main>
   )
