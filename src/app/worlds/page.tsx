@@ -38,7 +38,7 @@ export default function Worlds() {
       />
       <table className="w-full text-center">
         <thead>
-          <tr>
+          <tr className="bg-black">
             <th>Year</th>
             <th>Nationality</th>
             <th>Winner</th>
