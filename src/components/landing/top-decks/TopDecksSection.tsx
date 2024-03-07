@@ -15,10 +15,13 @@ export default function TopDecksSection() {
   return (
     <section>
       <h2 className='mb-4'>Top Decks</h2>
-      <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-4'>
-        {topDecks?.map((topDeck) => (
-          <TopDeckCard key={topDeck.id} topDeck={topDeck} />
-        ))}
+      {/* <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-4'> */}
+      <div className='grid grid-cols-[5fr_2fr] gap-4'>
+        <div className='grid sm:grid-cols-2 grid-cols-3 gap-4'>
+          {topDecks?.map((topDeck) => (
+            <TopDeckCard key={topDeck.id} topDeck={topDeck} />
+          ))}
+        </div>
       </div>
     </section>
   )

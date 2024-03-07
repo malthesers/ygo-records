@@ -4,11 +4,11 @@
 
 @layer base {
   body {
-    @apply bg-zinc-800 text-white text-lg;
+    @apply bg-sky-950 text-white text-lg;
   }
 
   main {
-    @apply max-w-5xl mx-auto py-8 px-4;
+    @apply max-w-6xl mx-auto py-8 px-4;
   }
 
   h1 {
@@ -17,6 +17,10 @@
 
   h2 {
     @apply text-2xl font-semibold;
+  }
+
+  p {
+    @apply text-base;
   }
 
   th,
