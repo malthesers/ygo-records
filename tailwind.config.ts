@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss'
+import { PluginAPI } from 'tailwindcss/types/config'
 
 const config: Config = {
   content: [
@@ -10,11 +11,18 @@ const config: Config = {
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
     },
   },
-  plugins: [],
+  plugins: [
+    ({ addUtilities }: PluginAPI) => {
+      addUtilities({
+        '.grid-center': {
+          'grid-area': '1/1/1/1',
+        },
+      })
+    },
+  ],
 }
 export default config
