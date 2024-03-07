@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function Header() {
   return (
-    <header className='bg-zinc-900'>
+    <header className='bg-sky-900'>
       <nav className='flex flex-row justify-between px-6 py-3'>
         <Link href='/'>YGOTops</Link>
         <div className='flex gap-4'>
