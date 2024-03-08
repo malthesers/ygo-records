@@ -7,6 +7,8 @@ export default function Header() {
         <Link href='/'>YGOTops</Link>
         <div className='flex gap-4'>
           <Link href='/ycs'>YCS</Link>
+          <span>|</span>
+          <Link href='/team-ycs'>TEAM YCS</Link>
           {/* <Link href='/worlds'>Worlds</Link> */}
         </div>
       </nav>

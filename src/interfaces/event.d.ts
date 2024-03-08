@@ -1,13 +1,40 @@
-import { Duelist } from "./duelist";
+import { IDeck } from './deck'
+import { IPlayer } from './player'
 
-export interface Event {
-  year: number,
-  date: string,
-  location: string,
-  attendance: number,
-  winner: Duelist,
-  structure: {
-    rounds: number,
-    cutoff: number
-  }
+export interface IEvent {
+  id: number
+  name: string
+  type: EventType
+  year: number
+  date: string
+  location: string
+  attendance: number
+  winner: IWinner
+  winner2?: IWinner
+  winner3?: IWinner
+  // structure: {
+  //   rounds: number
+  //   cutoff: number
+  // }
+}
+
+type EventType = IEventTypeYCS | IEventTypeTeamYCS | IEventTypeWCQ
+
+interface IWinner extends IPlayer {
+  deck: IDeck
+}
+
+interface IEventTypeWCQ {
+  name: 'WCQ'
+  slug: 'wcq'
+}
+
+interface IEventTypeYCS {
+  name: 'YCS'
+  slug: 'ycs'
+}
+
+interface IEventTypeTeamYCS {
+  name: 'TEAM YCS'
+  slug: 'team-ycs'
 }

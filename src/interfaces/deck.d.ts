@@ -3,5 +3,5 @@ export interface IDeck {
   name: string
   archetype: string
   engine?: string[]
-  thumbnail: string
+  thumbnail?: string
 }
