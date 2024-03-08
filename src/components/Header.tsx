@@ -9,6 +9,8 @@ export default function Header() {
           <Link href='/ycs'>YCS</Link>
           <span>|</span>
           <Link href='/team-ycs'>TEAM YCS</Link>
+          <span>|</span>
+          <Link href='/remote-ycs'>Remote YCS</Link>
           {/* <Link href='/worlds'>Worlds</Link> */}
         </div>
       </nav>
