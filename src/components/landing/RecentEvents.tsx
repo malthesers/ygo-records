@@ -15,6 +15,7 @@ export default function RecentEvents() {
   return (
     <aside>
       <h2>Recent Events</h2>
+      <hr className='mb-4'></hr>
       <div className='bg-sky-900 flex flex-col gap-4'>
         {recentEvents?.map((recentEvent) => (
           <article key={recentEvent.id} className='flex flex-row justify-between p-2'>
