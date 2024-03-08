@@ -13,7 +13,7 @@ export default function TopDecksSection() {
   }, [])
 
   return (
-    <section>
+    <div>
       <h2>Top Decks</h2>
       <div>
         <div className='grid md:grid-cols-2 gap-4'>
@@ -22,6 +22,6 @@ export default function TopDecksSection() {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   )
 }

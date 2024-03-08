@@ -9,7 +9,9 @@ export default function TournamentRow({ event }: TournamentRowProps) {
   return (
     <tr className='text-center'>
       <td>{event.date}</td>
-      <td>{event.name}</td>
+      <td>
+        <Link href='/'>{event.name}</Link>
+      </td>
       <td>
         {event.attendance} {event.type.slug === 'team-ycs' && 'teams'}
       </td>
