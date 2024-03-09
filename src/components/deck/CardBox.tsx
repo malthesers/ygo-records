@@ -17,7 +17,7 @@ export default function CardBox({ title, cards }: CardBoxProps) {
       </p>
       <div>
         {cards.map((card) => (
-          <CardRow card={card} />
+          <CardRow key={card.name} card={card} />
         ))}
       </div>
     </div>
