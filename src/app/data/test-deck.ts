@@ -1,19 +1,6 @@
-export interface ITestDeck {
-  mainDeck: {
-    monsters: ITestCard[]
-    spells: ITestCard[]
-    traps: ITestCard[]
-  }
-  extraDeck: ITestCard[]
-  sideDeck: ITestCard[]
-}
+import { IDeck, IDeckList } from '@/interfaces/deck'
 
-interface ITestCard {
-  name: string
-  count: 1 | 2 | 3
-}
-
-export const testDeck: ITestDeck = {
+export const testDeck: IDeckList = {
   mainDeck: {
     monsters: [
       {
