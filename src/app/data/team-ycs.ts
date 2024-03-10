@@ -20,6 +20,7 @@ const teamYcsTestData: IEvent[] = [
         id: 2,
         name: 'Snake-Eye',
         archetype: 'Snake-Eye',
+        thumbnail: '48452496.jpg',
       },
     },
     winner2: {
@@ -30,6 +31,7 @@ const teamYcsTestData: IEvent[] = [
         id: 2,
         name: 'Snake-Eye',
         archetype: 'Snake-Eye',
+        thumbnail: '48452496.jpg',
       },
     },
     winner3: {
@@ -40,6 +42,7 @@ const teamYcsTestData: IEvent[] = [
         id: 2,
         name: 'Snake-Eye',
         archetype: 'Snake-Eye',
+        thumbnail: '48452496.jpg',
       },
     },
   },
@@ -63,6 +66,7 @@ const teamYcsTestData: IEvent[] = [
         name: 'Fire King Snake-Eye',
         archetype: 'Fire King',
         engine: ['Snake-Eye'],
+        thumbnail: '66431519.jpg',
       },
     },
     winner2: {
@@ -73,6 +77,7 @@ const teamYcsTestData: IEvent[] = [
         id: 3,
         name: 'Snake-Eye',
         archetype: 'Snake-Eye',
+        thumbnail: '66431519.jpg',
       },
     },
     winner3: {
@@ -84,6 +89,7 @@ const teamYcsTestData: IEvent[] = [
         name: 'Fire King Snake-Eye',
         archetype: 'Fire King',
         engine: ['Snake-Eye'],
+        thumbnail: '66431519.jpg',
       },
     },
   },

@@ -22,7 +22,9 @@ export default function DeckInfo({ deck }: DeckInfoProps) {
           <div className='flex flex-row gap-2 justify-center'>
             <Link href='/'>{deck?.archetype}</Link>
             {deck.engine?.map((engine) => (
-              <Link href='/'>{engine}</Link>
+              <Link key={engine} href='/'>
+                {engine}
+              </Link>
             ))}
           </div>
           <div className='flex flex-row gap-1'>

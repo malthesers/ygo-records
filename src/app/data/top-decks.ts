@@ -5,7 +5,6 @@ const topDecksTest: ITopDeck[] = [
     id: 1,
     name: 'Snake-Eye',
     archetype: 'Snake-Eye',
-    engine: ['Synchro'],
     thumbnail: '48452496.jpg',
     topCutPercentage: 45,
   },

@@ -1,12 +1,12 @@
 'use client'
 
 import topDecksTest from '@/app/data/top-decks'
-import { IDeckType } from '@/interfaces/deck'
+import { IDeckType, ITopDeck } from '@/interfaces/deck'
 import { useEffect, useState } from 'react'
 import TopDeckCard from './TopDeckCard'
 
 export default function TopDecksSection() {
-  const [topDecks, setTopDecks] = useState<IDeckType[] | null>()
+  const [topDecks, setTopDecks] = useState<ITopDeck[] | null>()
 
   useEffect(() => {
     setTopDecks(topDecksTest)
