@@ -3,7 +3,9 @@
 export default function DeckPage() {
   return (
     <main>
-      <p>deck</p>
+      <section>
+        <h1>Decks</h1>
+      </section>
     </main>
   )
 }

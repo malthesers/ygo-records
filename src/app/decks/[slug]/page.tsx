@@ -11,7 +11,7 @@ export default function DeckPage({ params }: { params: { slug: number } }) {
 
   useEffect(() => {
     setDeck(testDecks[params.slug])
-  }, [])
+  }, [params.slug])
 
   return (
     <main className='space-y-4'>
