@@ -1,7 +1,7 @@
-import { IDeckCard } from '@/interfaces/deck'
+import { IDeckTypeCard } from '@/interfaces/deck'
 
 interface CardRowProps {
-  card: IDeckCard
+  card: IDeckTypeCard
 }
 
 export default function CardRow({ card }: CardRowProps) {

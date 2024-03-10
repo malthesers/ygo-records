@@ -1,4 +1,4 @@
-import { IDeck } from './deck'
+import { IDeckType } from './deck'
 import { IPlayer } from './player'
 
 export interface IEvent {
@@ -21,7 +21,7 @@ export interface IEvent {
 type EventType = IEventTypeYCS | IEventTypeTeamYCS | IEventTypeWCQ
 
 interface IWinner extends IPlayer {
-  deck: IDeck
+  deck: IDeckType
 }
 
 interface IEventTypeWCQ {

@@ -1,8 +1,8 @@
-import { IDeck } from '@/interfaces/deck'
+import { ITopDeck } from '@/interfaces/deck'
 import Image from 'next/image'
 
 interface TopDeckCardProps {
-  topDeck: IDeck
+  topDeck: ITopDeck
 }
 
 export default function TopDeckCard({ topDeck }: TopDeckCardProps) {
@@ -19,15 +19,19 @@ export default function TopDeckCard({ topDeck }: TopDeckCardProps) {
           />
         </div>
         <div className='flex flex-col'>
-          <div>
-            <p className='py-1 px-2 font-semibold duration-200 hover:bg-sky-950'>
+          <div className='py-1 px-2 duration-200 hover:bg-sky-950'>
+            <p className='text-lg font-semibold'>
               <span>{topDeck.id}. </span>
               <span>{topDeck.name}</span>
             </p>
+            <p>
+              <span className='text-sm'>{topDeck.topCutPercentage}%</span>
+              <span className='text-xs'> of recent events</span>
+            </p>
           </div>
-          <hr></hr>
+          <hr className='border-white/50'></hr>
           <div className='h-full py-1 px-2 duration-200 hover:bg-sky-950'>
-            <p className='text-xs'>Featured Decklist</p>
+            <p className='text-xs italic'>Most succesful decklist</p>
             <p className='text-sm'>1st Place TEAM YCS Las Vegas</p>
             <p className='text-sm'>Pakawat Pamornsut</p>
           </div>

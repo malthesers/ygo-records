@@ -1,16 +1,16 @@
-import { IDeckCard } from '@/interfaces/deck'
+import { IDeckTypeCard } from '@/interfaces/deck'
 import CardRow from './CardRow'
 
 interface CardBoxProps {
   title: string
-  cards: IDeckCard[]
+  cards: IDeckTypeCard[]
 }
 
 export default function CardBox({ title, cards }: CardBoxProps) {
   const cardCount = cards.reduce((counter, currCard) => counter + currCard.count, 0)
 
   return (
-    <div className='bg-sky-900 p-4'>
+    <div className='bg-sky-900 h-fit p-4'>
       <p className='flex flex-row gap-2 text-xl font-semibold'>
         <span>{title}</span>
         <span>({cardCount})</span>
