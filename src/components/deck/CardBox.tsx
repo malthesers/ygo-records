@@ -10,12 +10,12 @@ export default function CardBox({ title, cards }: CardBoxProps) {
   const cardCount = cards.reduce((counter, currCard) => counter + currCard.count, 0)
 
   return (
-    <div className='bg-sky-900 h-fit p-4'>
-      <p className='flex flex-row gap-2 text-xl font-semibold'>
+    <div className='bg-sky-900 h-fit'>
+      <p className='bg-sky-950 p-4 flex flex-row gap-2 text-xl font-semibold'>
         <span>{title}</span>
         <span>({cardCount})</span>
       </p>
-      <div>
+      <div className='px-4'>
         {cards.map((card) => (
           <CardRow key={card.name} card={card} />
         ))}
