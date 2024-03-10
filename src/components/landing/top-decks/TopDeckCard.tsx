@@ -1,5 +1,6 @@
 import { ITopDeck } from '@/interfaces/deck'
 import Image from 'next/image'
+import Link from 'next/link'
 
 interface TopDeckCardProps {
   topDeck: ITopDeck
@@ -30,11 +31,11 @@ export default function TopDeckCard({ topDeck }: TopDeckCardProps) {
             </p>
           </div>
           <hr className='border-white/50'></hr>
-          <div className='h-full py-1 px-2 duration-200 hover:bg-sky-950'>
+          <Link href='/deck/1' className='h-full py-1 px-2 no-underline duration-200 hover:bg-sky-950'>
             <p className='text-xs italic'>Most succesful decklist</p>
             <p className='text-sm'>1st Place TEAM YCS Las Vegas</p>
             <p className='text-sm'>Pakawat Pamornsut</p>
-          </div>
+          </Link>
         </div>
       </article>
     </>
