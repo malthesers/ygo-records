@@ -5,7 +5,7 @@ import SplashBanner from '@/components/SplashBanner'
 import { IEvent } from '@/interfaces/event'
 import type { Metadata } from 'next'
 import { useEffect, useState } from 'react'
-import ycsTestData from '../data/ycs'
+import ycsTestData from '../../data/ycs'
 import splash from '~/images/splash/wcq.png'
 import logo from '~/images/logos/wcq.png'
 

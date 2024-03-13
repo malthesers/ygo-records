@@ -16,7 +16,7 @@ export default function DeckInfo({ deck }: DeckInfoProps) {
         priority
         fill
       />
-      <div className='size-full bg-black/60 backdrop-blur-sm p-4'>
+      <div className='size-full bg-black/60 backdrop-blur-[2px] p-4'>
         <div className='z-10 p-4 flex flex-col gap-2 items-center border-white border-4'>
           <h1 className='mb-2 font-semibold'>{deck?.name}</h1>
           <div className='flex flex-row gap-2 justify-center'>
