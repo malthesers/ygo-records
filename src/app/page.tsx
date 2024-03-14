@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main>
-      <section className='grid lg:grid-cols-[5fr_2fr] gap-4'>
+      <section className='grid xl:grid-cols-[5fr_2fr] gap-4'>
         <TopDecks />
         <RecentEvents />
       </section>

@@ -9,7 +9,7 @@ interface TopDeckCardProps {
 export default function TopDeckCard({ topDeck }: TopDeckCardProps) {
   return (
     <>
-      <article className='bg-sky-900 grid grid-cols-[1fr_2fr] shadow-2xl'>
+      <article className='bg-sky-900 max-w-[30rem] w-full mx-auto grid grid-cols-[1fr_2fr] shadow-2xl'>
         <div className='relative aspect-square'>
           <Image
             priority

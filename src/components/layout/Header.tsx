@@ -11,7 +11,7 @@ export default function Header() {
           <Image src={logo} alt='YGO Records logo' width={70} />
           <span className='font-bold text-3xl'>YGO RECORDS</span>
         </Link>
-        <div className='flex self-center gap-4'>
+        <div className='hidden md:flex self-center gap-4 '>
           <Link href='/tournaments/wcq'>WCQ</Link>
           <Link href='/tournaments/ycs'>YCS</Link>
           <Link href='/tournaments/team-ycs'>TEAM YCS</Link>
