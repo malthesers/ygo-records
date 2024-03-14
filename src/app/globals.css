@@ -27,7 +27,7 @@
     @apply text-base;
   }
 
-  a {
+  nav a {
     @apply underline underline-offset-2 duration-200 hover:opacity-70;
   }
 

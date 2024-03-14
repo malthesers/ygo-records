@@ -16,7 +16,7 @@ export default function RecentEvents() {
     <aside>
       <h2>Recent Events</h2>
       <hr className='mb-4'></hr>
-      <div className='flex flex-col gap-4'>
+      <div className='flex flex-col'>
         {recentEvents?.map((event) => (
           <RecentEventCard key={event.name} event={event} />
         ))}
