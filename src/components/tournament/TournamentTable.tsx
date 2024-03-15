@@ -13,7 +13,7 @@ export default function TournamentTable({ events }: TournamentTableProps) {
   return (
     <section>
       <table className='w-full'>
-        <thead className='border-b-2 border-white'>
+        <thead className='hidden md:table-header-group border-b-2 border-white'>
           <tr>
             <th>Date</th>
             <th>Tournament</th>

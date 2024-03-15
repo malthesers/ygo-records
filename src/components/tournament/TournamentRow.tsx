@@ -7,12 +7,12 @@ interface TournamentRowProps {
 
 export default function TournamentRow({ event }: TournamentRowProps) {
   return (
-    <tr className='text-center'>
-      <td>{event.date}</td>
-      <td>
+    <tr className='grid md:table-row text-center'>
+      <td className='hidden md:table-cell'>{event.date}</td>
+      <td className='text-xl md:text-lg'>
         <Link href='/'>{event.name}</Link>
       </td>
-      <td>
+      <td className='hidden md:table-cell'>
         {event.attendance} {event.type.slug === 'team-ycs' && 'teams'}
       </td>
       <td className='*:block'>
