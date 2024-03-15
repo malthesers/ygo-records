@@ -9,7 +9,7 @@ export default function TournamentRow({ event }: TournamentRowProps) {
   return (
     <tr className='grid md:table-row text-center'>
       <td className='hidden md:table-cell'>{event.date}</td>
-      <td className='text-xl md:text-lg'>
+      <td className='text-xl font-semibold md:text-lg md:font-normal'>
         <Link href='/'>{event.name}</Link>
       </td>
       <td className='hidden md:table-cell'>
