@@ -1,6 +1,6 @@
 'use client'
 
-import TournamentTable from '@/components/table/TournamentTable'
+import TournamentTable from '@/components/tournament/TournamentTable'
 import SplashBanner from '@/components/SplashBanner'
 import { IEvent } from '@/interfaces/event'
 import type { Metadata } from 'next'
