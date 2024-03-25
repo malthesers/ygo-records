@@ -1,12 +1,12 @@
 'use client'
 
-import { useEffect, useState } from 'react'
-import PlayerInfo from '@/components/players/PlayerInfo'
-import { IPlayer } from '@/interfaces/player'
 import { testPlayer } from '@/app/data/test-player'
-import DeckTable from '@/components/players/DeckTable'
-import { IDeck } from '@/interfaces/deck'
 import { testDeck } from '@/app/data/test-deck'
+import { useEffect, useState } from 'react'
+import { IPlayer } from '@/interfaces/player'
+import { IDeck } from '@/interfaces/deck'
+import PlayerInfo from './PlayerInfo'
+import DeckTable from './DeckTable'
 
 export default function PlayerPage({ params }: { params: { slug: number } }) {
   const [player, setPlayer] = useState<IPlayer | null>()

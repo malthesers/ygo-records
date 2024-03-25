@@ -23,7 +23,6 @@ export default function YCSListPage() {
 
   return (
     <main>
-      {/* <h1>Yu-Gi-Oh! Championship Series</h1> */}
       <SplashBanner splash={splash} logo={logo} alt='Yu-Gi-Oh! Championship Series' />
       {events && <TournamentTable events={events} />}
     </main>

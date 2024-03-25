@@ -1,11 +1,11 @@
 'use client'
 
+import cardart from '~/images/placeholders/card.webp'
 import { testCard } from '@/app/data/test-card'
 import { ICard } from '@/interfaces/card'
-import CardInfo from '@/components/card/CardInfo'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
-import cardart from '~/images/placeholders/card.webp'
+import CardInfo from './CardInfo'
 
 export default function CardPage({ params }: { params: { slug: number } }) {
   const [card, setCard] = useState<ICard | null>()

@@ -1,10 +1,10 @@
 'use client'
 
-import { useEffect, useState } from 'react'
-import CardBox from '@/components/deck/CardBox'
-import DeckInfo from '@/components/deck/DeckInfo'
-import { IDeck } from '@/interfaces/deck'
 import { testDecks } from '@/app/data/test-decks'
+import { useEffect, useState } from 'react'
+import { IDeck } from '@/interfaces/deck'
+import DeckInfo from './DeckInfo'
+import CardBox from './CardBox'
 
 export default function DeckPage({ params }: { params: { slug: number } }) {
   const [deck, setDeck] = useState<IDeck | null>()

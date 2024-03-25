@@ -23,7 +23,6 @@ export default function TEAMYCSListPage() {
 
   return (
     <main>
-      {/* <h1>TEAM Yu-Gi-Oh! Championship Series</h1> */}
       <SplashBanner splash={splash} logo={logo} alt='Yu-Gi-Oh! TEAM Championship Series' />
       {events && <TournamentTable events={events} />}
     </main>

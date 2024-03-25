@@ -24,7 +24,7 @@ export default function TopDecksSection() {
           ))}
         </div>
       </div>
-      <Link href='/' className='text-sm font-semibold uppercase'>
+      <Link href='/decks' className='text-sm font-semibold uppercase'>
         See all decks
       </Link>
     </div>
