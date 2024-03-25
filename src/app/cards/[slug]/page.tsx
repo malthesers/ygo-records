@@ -6,6 +6,7 @@ import { ICard } from '@/interfaces/card'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import CardInfo from './CardInfo'
+import Card from '@/components/card/Card'
 
 export default function CardPage({ params }: { params: { slug: number } }) {
   const [card, setCard] = useState<ICard | null>()
@@ -16,8 +17,9 @@ export default function CardPage({ params }: { params: { slug: number } }) {
 
   return (
     <main className='space-y-4'>
-      <section className='grid md:grid-cols-[1fr_2fr]'>
-        <Image src={cardart} alt='card art' className='shadow-2xl' />
+      <section className='flex flex-col md:flex-row'>
+        {/* <Image src={cardart} alt='card art' className='shadow-2xl' /> */}
+        {card && <Card card={card} />}
         {card && <CardInfo card={card} />}
       </section>
     </main>
