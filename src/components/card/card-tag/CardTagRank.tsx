@@ -2,11 +2,11 @@ import { Rank } from '@/interfaces/card/monster'
 import rankStar from '~/images/frame-assets/rank.webp'
 import Image from 'next/image'
 
-interface CardTagRanksProps {
+interface CardTagRankProps {
   rank: Rank
 }
 
-export default function CardTagRanks({ rank }: CardTagRanksProps) {
+export default function CardTagRank({ rank }: CardTagRankProps) {
   return (
     <div
       className={
