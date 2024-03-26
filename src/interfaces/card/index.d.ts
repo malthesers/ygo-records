@@ -7,8 +7,6 @@ export type ICard = IMonsterCard | ISpellCard | ITrapCard
 export interface ICardBase {
   id: number
   name: string
-  frame: Frame
+  frame: string
   description: string
 }
-
-type Frame = 'normal' | 'effect' | 'fusion' | 'ritual' | 'synchro' | 'xyz' | 'link' | 'spell' | 'trap'

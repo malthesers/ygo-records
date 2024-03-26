@@ -1,6 +1,15 @@
 import { ICardBase } from '.'
 
-interface IMonsterCard extends ICardBase {
+type IMonsterCard =
+  | INormalMonsterCard
+  | IEffectMonsterCard
+  | IFusionMonsterCard
+  | IRitualMonsterCard
+  | ISynchroMonsterCard
+  | IXyzMonsterCard
+  | ILinkMonsterCard
+
+interface IMonsterCardBase extends ICardBase {
   cardType: 'Monster'
   monsterCardType: MonsterCardType
   attribute: Attribute
@@ -8,23 +17,55 @@ interface IMonsterCard extends ICardBase {
   atk: number
   def: number
   level: Level
-  properties: Property[]
-  xyz?: XyzAttributes
-  pendulum?: PendulumAttributes
-  link?: LinkAttributes
+  properties?: Property[]
+  pendulum?: Pendulum
 }
 
-interface XyzAttributes {
+interface INormalMonsterCard extends IMonsterCardBase {
+  monsterCardType: 'Normal'
+}
+
+interface IEffectMonsterCard extends IMonsterCardBase {
+  monsterCardType: 'Effect'
+}
+
+interface IFusionMonsterCard extends IMonsterCardBase {
+  monsterCardType: 'Fusion'
+}
+
+interface IRitualMonsterCard extends IMonsterCardBase {
+  monsterCardType: 'Ritual'
+}
+
+interface ISynchroMonsterCard extends IMonsterCardBase {
+  monsterCardType: 'Synchro'
+}
+
+interface IXyzMonsterCard extends Omit<IMonsterCardBase, 'level'> {
+  monsterCardType: 'Xyz'
   rank: Rank
 }
 
-interface PendulumAttributes {
-  scale: Scale
-  description: string
+interface ILinkMonsterCard extends Omit<IMonsterCardBase, 'level' | 'def'> {
+  monsterCardType: 'Link'
+  rating: Rating
+  arrows: LinkArrows
 }
 
-interface LinkAttributes {
-  rating: Rating
+interface Pendulum {
+  scale: Scale
+  pendulumDescription: string
+}
+
+interface LinkArrows {
+  TL?: boolean
+  T?: boolean
+  TR?: boolean
+  L?: boolean
+  R?: boolean
+  BL?: boolean
+  B?: boolean
+  BR?: boolean
 }
 
 type Rating = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8
@@ -35,9 +76,9 @@ type Rank = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13
 
 type Scale = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13
 
-type Property = 'tuner' | 'spirit' | 'gemini' | 'toon' | 'flip' | 'union'
+type Frame = 'normal' | 'effect' | 'fusion' | 'ritual' | 'synchro' | 'xyz' | 'link'
 
-type MonsterCardType = 'Normal' | 'Effect' | 'Fusion' | 'Ritual' | 'Synchro' | 'Xyz' | 'Pendulum' | 'Link'
+type Property = 'tuner' | 'spirit' | 'gemini' | 'toon' | 'flip' | 'union'
 
 type Attribute = 'DARK' | 'LIGHT' | 'EARTH' | 'WIND' | 'WATER' | 'FIRE' | 'DIVINE'
 

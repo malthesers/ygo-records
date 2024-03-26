@@ -1,17 +1,16 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import recentEventsTest from '@/app/data/recent-events'
 import { ICard } from '@/interfaces/card'
-import { testCard } from '@/app/data/test-card'
 import Card from '@/components/card/Card'
 import Link from 'next/link'
+import { testCards } from '@/app/data/test-cards'
 
 export default function PopularCards() {
   const [popularCards, setPopularCards] = useState<ICard[] | null>([])
 
   useEffect(() => {
-    setPopularCards([testCard, testCard, testCard, testCard, testCard, testCard])
+    setPopularCards(testCards)
   }, [])
 
   return (

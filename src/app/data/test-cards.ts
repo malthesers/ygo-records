@@ -17,9 +17,58 @@ export const testCards: ICard[] = [
     attribute: 'FIRE',
   },
   {
+    id: 10045474,
+    cardType: 'Trap',
+    name: 'Infinite Impermanence',
+    frame: 'trap',
+    description:
+      'Target 1 face-up monster your opponent controls; negate its effects (until the end of this turn), then, if this card was Set before activation and is on the field at resolution, for the rest of this turn all other Spell/Trap effects in this column are negated. If you control no cards, you can activate this card from your hand.',
+    type: 'Normal',
+  },
+  {
+    id: 29301450,
+    cardType: 'Monster',
+    monsterCardType: 'Link',
+    name: 'S:P Little Knight',
+    frame: 'link',
+    description:
+      '2 Effect Monsters\r\n If this card is Link Summoned using a Fusion, Synchro, Xyz, or Link Monster as material: You can target 1 card on the field or in either GY; banish it, also your monsters cannot attack directly this turn. When your opponent activates a card or effect (Quick Effect): You can target 2 face-up monsters on the field, including a monster you control; banish both until the End Phase. You can only use each effect of "S:P Little Knight" once per turn.',
+    atk: 1600,
+    rating: 2,
+    type: 'Warrior',
+    attribute: 'DARK',
+    arrows: {
+      L: true,
+      R: true,
+    },
+  },
+  {
+    id: 90448279,
+    cardType: 'Monster',
+    monsterCardType: 'Xyz',
+    name: 'Divine Arsenal AA-ZEUS - Sky Thunder',
+    frame: 'xyz',
+    description:
+      '2 Level 12 monsters\r\n Once per turn, if an Xyz Monster battled this turn, you can also Xyz Summon "Divine Arsenal AA-ZEUS - Sky Thunder" by using 1 Xyz Monster you control as material. (Transfer its materials to this card.) (Quick Effect): You can detach 2 materials from this card; send all other cards from the field to the GY. Once per turn, if another card(s) you control is destroyed by battle or an opponent\'s card effect: You can attach 1 card from your hand, Deck, or Extra Deck to this card as material.',
+    atk: 3000,
+    def: 3000,
+    rank: 12,
+    type: 'Machine',
+    attribute: 'LIGHT',
+  },
+  {
+    id: 25311006,
+    cardType: 'Spell',
+    name: 'Triple Tactics Talent',
+    frame: 'spell',
+    description:
+      'If your opponent has activated a monster effect during your Main Phase this turn: Activate 1 of these effects;\r\n● Draw 2 cards.\r\n● Take control of 1 monster your opponent controls until the End Phase.\r\n● Look at your opponent\'s hand, and choose 1 card from it to shuffle into the Deck. You can only activate 1 "Triple Tactics Talent" per turn.',
+    type: 'Normal',
+  },
+  {
     id: 82112494,
     cardType: 'Monster',
-    monsterCardType: 'Pendulum',
+    monsterCardType: 'Effect',
     name: 'Superheavy Samurai Prodigy Wakaushi',
     frame: 'effect',
     properties: ['tuner'],
@@ -32,17 +81,8 @@ export const testCards: ICard[] = [
     attribute: 'DARK',
     pendulum: {
       scale: 8,
-      description:
+      pendulumDescription:
         'If you have no Spells/Traps in your GY: You can place 1 "Superheavy Samurai" Pendulum Monster from your Deck, except "Superheavy Samurai Prodigy Wakaushi", in your other Pendulum Zone, then Special Summon this card. You can only use this effect of "Superheavy Samurai Prodigy Wakaushi" once per turn.',
     },
-  },
-  {
-    id: 25311006,
-    cardType: 'Spell',
-    name: 'Triple Tactics Talent',
-    frame: 'spell',
-    description:
-      'If your opponent has activated a monster effect during your Main Phase this turn: Activate 1 of these effects;\r\n● Draw 2 cards.\r\n● Take control of 1 monster your opponent controls until the End Phase.\r\n● Look at your opponent\'s hand, and choose 1 card from it to shuffle into the Deck. You can only activate 1 "Triple Tactics Talent" per turn.',
-    type: 'Normal',
   },
 ]

@@ -3,7 +3,7 @@ import Image from 'next/image'
 import pendulumFrame from '~/images/card-frame/pendulum.webp'
 import cardBorder from '~/images/card-frame/card-border.jpg'
 import CardNameplate from './CardNameplate'
-import CardTag from './CardTag'
+import CardTag from './card-tag/CardTag'
 
 interface CardProps {
   card: ICard
