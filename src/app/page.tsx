@@ -1,3 +1,4 @@
+import PopularCards from '@/components/landing/popular-cards/PopularCards'
 import RecentEvents from '@/components/landing/recent-events/RecentEvents'
 import TopDecks from '@/components/landing/top-decks/TopDecks'
 import type { Metadata } from 'next'
@@ -14,10 +15,7 @@ export default function Home() {
         <TopDecks />
         <RecentEvents />
       </section>
-      <section>
-        <h2>Popular Cards</h2>
-        <hr></hr>
-      </section>
+      <PopularCards />
     </main>
   )
 }
