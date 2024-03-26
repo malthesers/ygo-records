@@ -2,6 +2,8 @@ import { ICard } from '@/interfaces/card'
 
 export const testCard: ICard = {
   id: 14558127,
+  cardType: 'Monster',
+  monsterCardType: 'Effect',
   name: 'Ash Blossom & Joyous Spring',
   frame: 'effect',
   properties: ['tuner'],

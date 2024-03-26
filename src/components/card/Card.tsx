@@ -3,12 +3,14 @@ import Image from 'next/image'
 import pendulumFrame from '~/images/card-frame/pendulum.webp'
 import cardBorder from '~/images/card-frame/card-border.jpg'
 import CardNameplate from './CardNameplate'
+import CardTag from './CardTag'
 
 interface CardProps {
   card: ICard
 }
 
 export default function Card({ card }: CardProps) {
+  const isPendulum = card.cardType === 'Monster' && card.pendulum
   return (
     <div className='relative w-full max-w-96 h-fit mx-auto grid *:grid-center text-black'>
       <Image src={cardBorder} alt='yugioh card border' priority />
@@ -20,16 +22,17 @@ export default function Card({ card }: CardProps) {
         height={550}
         priority
       />
-      <CardNameplate name={card.name} attribute={card.attribute} />
+      <CardNameplate card={card} />
+      <CardTag card={card} />
       <Image
         src={`/images/placeholders/${card.id}.jpg`}
         alt={`${card.name} artwork`}
-        className={[card.pendulum ? 'mt-[26%] w-[87%]' : 'mt-[27%] w-[76%]'] + ' mx-auto'}
+        className={[isPendulum ? 'mt-[26%] w-[87%]' : 'mt-[27%] w-[76%]'] + ' mx-auto'}
         width={450}
         height={450}
         priority
       />
-      {card.pendulum && <Image src={pendulumFrame} alt='yugioh card pendulum frame' className='w-[93%] m-auto' />}
+      {isPendulum && <Image src={pendulumFrame} alt='yugioh card pendulum frame' className='w-[93%] m-auto' />}
     </div>
   )
 }

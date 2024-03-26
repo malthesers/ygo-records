@@ -18,21 +18,7 @@ export default function PopularCards() {
     <section>
       <h2>Popular Cards</h2>
       <hr className='mb-4'></hr>
-      <div className='grid gap-2 grid-cols-3 sm:grid-cols-3 md:grid-cols-6'>
-        {popularCards?.map((card, index) => (
-          <Card key={index} card={card} />
-        ))}
-      </div>
-      <h2 className='mt-4'>Popular Cards</h2>
-      <hr className='mb-4'></hr>
-      <div className='grid gap-2 grid-cols-2 sm:grid-cols-3 md:grid-cols-6'>
-        {popularCards?.map((card, index) => (
-          <Card key={index} card={card} />
-        ))}
-      </div>
-      <h2 className='mt-4'>Popular Cards</h2>
-      <hr className='mb-4'></hr>
-      <div className='grid gap-2 grid-cols-1 sm:grid-cols-3 md:grid-cols-6'>
+      <div className='mb-4 grid gap-2 grid-cols-2 sm:grid-cols-3 md:grid-cols-6'>
         {popularCards?.map((card, index) => (
           <Card key={index} card={card} />
         ))}
