@@ -7,12 +7,13 @@ import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import CardInfo from './CardInfo'
 import Card from '@/components/card/Card'
+import { testCards } from '@/app/data/test-cards'
 
 export default function CardPage({ params }: { params: { slug: number } }) {
   const [card, setCard] = useState<ICard | null>()
 
   useEffect(() => {
-    setCard(testCard)
+    setCard(testCards[params.slug])
   }, [params.slug])
 
   return (

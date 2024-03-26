@@ -6,7 +6,7 @@ interface CardInfoProps {
 
 export default function CardInfo({ card }: CardInfoProps) {
   return (
-    <div className='bg-sky-900 my-4 p-4 border-y-2 border-white shadow-2xl space-y-2'>
+    <div className='w-full bg-sky-900 my-4 p-4 border-y-2 border-white shadow-2xl space-y-2'>
       <h1 className='text-xl font-semibold text-left mb-0'>{card.name}</h1>
       <p className='bg-sky-950 p-2 whitespace-pre-wrap'>{card.description}</p>
       <p>

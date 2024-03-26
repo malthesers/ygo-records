@@ -9,11 +9,19 @@ export interface ICard {
   level: Level
   type: Type
   attribute: Attribute
+  pendulum?: PendulumAttributes
 }
 
-type Frame = 'normal' | 'effect' | 'fusion' | 'ritual' | 'synchro' | 'xyz' | 'pendulum' | 'link'
+interface PendulumAttributes {
+  scale: Scale
+  description: string
+}
+
+type Frame = 'normal' | 'effect' | 'fusion' | 'ritual' | 'synchro' | 'xyz' | 'link'
 
 type Level = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13
+
+type Scale = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13
 
 type Property = 'tuner' | 'spirit' | 'gemini' | 'toon' | 'flip' | 'union'
 
