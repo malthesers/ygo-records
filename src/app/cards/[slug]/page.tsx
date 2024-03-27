@@ -1,9 +1,6 @@
 'use client'
 
-import cardart from '~/images/placeholders/card.webp'
-import { testCard } from '@/app/data/test-card'
 import { ICard } from '@/interfaces/card'
-import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import CardInfo from './CardInfo'
 import Card from '@/components/card/Card'
