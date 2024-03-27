@@ -5,6 +5,7 @@ import { ICard } from '@/interfaces/card'
 import Card from '@/components/card/Card'
 import Link from 'next/link'
 import { testCards } from '@/app/data/test-cards'
+import PopularCard from './PopularCard'
 
 export default function PopularCards() {
   const [popularCards, setPopularCards] = useState<ICard[] | null>([])
@@ -18,8 +19,8 @@ export default function PopularCards() {
       <h2>Popular Cards</h2>
       <hr className='mb-4'></hr>
       <div className='mb-4 grid gap-2 grid-cols-2 sm:grid-cols-3 md:grid-cols-6'>
-        {popularCards?.map((card, index) => (
-          <Card key={index} card={card} />
+        {popularCards?.map((card) => (
+          <PopularCard key={card.id} card={card} />
         ))}
       </div>
       <Link href='/cards' className='text-sm font-semibold uppercase'>

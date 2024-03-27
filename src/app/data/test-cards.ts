@@ -81,7 +81,7 @@ export const testCards: ICard[] = [
     attribute: 'DARK',
     pendulum: {
       scale: 8,
-      pendulumDescription:
+      description:
         'If you have no Spells/Traps in your GY: You can place 1 "Superheavy Samurai" Pendulum Monster from your Deck, except "Superheavy Samurai Prodigy Wakaushi", in your other Pendulum Zone, then Special Summon this card. You can only use this effect of "Superheavy Samurai Prodigy Wakaushi" once per turn.',
     },
   },

@@ -54,7 +54,7 @@ interface ILinkMonsterCard extends Omit<IMonsterCardBase, 'level' | 'def'> {
 
 interface Pendulum {
   scale: Scale
-  pendulumDescription: string
+  description: string
 }
 
 interface LinkArrows {

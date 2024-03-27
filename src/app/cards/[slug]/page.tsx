@@ -6,11 +6,11 @@ import CardInfo from './CardInfo'
 import Card from '@/components/card/Card'
 import { testCards } from '@/app/data/test-cards'
 
-export default function CardPage({ params }: { params: { slug: number } }) {
+export default function CardPage({ params }: { params: { slug: string } }) {
   const [card, setCard] = useState<ICard | null>()
 
   useEffect(() => {
-    setCard(testCards[params.slug])
+    setCard(testCards.find(({ id }) => id.toString() === params.slug))
   }, [params.slug])
 
   return (
