@@ -12,6 +12,7 @@ const config: Config = {
       fontFamily: {
         body: ['var(--font-inter)'],
         'card-title': ['var(--font-matrix-book)'],
+        'link-rating': ['var(--font-link-rating)'],
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
