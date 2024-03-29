@@ -7,9 +7,9 @@ export const testCards: ICard[] = [
     monsterCardType: 'Effect',
     name: 'Ash Blossom & Joyous Spring',
     frame: 'effect',
-    properties: ['tuner'],
+    properties: ['Tuner'],
     description:
-      'When a card or effect is activated that includes any of these effects (Quick Effect): You can discard this card; negate that effect.\r\n● Add a card from the Deck to the hand.\r\n● Special Summon from the Deck.\r\n● Send a card from the Deck to the GY.\r\nYou can only use this effect of "Ash Blossom & Joyous Spring" once per turn.',
+      'When a card or effect is activated that includes any of these effects (Quick Effect): You can discard this card; negate that effect.\n● Add a card from the Deck to the hand.\n● Special Summon from the Deck.\n● Send a card from the Deck to the GY.\nYou can only use this effect of "Ash Blossom & Joyous Spring" once per turn.',
     atk: 0,
     def: 1800,
     level: 3,
@@ -32,7 +32,7 @@ export const testCards: ICard[] = [
     name: 'S:P Little Knight',
     frame: 'link',
     description:
-      '2 Effect Monsters\r\n If this card is Link Summoned using a Fusion, Synchro, Xyz, or Link Monster as material: You can target 1 card on the field or in either GY; banish it, also your monsters cannot attack directly this turn. When your opponent activates a card or effect (Quick Effect): You can target 2 face-up monsters on the field, including a monster you control; banish both until the End Phase. You can only use each effect of "S:P Little Knight" once per turn.',
+      '2 Effect Monsters\n If this card is Link Summoned using a Fusion, Synchro, Xyz, or Link Monster as material: You can target 1 card on the field or in either GY; banish it, also your monsters cannot attack directly this turn. When your opponent activates a card or effect (Quick Effect): You can target 2 face-up monsters on the field, including a monster you control; banish both until the End Phase. You can only use each effect of "S:P Little Knight" once per turn.',
     atk: 1600,
     rating: 2,
     type: 'Warrior',
@@ -49,7 +49,7 @@ export const testCards: ICard[] = [
     name: 'Divine Arsenal AA-ZEUS - Sky Thunder',
     frame: 'xyz',
     description:
-      '2 Level 12 monsters\r\n Once per turn, if an Xyz Monster battled this turn, you can also Xyz Summon "Divine Arsenal AA-ZEUS - Sky Thunder" by using 1 Xyz Monster you control as material. (Transfer its materials to this card.) (Quick Effect): You can detach 2 materials from this card; send all other cards from the field to the GY. Once per turn, if another card(s) you control is destroyed by battle or an opponent\'s card effect: You can attach 1 card from your hand, Deck, or Extra Deck to this card as material.',
+      '2 Level 12 monsters\n Once per turn, if an Xyz Monster battled this turn, you can also Xyz Summon "Divine Arsenal AA-ZEUS - Sky Thunder" by using 1 Xyz Monster you control as material. (Transfer its materials to this card.) (Quick Effect): You can detach 2 materials from this card; send all other cards from the field to the GY. Once per turn, if another card(s) you control is destroyed by battle or an opponent\'s card effect: You can attach 1 card from your hand, Deck, or Extra Deck to this card as material.',
     atk: 3000,
     def: 3000,
     rank: 12,
@@ -62,7 +62,7 @@ export const testCards: ICard[] = [
     name: 'Triple Tactics Talent',
     frame: 'spell',
     description:
-      'If your opponent has activated a monster effect during your Main Phase this turn: Activate 1 of these effects;\r\n● Draw 2 cards.\r\n● Take control of 1 monster your opponent controls until the End Phase.\r\n● Look at your opponent\'s hand, and choose 1 card from it to shuffle into the Deck. You can only activate 1 "Triple Tactics Talent" per turn.',
+      'If your opponent has activated a monster effect during your Main Phase this turn: Activate 1 of these effects;\n● Draw 2 cards.\n● Take control of 1 monster your opponent controls until the End Phase.\n● Look at your opponent\'s hand, and choose 1 card from it to shuffle into the Deck. You can only activate 1 "Triple Tactics Talent" per turn.',
     type: 'Normal',
   },
   {
@@ -71,7 +71,7 @@ export const testCards: ICard[] = [
     monsterCardType: 'Effect',
     name: 'Superheavy Samurai Prodigy Wakaushi',
     frame: 'effect',
-    properties: ['tuner'],
+    properties: ['Tuner'],
     description:
       'If you have no Spells/Traps in your GY: You can discard 1 monster; Special Summon 1 "Superheavy Samurai" monster from your hand or Deck in Defense Position, also you cannot Special Summon monsters for the rest of this turn, except "Superheavy Samurai" monsters. If this card is used as Synchro Material and added to your Extra Deck face-up: You can place this card in your Pendulum Zone. You can only use each effect of "Superheavy Samurai Prodigy Wakaushi" once per turn.',
     atk: 1000,
