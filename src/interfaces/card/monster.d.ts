@@ -14,8 +14,8 @@ interface IMonsterCardBase extends ICardBase {
   monsterCardType: MonsterCardType
   attribute: Attribute
   type: MonsterType
-  atk: number
-  def: number
+  atk: Atk
+  def: Def
   level: Level
   properties?: Property[]
   pendulum?: Pendulum
@@ -68,11 +68,15 @@ interface LinkArrows {
   BR?: boolean
 }
 
+type Atk = '?' | number
+
+type Def = '?' | number
+
 type Rating = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8
 
-type Level = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
+type Level = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
 
-type Rank = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13
+type Rank = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13
 
 type Scale = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13
 
@@ -86,6 +90,7 @@ type MonsterType =
   | 'Aqua'
   | 'Beast'
   | 'Beast-Warrior'
+  | 'Creator-God'
   | 'Cyberse'
   | 'Dinosaur'
   | 'Divine-Beast'

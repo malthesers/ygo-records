@@ -5,7 +5,7 @@ import { ITrapCard } from './trap'
 export type ICard = IMonsterCard | ISpellCard | ITrapCard
 
 export interface ICardBase {
-  id: number
+  id: string
   name: string
   frame: string
   description: string
