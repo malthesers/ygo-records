@@ -14,7 +14,7 @@ export default function DeckRow({ deck }: DeckRowProps) {
       </td>
       <td>{deck.place}</td>
       <td className='*:block'>
-        <Link href='/decks/0'>{deck.name}</Link>
+        <Link href='/decks/lists/0'>{deck.name}</Link>
       </td>
     </tr>
   )

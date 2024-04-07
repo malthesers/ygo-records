@@ -1,32 +1,16 @@
 'use client'
 
-import { testDecks } from '@/app/data/test-decks'
-import { useEffect, useState } from 'react'
-import { IDeck } from '@/interfaces/deck'
+import { IDeckType } from '@/interfaces/deck'
 import DeckInfo from './DeckInfo'
-import CardBox from './CardBox'
+import { useEffect, useState } from 'react'
+import testDeckTypes from '@/app/data/test-deck-types'
 
-export default function DeckPage({ params }: { params: { slug: number } }) {
-  const [deck, setDeck] = useState<IDeck | null>()
+export default function DeckTypePage({ params }: { params: { slug: string } }) {
+  const [deckType, setDeckType] = useState<IDeckType | null>()
 
   useEffect(() => {
-    setDeck(testDecks[params.slug])
+    setDeckType(testDeckTypes.find(({ slug }) => slug === params.slug))
   }, [params.slug])
 
-  return (
-    <main className='space-y-4'>
-      {deck && <DeckInfo deck={deck} />}
-      <section className='bg-sky-800 p-4 grid md:grid-cols-2 gap-4'>
-        <div className='flex flex-col gap-4'>
-          {deck && <CardBox title='Monsters' cards={deck?.decklist.mainDeck.monsters} />}
-          {deck && <CardBox title='Spells' cards={deck?.decklist.mainDeck.spells} />}
-          {deck && <CardBox title='Traps' cards={deck?.decklist.mainDeck.traps} />}
-        </div>
-        <div className='flex flex-col gap-4'>
-          {deck && <CardBox title='Extra Deck' cards={deck?.decklist.extraDeck} />}
-          {deck && <CardBox title='Side Deck' cards={deck?.decklist.sideDeck} />}
-        </div>
-      </section>
-    </main>
-  )
+  return <main>{deckType && <DeckInfo deckType={deckType} />}</main>
 }

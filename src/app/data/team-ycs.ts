@@ -19,6 +19,7 @@ const teamYcsTestData: IEvent[] = [
       deck: {
         _id: '2',
         name: 'Snake-Eye',
+        slug: 'snake-eye',
         engines: ['Snake-Eye'],
         thumbnail: '48452496.jpg',
       },
@@ -30,6 +31,7 @@ const teamYcsTestData: IEvent[] = [
       deck: {
         _id: '2',
         name: 'Snake-Eye',
+        slug: 'snake-eye',
         engines: ['Snake-Eye'],
         thumbnail: '48452496.jpg',
       },
@@ -41,6 +43,7 @@ const teamYcsTestData: IEvent[] = [
       deck: {
         _id: '3',
         name: 'Snake-Eye',
+        slug: 'snake-eye',
         engines: ['Snake-Eye'],
         thumbnail: '48452496.jpg',
       },
@@ -64,6 +67,7 @@ const teamYcsTestData: IEvent[] = [
       deck: {
         _id: '4',
         name: 'Fire King Snake-Eye',
+        slug: 'snake-eye-fire-king',
         engines: ['Fire King', 'Snake-Eye'],
         thumbnail: '66431519.jpg',
       },
@@ -75,6 +79,7 @@ const teamYcsTestData: IEvent[] = [
       deck: {
         _id: '3',
         name: 'Snake-Eye',
+        slug: 'snake-eye',
         engines: ['Snake-Eye'],
         thumbnail: '66431519.jpg',
       },
@@ -86,6 +91,7 @@ const teamYcsTestData: IEvent[] = [
       deck: {
         _id: '4',
         name: 'Fire King Snake-Eye',
+        slug: 'snake-eye-fire-king',
         engines: ['Fire King', 'Snake-Eye'],
         thumbnail: '66431519.jpg',
       },

@@ -4,6 +4,7 @@ import { IPlayer } from './player'
 export interface IDeckType {
   _id: string
   name: string
+  slug: string
   engines: string[]
   thumbnail: string
 }
@@ -13,12 +14,13 @@ export interface ITopDeck extends IDeckType {
 }
 
 export interface IDeck {
+  _id: string
   placement: Placement
   deckType: IDeckType
   decklist: IDecklist
   player: IPlayer
   event: IEvent
-  engines?: string[]
+  additionalEngines?: string[]
 }
 
 type Placement = 1 | 2 | 4 | 8 | 16 | 32 | 64 | 128

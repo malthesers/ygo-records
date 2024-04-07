@@ -21,9 +21,9 @@ export default function TournamentRow({ event }: TournamentRowProps) {
         {event.winner3 && <Link href='/players/0'>{event.winner3?.name}</Link>}
       </td>
       <td className='*:block'>
-        <Link href='/decks/0'>{event.winner.deck.name}</Link>
-        {event.winner2 && <Link href='/decks/1'>{event.winner2?.deck.name}</Link>}
-        {event.winner3 && <Link href='/decks/1'>{event.winner3?.deck.name}</Link>}
+        <Link href='/decks/lists/0'>{event.winner.deck.name}</Link>
+        {event.winner2 && <Link href='/decks/lists/1'>{event.winner2?.deck.name}</Link>}
+        {event.winner3 && <Link href='/decks/lists/1'>{event.winner3?.deck.name}</Link>}
       </td>
     </tr>
   )
