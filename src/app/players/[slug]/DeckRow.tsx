@@ -12,9 +12,9 @@ export default function DeckRow({ deck }: DeckRowProps) {
       <td className='text-xl font-semibold md:text-lg md:font-normal'>
         <Link href='/'>{deck.event.name}</Link>
       </td>
-      <td>{deck.place}</td>
+      <td>{deck.placement}</td>
       <td className='*:block'>
-        <Link href='/decks/lists/0'>{deck.name}</Link>
+        <Link href='/decks/lists/0'>{deck.deckType.name}</Link>
       </td>
     </tr>
   )
