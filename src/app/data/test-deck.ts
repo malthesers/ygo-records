@@ -6,8 +6,9 @@ export const testDeck: IDeck = {
   deckType: {
     _id: '1',
     name: 'Runick Bystial',
+    slug: 'runick-bystial',
     engines: ['Runick', 'Bystial'],
-    thumbnail: '92107604.jpg',
+    thumbnail: '92107604',
   },
   event: {
     _id: '1',
@@ -27,8 +28,9 @@ export const testDeck: IDeck = {
       deck: {
         _id: '1',
         name: 'Runick Bystial',
+        slug: 'runick-bystial',
         engines: ['Runick', 'Bystial'],
-        thumbnail: '92107604.jpg',
+        thumbnail: '92107604',
       },
     },
   },

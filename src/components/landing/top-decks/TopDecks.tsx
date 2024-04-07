@@ -20,7 +20,7 @@ export default function TopDecksSection() {
       <div>
         <div className='grid md:grid-cols-2 gap-4 mb-4'>
           {topDecks?.map((topDeck) => (
-            <TopDeckCard key={topDeck.id} topDeck={topDeck} />
+            <TopDeckCard key={topDeck._id} topDeck={topDeck} />
           ))}
         </div>
       </div>

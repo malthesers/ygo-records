@@ -6,7 +6,7 @@ const topDecksTest: ITopDeck[] = [
     name: 'Snake-Eye',
     slug: 'snake-eye',
     engines: ['Snake-Eye'],
-    thumbnail: '48452496.jpg',
+    thumbnail: '48452496',
     topCutPercentage: 45,
   },
   {
@@ -14,7 +14,7 @@ const topDecksTest: ITopDeck[] = [
     name: 'Snake-Eye Fire King',
     slug: 'snake-eye-fire-king',
     engines: ['Snake-Eye', 'Fire King'],
-    thumbnail: '66431519.jpg',
+    thumbnail: '66431519',
     topCutPercentage: 40,
   },
   {
@@ -22,7 +22,7 @@ const topDecksTest: ITopDeck[] = [
     name: 'Voiceless Voice',
     slug: 'voiceless-voice',
     engines: ['Voiceless Voice'],
-    thumbnail: '10774240.jpg',
+    thumbnail: '10774240',
     topCutPercentage: 12,
   },
   {
@@ -30,7 +30,7 @@ const topDecksTest: ITopDeck[] = [
     name: 'Branded Despia',
     slug: 'branded-despia',
     engines: ['Branded', 'Despia', 'Bystial'],
-    thumbnail: '44146295.jpg',
+    thumbnail: '44146295',
     topCutPercentage: 1,
   },
   {
@@ -38,7 +38,7 @@ const topDecksTest: ITopDeck[] = [
     name: 'Floowandereeze',
     slug: 'floowandereeze',
     engines: ['Floowandereeze'],
-    thumbnail: '80611581.jpg',
+    thumbnail: '80611581',
     topCutPercentage: 1,
   },
   {
@@ -46,7 +46,7 @@ const topDecksTest: ITopDeck[] = [
     name: 'Kashtira',
     slug: 'kashtira',
     engines: ['Kashtira'],
-    thumbnail: '48626373.jpg',
+    thumbnail: '48626373',
     topCutPercentage: 1,
   },
 ]

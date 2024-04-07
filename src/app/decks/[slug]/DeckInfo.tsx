@@ -11,7 +11,7 @@ export default function DeckInfo({ deckType }: DeckInfoProps) {
     <section className='relative min-h-[15rem] p-0 grid grid-cols-1 grid-rows-1 *:grid-center'>
       <Image
         className='-z-10 object-cover'
-        src={`/images/placeholders/${deckType?.thumbnail}`}
+        src={`/images/placeholders/${deckType?.thumbnail}.jpg`}
         alt={`${deckType?.name} splash image`}
         priority
         fill

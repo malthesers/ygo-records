@@ -19,8 +19,9 @@ const ycsTestData: IEvent[] = [
       deck: {
         _id: '1',
         name: 'Runick Bystial',
+        slug: 'runick-bystial',
         engines: ['Runick', 'Bystial'],
-        thumbnail: '92107604.jpg',
+        thumbnail: '92107604',
       },
     },
   },
@@ -42,8 +43,9 @@ const ycsTestData: IEvent[] = [
       deck: {
         _id: '3',
         name: 'Unchained',
+        slug: 'unchained',
         engines: ['Unchained'],
-        thumbnail: '24269961.jpg',
+        thumbnail: '24269961',
       },
     },
   },

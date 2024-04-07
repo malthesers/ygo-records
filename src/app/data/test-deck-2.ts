@@ -6,8 +6,9 @@ export const testDeck2: IDeck = {
   deckType: {
     _id: '2',
     name: 'Snake-Eye',
+    slug: 'snake-eye',
     engines: ['Snake-Eye'],
-    thumbnail: '48452496.jpg',
+    thumbnail: '48452496',
   },
   event: {
     _id: '3',
@@ -27,8 +28,9 @@ export const testDeck2: IDeck = {
       deck: {
         _id: '2',
         name: 'Snake-Eye',
+        slug: 'snake-eye',
         engines: ['Snake-Eye'],
-        thumbnail: '48452496.jpg',
+        thumbnail: '48452496',
       },
     },
   },

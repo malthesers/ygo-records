@@ -21,7 +21,7 @@ const teamYcsTestData: IEvent[] = [
         name: 'Snake-Eye',
         slug: 'snake-eye',
         engines: ['Snake-Eye'],
-        thumbnail: '48452496.jpg',
+        thumbnail: '48452496',
       },
     },
     winner2: {
@@ -33,7 +33,7 @@ const teamYcsTestData: IEvent[] = [
         name: 'Snake-Eye',
         slug: 'snake-eye',
         engines: ['Snake-Eye'],
-        thumbnail: '48452496.jpg',
+        thumbnail: '48452496',
       },
     },
     winner3: {
@@ -45,7 +45,7 @@ const teamYcsTestData: IEvent[] = [
         name: 'Snake-Eye',
         slug: 'snake-eye',
         engines: ['Snake-Eye'],
-        thumbnail: '48452496.jpg',
+        thumbnail: '48452496',
       },
     },
   },
@@ -69,7 +69,7 @@ const teamYcsTestData: IEvent[] = [
         name: 'Fire King Snake-Eye',
         slug: 'snake-eye-fire-king',
         engines: ['Fire King', 'Snake-Eye'],
-        thumbnail: '66431519.jpg',
+        thumbnail: '66431519',
       },
     },
     winner2: {
@@ -81,7 +81,7 @@ const teamYcsTestData: IEvent[] = [
         name: 'Snake-Eye',
         slug: 'snake-eye',
         engines: ['Snake-Eye'],
-        thumbnail: '66431519.jpg',
+        thumbnail: '66431519',
       },
     },
     winner3: {
@@ -93,7 +93,7 @@ const teamYcsTestData: IEvent[] = [
         name: 'Fire King Snake-Eye',
         slug: 'snake-eye-fire-king',
         engines: ['Fire King', 'Snake-Eye'],
-        thumbnail: '66431519.jpg',
+        thumbnail: '66431519',
       },
     },
   },
