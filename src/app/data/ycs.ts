@@ -2,7 +2,7 @@ import { IEvent } from '@/interfaces/event'
 
 const ycsTestData: IEvent[] = [
   {
-    id: 1,
+    _id: '1',
     name: 'YCS Bologna 2023',
     type: {
       name: 'YCS',
@@ -13,20 +13,19 @@ const ycsTestData: IEvent[] = [
     location: 'Bologna, Italy',
     attendance: 2488,
     winner: {
-      id: 1,
-      name: 'Joshua Schmidt',
+      _id: '1',
+      name: 'Joshua Schm_idt',
       nationality: 'DE',
       deck: {
-        id: 1,
+        _id: '1',
         name: 'Runick Bystial',
-        archetype: 'Runick',
-        engine: ['Bystial'],
+        engines: ['Runick', 'Bystial'],
         thumbnail: '92107604.jpg',
       },
     },
   },
   {
-    id: 2,
+    _id: '2',
     name: 'YCS Richmond 2023',
     type: {
       name: 'YCS',
@@ -37,13 +36,13 @@ const ycsTestData: IEvent[] = [
     location: 'Richmond, US',
     attendance: 1494,
     winner: {
-      id: 2,
+      _id: '2',
       name: 'Joseph Bellafiore',
       nationality: 'US',
       deck: {
-        id: 3,
+        _id: '3',
         name: 'Unchained',
-        archetype: 'Unchained',
+        engines: ['Unchained'],
         thumbnail: '24269961.jpg',
       },
     },

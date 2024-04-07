@@ -1,7 +1,7 @@
 import { IPlayer } from '@/interfaces/player'
 
 export const testPlayer: IPlayer = {
-  id: 0,
+  _id: '1',
   name: 'Joshua Schmidt',
   nationality: 'DE',
 }

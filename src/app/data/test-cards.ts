@@ -2,7 +2,7 @@ import { ICard } from '@/interfaces/card'
 
 export const testCards: ICard[] = [
   {
-    id: 14558127,
+    id: '14558127',
     cardType: 'Monster',
     monsterCardType: 'Effect',
     name: 'Ash Blossom & Joyous Spring',
@@ -17,7 +17,7 @@ export const testCards: ICard[] = [
     attribute: 'FIRE',
   },
   {
-    id: 10045474,
+    id: '10045474',
     cardType: 'Trap',
     name: 'Infinite Impermanence',
     frame: 'trap',
@@ -26,7 +26,7 @@ export const testCards: ICard[] = [
     type: 'Normal',
   },
   {
-    id: 29301450,
+    id: '29301450',
     cardType: 'Monster',
     monsterCardType: 'Link',
     name: 'S:P Little Knight',
@@ -43,7 +43,7 @@ export const testCards: ICard[] = [
     },
   },
   {
-    id: 90448279,
+    id: '90448279',
     cardType: 'Monster',
     monsterCardType: 'Xyz',
     name: 'Divine Arsenal AA-ZEUS - Sky Thunder',
@@ -57,7 +57,7 @@ export const testCards: ICard[] = [
     attribute: 'LIGHT',
   },
   {
-    id: 25311006,
+    id: '25311006',
     cardType: 'Spell',
     name: 'Triple Tactics Talent',
     frame: 'spell',
@@ -66,7 +66,7 @@ export const testCards: ICard[] = [
     type: 'Normal',
   },
   {
-    id: 82112494,
+    id: '82112494',
     cardType: 'Monster',
     monsterCardType: 'Effect',
     name: 'Superheavy Samurai Prodigy Wakaushi',

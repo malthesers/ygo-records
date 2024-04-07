@@ -1,13 +1,16 @@
 import { IDeck } from '@/interfaces/deck'
 
 export const testDeck2: IDeck = {
-  id: 2,
-  name: 'Snake-Eye',
-  archetype: 'Snake-Eye',
-  thumbnail: '48452496.jpg',
-  place: '1st',
+  _id: '2',
+  placement: 1,
+  deckType: {
+    _id: '2',
+    name: 'Snake-Eye',
+    engines: ['Snake-Eye'],
+    thumbnail: '48452496.jpg',
+  },
   event: {
-    id: 3,
+    _id: '3',
     name: 'TEAM YCS San Jose 2024',
     type: {
       name: 'TEAM YCS',
@@ -18,19 +21,19 @@ export const testDeck2: IDeck = {
     location: 'San Jose, Costa Rica',
     attendance: 136,
     winner: {
-      id: 3,
+      _id: '3',
       name: 'Pakawat Pamornsut',
       nationality: 'US',
       deck: {
-        id: 2,
+        _id: '2',
         name: 'Snake-Eye',
-        archetype: 'Snake-Eye',
+        engines: ['Snake-Eye'],
         thumbnail: '48452496.jpg',
       },
     },
   },
   player: {
-    id: 3,
+    _id: '3',
     name: 'Pakawat Pamornsut',
     nationality: 'US',
   },

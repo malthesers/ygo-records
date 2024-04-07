@@ -2,7 +2,7 @@ import { IDeckType } from './deck'
 import { IPlayer } from './player'
 
 export interface IEvent {
-  id: number
+  _id: string
   name: string
   type: EventType
   year: number
@@ -18,11 +18,11 @@ export interface IEvent {
   // }
 }
 
-type EventType = IEventTypeYCS | IEventTypeTeamYCS | IEventTypeWCQ
-
 interface IWinner extends IPlayer {
   deck: IDeckType
 }
+
+type EventType = IEventTypeWCQ | IEventTypeYCS | IEventTypeTeamYCS | IEventTypeRemoteYCS
 
 interface IEventTypeWCQ {
   name: 'WCQ'
@@ -37,4 +37,9 @@ interface IEventTypeYCS {
 interface IEventTypeTeamYCS {
   name: 'TEAM YCS'
   slug: 'team-ycs'
+}
+
+interface IEventTypeRemoteYCS {
+  name: 'Remote YCS'
+  slug: 'remote-ycs'
 }

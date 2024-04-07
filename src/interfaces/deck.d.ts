@@ -2,10 +2,9 @@ import { IEvent } from './event'
 import { IPlayer } from './player'
 
 export interface IDeckType {
-  id: number
+  _id: string
   name: string
-  archetype: string
-  engine?: string[]
+  engines: string[]
   thumbnail: string
 }
 
@@ -13,16 +12,18 @@ export interface ITopDeck extends IDeckType {
   topCutPercentage: number
 }
 
-export interface IDeck extends IDeckType {
-  decklist: IDeckList
+export interface IDeck {
+  placement: Placement
+  deckType: IDeckType
+  decklist: IDecklist
   player: IPlayer
   event: IEvent
-  place: Place
+  engines?: string[]
 }
 
-type Place = '1st' | '2nd' | 'Top 4' | 'Top 8' | 'Top 16' | 'Top 32' | 'Top 64' | 'Top 128'
+type Placement = 1 | 2 | 4 | 8 | 16 | 32 | 64 | 128
 
-export interface IDeckList {
+export interface IDecklist {
   mainDeck: {
     monsters: IDeckTypeCard[]
     spells: IDeckTypeCard[]

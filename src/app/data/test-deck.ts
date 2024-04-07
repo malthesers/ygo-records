@@ -1,14 +1,16 @@
 import { IDeck } from '@/interfaces/deck'
 
 export const testDeck: IDeck = {
-  id: 1,
-  name: 'Runick Bystial',
-  archetype: 'Runick',
-  engine: ['Bystial'],
-  thumbnail: '92107604.jpg',
-  place: '1st',
+  _id: '1',
+  placement: 1,
+  deckType: {
+    _id: '1',
+    name: 'Runick Bystial',
+    engines: ['Runick', 'Bystial'],
+    thumbnail: '92107604.jpg',
+  },
   event: {
-    id: 1,
+    _id: '1',
     name: 'YCS Bologna 2023',
     type: {
       name: 'YCS',
@@ -19,20 +21,19 @@ export const testDeck: IDeck = {
     location: 'Bologna, Italy',
     attendance: 2488,
     winner: {
-      id: 1,
+      _id: '1',
       name: 'Joshua Schmidt',
       nationality: 'DE',
       deck: {
-        id: 1,
+        _id: '1',
         name: 'Runick Bystial',
-        archetype: 'Runick',
-        engine: ['Bystial'],
+        engines: ['Runick', 'Bystial'],
         thumbnail: '92107604.jpg',
       },
     },
   },
   player: {
-    id: 1,
+    _id: '1',
     name: 'Joshua Schmidt',
     nationality: 'DE',
   },
