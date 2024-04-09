@@ -14,7 +14,7 @@ const ycsTestData: IEvent[] = [
     attendance: 2488,
     winner: {
       _id: '1',
-      name: 'Joshua Schm_idt',
+      name: 'Joshua Schmidt',
       nationality: 'DE',
       deck: {
         _id: '1',

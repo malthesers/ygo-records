@@ -1,6 +1,6 @@
 'use client'
 
-import TournamentTable from '@/components/tournament/TournamentTable'
+import TournamentTable from '@/components/tables/TournamentTable'
 import SplashBanner from '@/components/SplashBanner'
 import type { Metadata } from 'next'
 import splash from '~/images/splash/team-ycs.png'

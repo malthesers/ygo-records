@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react'
 import { IPlayer } from '@/interfaces/player'
 import { IDeck } from '@/interfaces/deck'
 import PlayerInfo from './PlayerInfo'
-import DeckTable from './DeckTable'
+import DeckTable from '../../../components/tables/DeckTable'
 
 export default function PlayerPage({ params }: { params: { slug: number } }) {
   const [player, setPlayer] = useState<IPlayer | null>()
