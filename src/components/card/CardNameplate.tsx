@@ -9,7 +9,7 @@ export default function CardNameplate({ card }: CardNameplateProps) {
   let attributeIcon = card.cardType === 'Spell' ? 'SPELL' : card.cardType === 'Trap' ? 'TRAP' : card.attribute
 
   return (
-    <div className='w-[87%] h-[6%] mt-[7%] mx-auto flex flex-row justify-between overflow-hidden'>
+    <div className='w-[87%] h-[6.5%] mt-[7%] p-[0.5%] mx-auto flex flex-row justify-between overflow-hidden'>
       <p className='max-w-[90%] font-card-title text-[2.7rem] leading-[0.75] text-nowrap'>
         {/* <span>{name}</span> */}
       </p>

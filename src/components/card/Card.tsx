@@ -21,7 +21,7 @@ export default function Card({ card }: CardProps) {
       <Image
         src={`/images/card-frame/${card.frame}.jpg`}
         alt='yugioh card frame'
-        className='w-[93%] m-auto'
+        className='w-[93%] pt-[4%] mx-auto'
         width={475}
         height={550}
         priority

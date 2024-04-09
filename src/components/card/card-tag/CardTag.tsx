@@ -9,7 +9,7 @@ interface CardTagProps {
 
 export default function CardTag({ card }: CardTagProps) {
   return (
-    <div className='w-full h-[4.5%] mt-[17.6%] mx-auto'>
+    <div className='w-full h-[4.5%] mt-[18%] mx-auto'>
       {/* {(card.cardType === 'Spell' || card.cardType === 'Trap') && <p className='w-[79%]'>[{card.cardType} Card]</p>} */}
       {card.cardType === 'Monster' && card.monsterCardType === 'Xyz' && <CardTagRank rank={card.rank} />}
       {card.cardType === 'Monster' && card.monsterCardType !== 'Xyz' && card.monsterCardType !== 'Link' && (
