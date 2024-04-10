@@ -19,7 +19,7 @@ export default function DeckTypePage({ params }: { params: { slug: string } }) {
   return (
     <main>
       {deckType && <DeckInfo deckType={deckType} />}
-      {decks && <DeckTable decks={decks} showPlayer />}
+      {decks && <DeckTable decks={decks} showPlayer showEngines />}
     </main>
   )
 }

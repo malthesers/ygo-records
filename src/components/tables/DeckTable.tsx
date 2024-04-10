@@ -6,15 +6,17 @@ import PlacementCell from './cells/PlacementCell'
 import DateCell from './cells/DateCell'
 import DeckCell from './cells/DeckCell'
 import EventCell from './cells/EventCell'
+import EnginesCell from './cells/EnginesCell'
 
 interface DeckTableProps {
   decks: IDeck[]
   showEvent?: boolean
   showPlayer?: boolean
   showDeck?: boolean
+  showEngines?: boolean
 }
 
-export default function DeckTable({ decks, showEvent, showPlayer, showDeck }: DeckTableProps) {
+export default function DeckTable({ decks, showEvent, showPlayer, showDeck, showEngines }: DeckTableProps) {
   const duplicatedData = Array.from({ length: 10 }, () => decks).flat()
 
   return (
@@ -27,6 +29,7 @@ export default function DeckTable({ decks, showEvent, showPlayer, showDeck }: De
             <th>Placement</th>
             {showPlayer && <th>Player</th>}
             {showDeck && <th>Deck</th>}
+            {showEngines && <th>Engines</th>}
           </tr>
         </thead>
         <tbody>
@@ -37,6 +40,7 @@ export default function DeckTable({ decks, showEvent, showPlayer, showDeck }: De
               <PlacementCell placement={deck.placement} />
               {showPlayer && <PlayerCell player={deck.player} />}
               {showDeck && <DeckCell deckType={deck.deckType} />}
+              {showEngines && <EnginesCell engines={deck.additionalEngines} />}
             </tr>
           ))}
         </tbody>
