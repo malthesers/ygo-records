@@ -1,6 +1,6 @@
 'use client'
 
-export default function EventPage() {
+export default function EventsPage() {
   return (
     <main>
       <h1>Events</h1>
