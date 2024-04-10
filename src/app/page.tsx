@@ -4,8 +4,8 @@ import TopDecks from '@/components/landing/top-decks/TopDecks'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'YGOTops',
-  description: 'YGOTops',
+  title: 'YGO Records',
+  description: 'YGO Records',
 }
 
 export default function Home() {

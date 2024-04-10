@@ -24,7 +24,7 @@ export default function EventTypePage({ params }: { params: { eventType: EventSl
     } else {
       setEvents(ycsTestData)
     }
-  }, [])
+  }, [params.eventType])
 
   return (
     <main>

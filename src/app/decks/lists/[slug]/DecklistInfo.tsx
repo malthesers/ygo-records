@@ -34,7 +34,7 @@ export default function DecklistInfo({ deck }: DecklistInfoProps) {
           </div>
           <div className='flex flex-row gap-1'>
             <span>Piloted by</span>
-            <Link href={`/players/${player.slug}`}>{deck.player.name}</Link>
+            <Link href={`/players/${deck.player.slug}`}>{deck.player.name}</Link>
           </div>
         </div>
       </div>
