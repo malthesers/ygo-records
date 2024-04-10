@@ -4,6 +4,7 @@ const teamYcsTestData: IEvent[] = [
   {
     _id: '3',
     name: 'TEAM YCS San Jose 2024',
+    slug: 'san-jose-2024',
     type: {
       name: 'TEAM YCS',
       slug: 'team-ycs',
@@ -15,6 +16,7 @@ const teamYcsTestData: IEvent[] = [
     winner: {
       _id: '3',
       name: 'Pakawat Pamornsut',
+      slug: 'pakawat-pamornsut',
       nationality: 'US',
       deck: {
         _id: '2',
@@ -27,6 +29,7 @@ const teamYcsTestData: IEvent[] = [
     winner2: {
       _id: '4',
       name: 'Kamal Crooks-Valdez',
+      slug: 'kamal-crooks-valdez',
       nationality: 'US',
       deck: {
         _id: '2',
@@ -39,6 +42,7 @@ const teamYcsTestData: IEvent[] = [
     winner3: {
       _id: '5',
       name: 'Ruben Penaranda',
+      slug: 'ruben-penaranda',
       nationality: 'US',
       deck: {
         _id: '3',
@@ -52,6 +56,7 @@ const teamYcsTestData: IEvent[] = [
   {
     _id: '4',
     name: 'TEAM YCS Las Vegas 2024',
+    slug: 'las-vegas-2024',
     type: {
       name: 'TEAM YCS',
       slug: 'team-ycs',
@@ -63,6 +68,7 @@ const teamYcsTestData: IEvent[] = [
     winner: {
       _id: '6',
       name: 'Hani Jawhari',
+      slug: 'hani-jawhari',
       nationality: 'US',
       deck: {
         _id: '4',
@@ -75,6 +81,7 @@ const teamYcsTestData: IEvent[] = [
     winner2: {
       _id: '7',
       name: 'Hisam Jawhari',
+      slug: 'hisam-jawhari',
       nationality: 'US',
       deck: {
         _id: '3',
@@ -87,6 +94,7 @@ const teamYcsTestData: IEvent[] = [
     winner3: {
       _id: '8',
       name: 'Chris LeBlanc',
+      slug: 'chris-leblanc',
       nationality: 'US',
       deck: {
         _id: '4',

@@ -20,7 +20,7 @@ export default function PlayerPage({ params }: { params: { slug: number } }) {
   return (
     <main className='space-y-4'>
       {player && <PlayerInfo player={player} />}
-      {decks && <DeckTable decks={decks} />}
+      {decks && <DeckTable decks={decks} showDeck />}
     </main>
   )
 }

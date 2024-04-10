@@ -4,6 +4,7 @@ const ycsTestData: IEvent[] = [
   {
     _id: '1',
     name: 'YCS Bologna 2023',
+    slug: 'bologna-2023',
     type: {
       name: 'YCS',
       slug: 'ycs',
@@ -15,6 +16,7 @@ const ycsTestData: IEvent[] = [
     winner: {
       _id: '1',
       name: 'Joshua Schmidt',
+      slug: 'joshua-schmidt',
       nationality: 'DE',
       deck: {
         _id: '1',
@@ -28,6 +30,7 @@ const ycsTestData: IEvent[] = [
   {
     _id: '2',
     name: 'YCS Richmond 2023',
+    slug: 'richmond-2023',
     type: {
       name: 'YCS',
       slug: 'ycs',
@@ -39,6 +42,7 @@ const ycsTestData: IEvent[] = [
     winner: {
       _id: '2',
       name: 'Joseph Bellafiore',
+      slug: 'joseph-bellafiore',
       nationality: 'US',
       deck: {
         _id: '3',

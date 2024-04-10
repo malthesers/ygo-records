@@ -13,6 +13,7 @@ export const testDeck: IDeck = {
   event: {
     _id: '1',
     name: 'YCS Bologna 2023',
+    slug: 'bologna-2023',
     type: {
       name: 'YCS',
       slug: 'ycs',
@@ -24,6 +25,7 @@ export const testDeck: IDeck = {
     winner: {
       _id: '1',
       name: 'Joshua Schmidt',
+      slug: 'joshua-schmidt',
       nationality: 'DE',
       deck: {
         _id: '1',
@@ -37,6 +39,7 @@ export const testDeck: IDeck = {
   player: {
     _id: '1',
     name: 'Joshua Schmidt',
+    slug: 'joshua-schmidt',
     nationality: 'DE',
   },
   decklist: {

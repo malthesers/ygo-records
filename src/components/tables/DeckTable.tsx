@@ -1,14 +1,20 @@
 'use client'
 
 import { IDeck } from '@/interfaces/deck'
-import formatPlacement from '@/services/formatPlacement'
-import Link from 'next/link'
+import PlayerCell from './cells/PlayerCell'
+import PlacementCell from './cells/PlacementCell'
+import DateCell from './cells/DateCell'
+import DeckCell from './cells/DeckCell'
+import EventCell from './cells/EventCell'
 
 interface DeckTableProps {
   decks: IDeck[]
+  showEvent?: boolean
+  showPlayer?: boolean
+  showDeck?: boolean
 }
 
-export default function DeckTable({ decks }: DeckTableProps) {
+export default function DeckTable({ decks, showEvent, showPlayer, showDeck }: DeckTableProps) {
   const duplicatedData = Array.from({ length: 10 }, () => decks).flat()
 
   return (
@@ -19,20 +25,18 @@ export default function DeckTable({ decks }: DeckTableProps) {
             <th>Date</th>
             <th>Tournament</th>
             <th>Placement</th>
-            <th>Deck</th>
+            {showPlayer && <th>Player</th>}
+            {showDeck && <th>Deck</th>}
           </tr>
         </thead>
         <tbody>
           {duplicatedData?.map((deck, index) => (
             <tr key={index}>
-              <td className='hidden md:table-cell'>{deck.event.date}</td>
-              <td className='text-xl font-semibold md:text-lg md:font-normal'>
-                <Link href='/'>{deck.event.name}</Link>
-              </td>
-              <td>{formatPlacement(deck.placement)}</td>
-              <td className='*:block'>
-                <Link href='/decks/lists/0'>{deck.deckType.name}</Link>
-              </td>
+              <DateCell date={deck.event.date} />
+              <EventCell event={deck.event} />
+              <PlacementCell placement={deck.placement} />
+              {showPlayer && <PlayerCell player={deck.player} />}
+              {showDeck && <DeckCell deckType={deck.deckType} />}
             </tr>
           ))}
         </tbody>

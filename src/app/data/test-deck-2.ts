@@ -13,6 +13,7 @@ export const testDeck2: IDeck = {
   event: {
     _id: '3',
     name: 'TEAM YCS San Jose 2024',
+    slug: 'san-jose-2024',
     type: {
       name: 'TEAM YCS',
       slug: 'team-ycs',
@@ -24,6 +25,7 @@ export const testDeck2: IDeck = {
     winner: {
       _id: '3',
       name: 'Pakawat Pamornsut',
+      slug: 'pakawat-pamornsut',
       nationality: 'US',
       deck: {
         _id: '2',
@@ -37,6 +39,7 @@ export const testDeck2: IDeck = {
   player: {
     _id: '3',
     name: 'Pakawat Pamornsut',
+    slug: 'pakawat-pamornsut',
     nationality: 'US',
   },
   decklist: {

@@ -1,7 +1,11 @@
 'use client'
 
 import { IEvent } from '@/interfaces/event'
-import Link from 'next/link'
+import PlayerCell from './cells/PlayerCell'
+import DateCell from './cells/DateCell'
+import DeckCell from './cells/DeckCell'
+import AttendanceCell from './cells/AttendanceCell'
+import EventCell from './cells/EventCell'
 
 interface TournamentTableProps {
   events: IEvent[]
@@ -25,23 +29,11 @@ export default function TournamentTable({ events }: TournamentTableProps) {
         <tbody>
           {duplicatedData?.map((event, index) => (
             <tr key={index}>
-              <td className='hidden md:table-cell'>{event.date}</td>
-              <td className='text-xl font-semibold md:text-lg md:font-normal'>
-                <Link href='/'>{event.name}</Link>
-              </td>
-              <td className='hidden md:table-cell'>
-                {event.attendance} {event.type.slug === 'team-ycs' && 'teams'}
-              </td>
-              <td className='*:block'>
-                <Link href='/players/0'>{event.winner.name}</Link>
-                {event.winner2 && <Link href='/players/0'>{event.winner2?.name}</Link>}
-                {event.winner3 && <Link href='/players/0'>{event.winner3?.name}</Link>}
-              </td>
-              <td className='*:block'>
-                <Link href='/decks/lists/0'>{event.winner.deck.name}</Link>
-                {event.winner2 && <Link href='/decks/lists/1'>{event.winner2?.deck.name}</Link>}
-                {event.winner3 && <Link href='/decks/lists/1'>{event.winner3?.deck.name}</Link>}
-              </td>
+              <DateCell date={event.date} />
+              <EventCell event={event} />
+              <AttendanceCell attendance={event.attendance} isTeamYCS={event.type.slug === 'team-ycs'} />
+              <PlayerCell player={event.winner} player2={event.winner2} player3={event.winner3} />
+              <DeckCell deckType={event.winner.deck} deckType2={event.winner2?.deck} deckType3={event.winner3?.deck} />
             </tr>
           ))}
         </tbody>

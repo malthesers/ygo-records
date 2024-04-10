@@ -4,6 +4,7 @@ import { IPlayer } from './player'
 export interface IEvent {
   _id: string
   name: string
+  slug: string
   type: EventType
   year: number
   date: string
