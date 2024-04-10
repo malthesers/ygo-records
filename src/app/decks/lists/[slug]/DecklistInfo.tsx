@@ -1,4 +1,5 @@
 import { IDeck } from '@/interfaces/deck'
+import formatPlacement from '@/services/formatPlacement'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -27,7 +28,7 @@ export default function DecklistInfo({ deck }: DecklistInfoProps) {
             ))}
           </div>
           <div className='flex flex-row gap-1'>
-            <span className='font-semibold'>{deck.placement}</span>
+            <span className='font-semibold'>{formatPlacement(deck.placement)}</span>
             <span>at</span>
             <Link href='/'>{deck.event.name}</Link>
           </div>

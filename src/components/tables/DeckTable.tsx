@@ -1,6 +1,7 @@
 'use client'
 
 import { IDeck } from '@/interfaces/deck'
+import formatPlacement from '@/services/formatPlacement'
 import Link from 'next/link'
 
 interface DeckTableProps {
@@ -9,16 +10,6 @@ interface DeckTableProps {
 
 export default function DeckTable({ decks }: DeckTableProps) {
   const duplicatedData = Array.from({ length: 10 }, () => decks).flat()
-  const placements = {
-    '1': '1st',
-    '2': '2nd',
-    '4': 'Top 4',
-    '8': 'Top 8',
-    '16': 'Top 16',
-    '32': 'Top 32',
-    '64': 'Top 64',
-    '128': 'Top 128',
-  }
 
   return (
     <section>
@@ -38,7 +29,7 @@ export default function DeckTable({ decks }: DeckTableProps) {
               <td className='text-xl font-semibold md:text-lg md:font-normal'>
                 <Link href='/'>{deck.event.name}</Link>
               </td>
-              <td>{placements[deck.placement]}</td>
+              <td>{formatPlacement(deck.placement)}</td>
               <td className='*:block'>
                 <Link href='/decks/lists/0'>{deck.deckType.name}</Link>
               </td>
