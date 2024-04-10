@@ -23,6 +23,8 @@ interface IWinner extends IPlayer {
   deck: IDeckType
 }
 
+export type EventSlug = 'wcq' | 'ycs' | 'team-ycs' | 'remote-ycs'
+
 type EventType = IEventTypeWCQ | IEventTypeYCS | IEventTypeTeamYCS | IEventTypeRemoteYCS
 
 interface IEventTypeWCQ {
