@@ -8,7 +8,7 @@ interface EventCellProps {
 export default function EventCell({ event }: EventCellProps) {
   return (
     <td className='text-xl font-semibold md:text-lg md:font-normal'>
-      <Link href={`/tournaments/${event.type.slug}/${event.slug}`}>{event.name}</Link>
+      <Link href={`/events/${event.type.slug}/${event.slug}`}>{event.name}</Link>
     </td>
   )
 }

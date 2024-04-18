@@ -12,10 +12,10 @@ export default function Header() {
           <span className='font-bold text-xl md:text-2xl'>YGO RECORDS</span>
         </Link>
         <div className='hidden md:flex self-center gap-4 '>
-          <Link href='/tournaments/wcq'>WCQ</Link>
-          <Link href='/tournaments/ycs'>YCS</Link>
-          <Link href='/tournaments/team-ycs'>TEAM YCS</Link>
-          <Link href='/tournaments/remote-ycs'>Remote YCS</Link>
+          <Link href='/events/wcq'>WCQ</Link>
+          <Link href='/events/ycs'>YCS</Link>
+          <Link href='/events/team-ycs'>TEAM YCS</Link>
+          <Link href='/events/remote-ycs'>Remote YCS</Link>
           {/* <Link href='/worlds'>Worlds</Link> */}
         </div>
       </nav>
