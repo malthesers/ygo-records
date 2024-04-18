@@ -19,7 +19,7 @@ export default function RecentEventCard({ event }: RecentEventCardProps) {
     //     <Image src={`/images/logos/${event.type.slug}.png`} alt='event logo' width={60} height={10}></Image>
     //   </div>
     // </article>
-    // <Link href='/' className='no-underline'>
+    // <Link href={`/events/${deck.event.type.slug}/${deck.event.slug}`} className='no-underline'>
     //   <article className='bg-sky-900 p-2 text-center grid grid-cols-1 grid-rows-1 *:grid-center shadow-2xl duration-200 hover:bg-sky-950'>
     //     <div className='relative opacity-30'>
     //       <Image
@@ -37,7 +37,7 @@ export default function RecentEventCard({ event }: RecentEventCardProps) {
     //     </div>
     //   </article>
     // </Link>
-    <Link href='/' className='no-underline'>
+    <Link href={`/events/${event.type.slug}/${event.slug}`} className='no-underline'>
       <article className='w-full max-w-[30rem] mx-auto grid grid-cols-12 grid-rows-7 pr-4 sm:pr-0 text-center'>
         <Image
           className='col-start-1 col-end-6 row-start-1 row-end-8 z-10 object-cover w-32 m-auto'
