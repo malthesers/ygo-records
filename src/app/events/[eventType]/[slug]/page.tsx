@@ -15,7 +15,7 @@ export default function EventPage({ params }: { params: { slug: string } }) {
   useEffect(() => {
     setEvent(ycsTestData[0])
     setDecks(testDecks)
-  })
+  }, [event, decks])
 
   return (
     <main>

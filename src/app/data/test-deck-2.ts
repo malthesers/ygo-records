@@ -35,6 +35,8 @@ export const testDeck2: IDeck = {
         thumbnail: '48452496',
       },
     },
+    thumbnail: '',
+    topcut: 64,
   },
   player: {
     _id: '3',
