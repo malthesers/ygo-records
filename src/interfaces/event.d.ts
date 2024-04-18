@@ -7,6 +7,7 @@ export interface IEvent {
   slug: string
   thumbnail: string
   type: EventType
+  topcut: TopCut
   year: number
   date: string
   location: string
@@ -14,15 +15,13 @@ export interface IEvent {
   winner: IWinner
   winner2?: IWinner
   winner3?: IWinner
-  // structure: {
-  //   rounds: number
-  //   cutoff: number
-  // }
 }
 
 interface IWinner extends IPlayer {
   deck: IDeckType
 }
+
+type TopCut = 8 | 16 | 32 | 64 | 128
 
 export type EventSlug = 'wcq' | 'ycs' | 'team-ycs' | 'remote-ycs'
 
