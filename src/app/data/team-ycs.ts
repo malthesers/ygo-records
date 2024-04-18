@@ -5,6 +5,7 @@ const teamYcsTestData: IEvent[] = [
     _id: '3',
     name: 'TEAM YCS San Jose 2024',
     slug: 'san-jose-2024',
+    thumbnail: 'las-vegas',
     type: {
       name: 'TEAM YCS',
       slug: 'team-ycs',
@@ -57,6 +58,7 @@ const teamYcsTestData: IEvent[] = [
     _id: '4',
     name: 'TEAM YCS Las Vegas 2024',
     slug: 'las-vegas-2024',
+    thumbnail: 'las-vegas',
     type: {
       name: 'TEAM YCS',
       slug: 'team-ycs',

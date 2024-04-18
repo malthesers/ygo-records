@@ -5,6 +5,7 @@ const ycsTestData: IEvent[] = [
     _id: '1',
     name: 'YCS Bologna 2023',
     slug: 'bologna-2023',
+    thumbnail: 'las-vegas',
     type: {
       name: 'YCS',
       slug: 'ycs',
@@ -31,6 +32,7 @@ const ycsTestData: IEvent[] = [
     _id: '2',
     name: 'YCS Richmond 2023',
     slug: 'richmond-2023',
+    thumbnail: 'las-vegas',
     type: {
       name: 'YCS',
       slug: 'ycs',

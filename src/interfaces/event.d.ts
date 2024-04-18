@@ -5,6 +5,7 @@ export interface IEvent {
   _id: string
   name: string
   slug: string
+  thumbnail: string
   type: EventType
   year: number
   date: string

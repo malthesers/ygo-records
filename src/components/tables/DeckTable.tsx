@@ -24,8 +24,8 @@ export default function DeckTable({ decks, showEvent, showPlayer, showDeck, show
       <table>
         <thead>
           <tr>
-            <th>Date</th>
-            <th>Tournament</th>
+            {showEvent && <th>Date</th>}
+            {showEvent && <th>Tournament</th>}
             <th>Placement</th>
             {showPlayer && <th>Player</th>}
             {showDeck && <th>Deck</th>}
@@ -35,8 +35,8 @@ export default function DeckTable({ decks, showEvent, showPlayer, showDeck, show
         <tbody>
           {duplicatedData?.map((deck, index) => (
             <tr key={index}>
-              <DateCell date={deck.event.date} />
-              <EventCell event={deck.event} />
+              {showEvent && <DateCell date={deck.event.date} />}
+              {showEvent && <EventCell event={deck.event} />}
               <PlacementCell placement={deck.placement} />
               {showPlayer && <PlayerCell player={deck.player} />}
               {showDeck && <DeckCell deckType={deck.deckType} />}
