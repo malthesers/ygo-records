@@ -18,7 +18,7 @@ export default function PlayerInfo({ player }: PlayerInfoProps) {
           {player.socials && (
             <div className='flex flex-row gap-4'>
               {player.socials.youtube && (
-                <ExternalLink href={'https://youtube.com/' + player.socials.youtube}>
+                <ExternalLink href={'https://youtube.com/@' + player.socials.youtube}>
                   <FaYoutube size='2rem' />
                 </ExternalLink>
               )}
