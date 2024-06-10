@@ -1,17 +1,19 @@
-'use client'
-
 import { ICard } from '@/interfaces/card'
 import { useEffect, useState } from 'react'
 import CardInfo from './CardInfo'
 import Card from '@/components/card/Card'
 import { testCards } from '@/app/data/test-cards'
 
-export default function CardPage({ params }: { params: { slug: string } }) {
-  const [card, setCard] = useState<ICard | null>()
+export default async function CardPage({ params }: { params: { slug: string } }) {
+  const response = await fetch('https://ygo-records-api.onrender.com/cards/' + params.slug)
+  const card: ICard = await response.json()
+  // const [card, setCard] = useState<ICard | null>()
 
-  useEffect(() => {
-    setCard(testCards.find(({ id }) => id.toString() === params.slug))
-  }, [params.slug])
+  // console.log('yo')
+
+  // useEffect(() => {
+  //   setCard(testCards.find(({ id }) => id.toString() === params.slug))
+  // }, [params.slug])
 
   return (
     <main className='space-y-4'>

@@ -8,7 +8,7 @@ export default function Footer() {
       <div className='max-w-6xl mx-auto py-16 px-3 text-center grid sm:grid-cols-2 md:grid-cols-3 gap-4'>
         <div className='sm:col-span-2 md:col-span-1'>
           <Link href='/' className='no-underline'>
-            <Image src={logo} alt='YGO Records logo' width={100} className='mx-auto' />
+            <Image src={logo} alt='YGO Records logo' width={100} className='mx-auto' priority />
             <span className='font-bold text-2xl'>YGO RECORDS</span>
           </Link>
         </div>
