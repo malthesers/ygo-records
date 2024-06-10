@@ -1,8 +1,7 @@
 'use client'
 
 import { IEvent } from '@/interfaces/event'
-import { DateCell, DeckCell, EventCell, PlayerCell } from './cells/'
-import AttendanceCell from './cells/AttendanceCell'
+import { DateCell, DeckCell, EventCell, PlayerCell, AttendanceCell } from './cells'
 
 interface TournamentTableProps {
   events: IEvent[]
