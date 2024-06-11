@@ -9,8 +9,10 @@ export interface IDeckType {
   thumbnail: string
 }
 
-export interface ITopDeck extends IDeckType {
-  topCutPercentage: number
+export interface ITopDeckType extends IDeckType {
+  percentage: string
+  count: number
+  rank: number
 }
 
 export interface IDeck {

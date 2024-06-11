@@ -1,9 +1,9 @@
-import { ITopDeck } from '@/interfaces/deck'
+import { ITopDeckType } from '@/interfaces/deck'
 import Image from 'next/image'
 import Link from 'next/link'
 
 interface TopDeckCardProps {
-  topDeck: ITopDeck
+  topDeck: ITopDeckType
 }
 
 export default function TopDeckCard({ topDeck }: TopDeckCardProps) {
@@ -22,11 +22,11 @@ export default function TopDeckCard({ topDeck }: TopDeckCardProps) {
       <div className='flex flex-col'>
         <Link href={'/decks/' + topDeck.slug} className='py-1 px-2 no-underline duration-200 hover:bg-sky-950'>
           <p className='text-lg font-semibold'>
-            <span>{topDeck._id}. </span>
+            <span>{topDeck.rank}. </span>
             <span>{topDeck.name}</span>
           </p>
           <p>
-            <span className='text-sm'>{topDeck.topCutPercentage}%</span>
+            <span className='text-sm'>{topDeck.percentage}%</span>
             <span className='text-xs'> of recent events</span>
           </p>
         </Link>
