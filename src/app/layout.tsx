@@ -27,9 +27,9 @@ export const metadata: Metadata = {
   title: 'YGO Records',
   description: 'YGO Records | Discover the newest and most effective decks',
   keywords: ['yugioh', 'yu-gi-oh!', 'meta'],
-  viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
-  themeColor: '#0C4A6E',
-  colorScheme: 'dark',
+  // viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
+  // themeColor: '#0C4A6E',
+  // colorScheme: 'dark',
   authors: { name: 'Malthesers (Malthe Kusk Lauritsen)', url: 'https://malthesers.github.io/' },
   creator: 'Malthesers',
   openGraph: {

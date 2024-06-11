@@ -11,9 +11,9 @@ interface CardArtworkProps {
 
 export default function CardArtwork({ card, isPendulum }: CardArtworkProps) {
   const [src, setSrc] = useState<string>(`/images/placeholders/${card.id}.jpg`)
-  function setFallback() {
-    setSrc(`/images/placeholders/10045474.jpg`)
-  }
+  // function setFallback() {
+  //   setSrc(`/images/placeholders/10045474.jpg`)
+  // }
 
   return (
     <Image
@@ -23,7 +23,7 @@ export default function CardArtwork({ card, isPendulum }: CardArtworkProps) {
       width={450}
       height={450}
       priority
-      onError={setFallback}
+      // onError={setFallback}
     />
   )
 }

@@ -1,7 +1,7 @@
 'use client'
 
 import { IDeck } from '@/interfaces/deck'
-import { DateCell, DeckCell, EnginesCell, EventCell, PlacementCell, PlayerCell } from './cells/'
+import { DateCell, DeckCell, EnginesCell, EventCell, PlacementCell, PlayerCell } from './cells'
 
 interface DeckTableProps {
   decks: IDeck[]
