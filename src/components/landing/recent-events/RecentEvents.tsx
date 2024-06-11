@@ -1,17 +1,11 @@
-'use client'
-
 import { useEffect, useState } from 'react'
 import RecentEventCard from './RecentEventCard'
 import { IEvent } from '@/interfaces/event'
 import recentEventsTest from '@/app/data/recent-events'
+import getData from '@/services/getData'
 
-export default function RecentEvents() {
-  const [recentEvents, setRecentEvents] = useState<IEvent[] | null>([])
-
-  useEffect(() => {
-    setRecentEvents(recentEventsTest)
-  }, [])
-
+export default async function RecentEvents() {
+  const recentEvents = await getData<IEvent[]>('events')
   return (
     <aside>
       <h2>Recent Events</h2>
