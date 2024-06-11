@@ -12,8 +12,6 @@ interface DeckTableProps {
 }
 
 export default function DeckTable({ decks, showEvent, showPlayer, showDeck, showEngines }: DeckTableProps) {
-  const duplicatedData = Array.from({ length: 10 }, () => decks).flat()
-
   return (
     <section>
       <table>
@@ -28,7 +26,7 @@ export default function DeckTable({ decks, showEvent, showPlayer, showDeck, show
           </tr>
         </thead>
         <tbody>
-          {duplicatedData?.map((deck, index) => (
+          {decks?.map((deck, index) => (
             <tr key={index}>
               {showEvent && <DateCell date={deck.event.date} />}
               {showEvent && <EventCell event={deck.event} />}

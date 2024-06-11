@@ -31,12 +31,16 @@
     @apply text-lg underline underline-offset-2 duration-200 hover:opacity-70;
   }
 
+  section:has(> table) {
+    @apply bg-sky-900;
+  }
+
   table {
     @apply w-full;
   }
 
   thead {
-    @apply hidden md:table-header-group border-b-2 border-white;
+    @apply hidden md:table-header-group bg-sky-950 border-b-2 border-white;
   }
 
   tr {
@@ -49,6 +53,6 @@
   }
 
   tbody tr {
-    @apply grid md:table-row text-center odd:bg-sky-900;
+    @apply grid md:table-row text-center even:bg-sky-950;
   }
 }

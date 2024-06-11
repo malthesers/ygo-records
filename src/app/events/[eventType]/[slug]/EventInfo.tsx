@@ -8,7 +8,7 @@ interface EventInfoProps {
 
 export default function EventInfo({ event }: EventInfoProps) {
   return (
-    <section className='relative min-h-[15rem] p-0 grid grid-cols-1 grid-rows-1 *:grid-center'>
+    <section className='relative min-h-[20rem] p-0 grid grid-cols-1 grid-rows-1 *:grid-center'>
       <Image
         className='-z-10 object-cover'
         src={`/images/locations/${event.thumbnail}.jpg`}

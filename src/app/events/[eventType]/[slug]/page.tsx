@@ -1,26 +1,20 @@
-'use client'
-
-import ycsTestData from '@/app/data/ycs'
 import { IEvent } from '@/interfaces/event'
-import { useEffect, useState } from 'react'
 import EventInfo from './EventInfo'
 import DeckTable from '@/components/tables/DeckTable'
 import { IDeck } from '@/interfaces/deck'
-import { testDecks } from '@/app/data/test-decks'
+import getData from '@/services/getData'
 
-export default function EventPage({ params }: { params: { slug: string } }) {
-  const [event, setEvent] = useState<IEvent>()
-  const [decks, setDecks] = useState<IDeck[]>()
+interface IEventInfo extends IEvent {
+  decks?: IDeck[]
+}
 
-  useEffect(() => {
-    setEvent(ycsTestData[0])
-    setDecks(testDecks)
-  }, [event, decks])
+export default async function EventPage({ params }: { params: { slug: string } }) {
+  const event = await getData<IEventInfo>(`events/${params.slug}`)
 
   return (
     <main>
       {event && <EventInfo event={event} />}
-      {decks && <DeckTable decks={decks} showPlayer showDeck showEngines />}
+      {event.decks && <DeckTable decks={event.decks} showPlayer showDeck showEngines />}
     </main>
   )
 }
