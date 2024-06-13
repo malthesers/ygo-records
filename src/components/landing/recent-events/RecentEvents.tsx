@@ -4,6 +4,7 @@ import getData from '@/services/getData'
 
 export default async function RecentEvents() {
   const recentEvents = await getData<IEvent[]>('events')
+
   return (
     <aside>
       <h2>Recent Events</h2>

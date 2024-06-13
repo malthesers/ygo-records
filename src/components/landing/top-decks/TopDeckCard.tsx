@@ -1,4 +1,5 @@
 import { ITopDeckType } from '@/interfaces/deck'
+import formatPlacement from '@/services/formatPlacement'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -31,10 +32,16 @@ export default function TopDeckCard({ topDeck }: TopDeckCardProps) {
           </p>
         </Link>
         <hr className='border-white/50'></hr>
-        <Link href='/decks/lists/1' className='h-full py-1 px-2 no-underline duration-200 hover:bg-sky-950'>
+        <Link
+          href={`/decks/lists/${topDeck.bestPerformance._id}`}
+          className='h-full py-1 px-2 no-underline duration-200 hover:bg-sky-950'
+        >
           <p className='text-xs italic'>Most succesful decklist</p>
-          <p className='text-sm'>1st Place TEAM YCS Las Vegas</p>
-          <p className='text-sm'>Pakawat Pamornsut</p>
+          <p className='text-sm'>
+            <span>{formatPlacement(topDeck.bestPerformance.placement)}</span>
+            <span> at {topDeck.bestPerformance.event}</span>
+          </p>
+          <p className='text-sm'>{topDeck.bestPerformance.player}</p>
         </Link>
       </div>
     </article>

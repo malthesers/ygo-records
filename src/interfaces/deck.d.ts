@@ -10,9 +10,15 @@ export interface IDeckType {
 }
 
 export interface ITopDeckType extends IDeckType {
-  percentage: string
-  count: number
   rank: number
+  count: number
+  percentage: string
+  bestPerformance: {
+    placement: Placement
+    player: string
+    event: string
+    _id: string
+  }
 }
 
 export interface IDeck {
@@ -25,7 +31,7 @@ export interface IDeck {
   additionalEngines?: string[]
 }
 
-export type Placement = 1 | 2 | 4 | 8 | 16 | 32 | 64 | 128
+export type Placement = 1 | 2 | 4 | 8 | 16 | 32 | 64 | 128 | 256
 
 export interface IDecklist {
   mainDeck: {
