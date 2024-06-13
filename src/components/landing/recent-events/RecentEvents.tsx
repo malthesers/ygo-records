@@ -1,7 +1,5 @@
-import { useEffect, useState } from 'react'
 import RecentEventCard from './RecentEventCard'
 import { IEvent } from '@/interfaces/event'
-import recentEventsTest from '@/app/data/recent-events'
 import getData from '@/services/getData'
 
 export default async function RecentEvents() {

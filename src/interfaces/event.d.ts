@@ -21,7 +21,7 @@ interface IWinner extends IPlayer {
   deck: IDeckType
 }
 
-type TopCut = 8 | 16 | 32 | 64 | 128
+type TopCut = 8 | 16 | 32 | 64 | 128 | 256
 
 export type EventSlug = 'wcq' | 'ycs' | 'team-ycs' | 'remote-ycs'
 

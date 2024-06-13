@@ -14,7 +14,7 @@ export default function EnginesCell({ engines }: EnginesCellProps) {
           </Link>
         ))
       ) : (
-        <p>Pure</p>
+        <p>{/* Pure */}</p>
       )}
     </td>
   )

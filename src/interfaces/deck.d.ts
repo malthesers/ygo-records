@@ -19,7 +19,7 @@ export interface IDeck {
   _id: string
   placement: Placement
   deckType: IDeckType
-  decklist: IDecklist
+  decklist?: IDecklist
   player: IPlayer
   event: IEvent
   additionalEngines?: string[]
