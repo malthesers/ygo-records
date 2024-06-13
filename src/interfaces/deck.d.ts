@@ -1,3 +1,4 @@
+import { ICard } from './card'
 import { IEvent } from './event'
 import { IPlayer } from './player'
 
@@ -34,16 +35,12 @@ export interface IDeck {
 export type Placement = 1 | 2 | 4 | 8 | 16 | 32 | 64 | 128 | 256
 
 export interface IDecklist {
-  mainDeck: {
-    monsters: IDeckTypeCard[]
-    spells: IDeckTypeCard[]
-    traps: IDeckTypeCard[]
-  }
+  mainDeck: IDeckTypeCard[]
   extraDeck: IDeckTypeCard[]
   sideDeck: IDeckTypeCard[]
 }
 
 interface IDeckTypeCard {
-  name: string
   count: 1 | 2 | 3
+  card: ICard
 }

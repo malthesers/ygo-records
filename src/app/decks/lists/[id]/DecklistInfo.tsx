@@ -30,7 +30,7 @@ export default function DecklistInfo({ deck }: DecklistInfoProps) {
           <div className='flex flex-row gap-1'>
             <span className='font-semibold'>{formatPlacement(deck.placement)}</span>
             <span>at</span>
-            <Link href='/'>{deck.event.name}</Link>
+            <Link href={`/events/${deck.event.type.slug}/${deck.event.slug}`}>{deck.event.name}</Link>
           </div>
           <div className='flex flex-row gap-1'>
             <span>Piloted by</span>

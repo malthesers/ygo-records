@@ -14,7 +14,7 @@
   section,
   header > nav,
   footer > div {
-    @apply max-w-7xl mx-auto p-4;
+    @apply max-w-6xl mx-auto p-4;
   }
 
   h1 {

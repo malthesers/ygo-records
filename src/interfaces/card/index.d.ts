@@ -4,6 +4,8 @@ import { ITrapCard } from './trap'
 
 export type ICard = IMonsterCard | ISpellCard | ITrapCard
 
+export type CardType = 'Monster' | 'Spell' | 'Trap'
+
 export interface ICardBase {
   id: string
   name: string

@@ -3,11 +3,11 @@ import CardRow from './CardRow'
 
 interface CardBoxProps {
   title: string
-  cards: IDeckTypeCard[]
+  cards: IDeckTypeCard[] | undefined
 }
 
 export default function CardBox({ title, cards }: CardBoxProps) {
-  const cardCount = cards.reduce((counter, currCard) => counter + currCard.count, 0)
+  const cardCount = cards?.reduce((counter, currCard) => counter + currCard.count, 0)
 
   return (
     <div className='bg-sky-900 h-fit'>
@@ -16,8 +16,8 @@ export default function CardBox({ title, cards }: CardBoxProps) {
         <span>({cardCount})</span>
       </p>
       <div className='px-4'>
-        {cards.map((card) => (
-          <CardRow key={card.name} card={card} />
+        {cards?.map((card) => (
+          <CardRow key={card.card.id} card={card} />
         ))}
       </div>
     </div>
