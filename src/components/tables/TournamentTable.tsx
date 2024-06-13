@@ -8,6 +8,8 @@ interface TournamentTableProps {
 }
 
 export default function TournamentTable({ events }: TournamentTableProps) {
+  console.log(events)
+
   return (
     <section>
       <table>
@@ -31,7 +33,7 @@ export default function TournamentTable({ events }: TournamentTableProps) {
                 player2={event.winner2?.player}
                 player3={event.winner3?.player}
               />
-              <DeckCell deck={event.winner.deck} deck2={event.winner2?.deck} deck3={event.winner3?.deck} />
+              {/* <DeckCell deck={event.winner.deck} deck2={event.winner2?.deck} deck3={event.winner3?.deck} /> */}
             </tr>
           ))}
         </tbody>

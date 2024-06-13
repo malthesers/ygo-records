@@ -24,10 +24,12 @@ const missingDeck: IDeck = {
     location: 'Bologna, Italy',
     attendance: 2488,
     winner: {
-      _id: '1',
-      name: 'Joshua Schmidt',
-      slug: 'joshua-schmidt',
-      nationality: 'DE',
+      player: {
+        _id: '0',
+        name: 'Joshua Schmidt',
+        slug: 'joshua-schmidt',
+        nationality: 'DE',
+      },
       deck: {
         _id: '1',
         name: 'Runick Bystial',
