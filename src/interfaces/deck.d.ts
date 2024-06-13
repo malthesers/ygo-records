@@ -23,6 +23,11 @@ export interface ITopDeckType extends IDeckType {
   }
 }
 
+export interface ITopDeckTypes {
+  totalDecks: number
+  deckTypes: ITopDeckType[]
+}
+
 export interface IDeck {
   _id: string
   placement: Placement

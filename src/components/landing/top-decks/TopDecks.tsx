@@ -1,12 +1,7 @@
-import { ITopDeckType } from '@/interfaces/deck'
+import { ITopDeckTypes } from '@/interfaces/deck'
 import TopDeckCard from './TopDeckCard'
 import Link from 'next/link'
 import getData from '@/services/getData'
-
-interface ITopDeckTypes {
-  totalDecks: number
-  deckTypes: ITopDeckType[]
-}
 
 export default async function TopDecksSection() {
   const topDecks = await getData<ITopDeckTypes>('decktypes/top')
