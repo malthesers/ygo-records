@@ -13,7 +13,7 @@ export interface ITopDeckType extends IDeckType {
   rank: number
   count: number
   percentage: string
-  bestPerformance: {
+  mostSuccessful: {
     placement: Placement
     player: string
     event: string
