@@ -3,9 +3,9 @@ import { IPlayer } from '@/interfaces/player'
 import Link from 'next/link'
 
 interface PlayerCellProps {
-  player: IPlayer | IWinner
-  player2?: IPlayer | IWinner
-  player3?: IPlayer | IWinner
+  player: IPlayer
+  player3?: IPlayer
+  player2?: IPlayer
 }
 
 export default function PlayerCell({ player, player2, player3 }: PlayerCellProps) {

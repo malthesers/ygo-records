@@ -17,8 +17,9 @@ export interface IEvent {
   winner3?: IWinner
 }
 
-interface IWinner extends IPlayer {
-  deck: IDeckType
+interface IWinner {
+  player: IPlayer
+  deck: IDeck
 }
 
 type TopCut = 8 | 16 | 32 | 64 | 128 | 256

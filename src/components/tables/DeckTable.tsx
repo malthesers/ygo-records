@@ -32,7 +32,7 @@ export default function DeckTable({ decks, showEvent, showPlayer, showDeck, show
               {showEvent && <EventCell event={deck.event} />}
               <PlacementCell placement={deck.placement} />
               {showPlayer && <PlayerCell player={deck.player} />}
-              {showDeck && <DeckCell deckType={deck.deckType} />}
+              {showDeck && <DeckCell deck={deck} />}
               {showEngines && <EnginesCell engines={deck.additionalEngines} />}
             </tr>
           ))}

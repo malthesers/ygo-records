@@ -1,36 +1,22 @@
-'use client'
-
 import { EventSlug, IEvent } from '@/interfaces/event'
 import { notFound } from 'next/navigation'
-import { useEffect, useState } from 'react'
 import TournamentTable from '@/components/tables/TournamentTable'
 import SplashBanner from '@/components/SplashBanner'
-import teamYcsTestData from '@/app/data/team-ycs'
-import ycsTestData from '@/app/data/ycs'
 import eventInfoData from '@/app/data/event-info'
+import getData from '@/services/getData'
 
-export default function EventTypePage({ params }: { params: { eventType: EventSlug } }) {
-  const eventSlugs: EventSlug[] = ['wcq', 'ycs', 'team-ycs', 'remote-ycs']
-  const [events, setEvents] = useState<IEvent[] | null>()
-  const eventInfo = eventInfoData
+export default async function EventTypePage({ params }: { params: { eventType: EventSlug } }) {
+  const events = await getData<IEvent[]>(`events/type/${params.eventType}`)
 
-  if (!eventSlugs.includes(params.eventType)) {
+  if (!Object.keys(eventInfoData).includes(params.eventType)) {
     notFound()
   }
-
-  useEffect(() => {
-    if (params.eventType === 'team-ycs') {
-      setEvents(teamYcsTestData)
-    } else {
-      setEvents(ycsTestData)
-    }
-  }, [params.eventType])
 
   return (
     <main>
       <SplashBanner
-        splash={eventInfo[params.eventType].splash}
-        logo={eventInfo[params.eventType].logo}
+        splash={eventInfoData[params.eventType].splash}
+        logo={eventInfoData[params.eventType].logo}
         alt='Yu-Gi-Oh! Championship Series'
         clear={params.eventType === 'remote-ycs'}
       />
