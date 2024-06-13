@@ -8,6 +8,7 @@ export interface IDeckType {
   slug: string
   engines: string[]
   thumbnail: string
+  decks?: IDeck[]
 }
 
 export interface ITopDeckType extends IDeckType {

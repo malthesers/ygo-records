@@ -1,25 +1,15 @@
-'use client'
-
-import { IDeck, IDeckType } from '@/interfaces/deck'
+import { IDeckType } from '@/interfaces/deck'
 import DeckInfo from './DeckInfo'
-import { useEffect, useState } from 'react'
-import testDeckTypes from '@/app/data/test-deck-types'
-import { testDeck } from '@/app/data/test-deck'
 import DeckTable from '@/components/tables/DeckTable'
+import getData from '@/services/getData'
 
-export default function DeckTypePage({ params }: { params: { slug: string } }) {
-  const [deckType, setDeckType] = useState<IDeckType | null>()
-  const [decks, setDecks] = useState<IDeck[] | null>()
-
-  useEffect(() => {
-    setDeckType(testDeckTypes.find(({ slug }) => slug === params.slug))
-    setDecks([testDeck])
-  }, [params.slug])
+export default async function DeckTypePage({ params }: { params: { slug: string } }) {
+  const deckType = await getData<IDeckType>(`decktypes/${params.slug}/tops`)
 
   return (
     <main>
       {deckType && <DeckInfo deckType={deckType} />}
-      {decks && <DeckTable decks={decks} showPlayer showEngines showDeck showEvent />}
+      {deckType.decks && <DeckTable decks={deckType.decks} showPlayer showEngines showEvent />}
     </main>
   )
 }
