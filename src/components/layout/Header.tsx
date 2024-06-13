@@ -6,7 +6,7 @@ import Image from 'next/image'
 export default function Header() {
   return (
     <header className='bg-sky-900'>
-      <nav className='max-w-6xl mx-auto flex flex-row justify-between p-2'>
+      <nav className='flex flex-row justify-between p-2'>
         <Link href='/' className='flex flex-row items-center gap-2 no-underline'>
           <Image src={logo} alt='YGO Records logo' width={50} />
           <span className='font-bold text-xl md:text-2xl'>YGO RECORDS</span>

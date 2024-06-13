@@ -5,7 +5,7 @@ import Image from 'next/image'
 export default function Footer() {
   return (
     <footer className='bg-sky-900'>
-      <div className='max-w-6xl mx-auto py-16 px-3 text-center grid sm:grid-cols-2 md:grid-cols-3 gap-4'>
+      <div className='py-16 px-3 text-center grid sm:grid-cols-2 md:grid-cols-3 gap-4'>
         <div className='sm:col-span-2 md:col-span-1'>
           <Link href='/' className='no-underline'>
             <Image src={logo} alt='YGO Records logo' width={100} className='mx-auto' priority />
