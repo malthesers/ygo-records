@@ -8,8 +8,8 @@ export interface IEvent {
   thumbnail: string
   type: EventType
   topcut: TopCut
-  year: number
-  date: string
+  startDate: Date
+  endDate: Date
   location: string
   attendance: number
   winner: IWinner

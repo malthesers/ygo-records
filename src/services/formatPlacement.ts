@@ -13,6 +13,7 @@ const placements = {
 }
 
 /**
+ * Formats the placement of a topping decklist from a number to a readable string.
  *
  * @param placement The top cut placement as a number.
  * @returns The top cut placement formatted to ordinal numbers as a string.
