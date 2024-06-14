@@ -3,7 +3,7 @@ import { IEvent } from '@/interfaces/event'
 import getData from '@/services/getData'
 
 export default async function RecentEvents() {
-  const recentEvents = await getData<IEvent[]>('events')
+  const recentEvents = await getData<IEvent[]>('events/recent/4')
 
   return (
     <aside>

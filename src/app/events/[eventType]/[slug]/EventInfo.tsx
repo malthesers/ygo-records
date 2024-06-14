@@ -23,7 +23,7 @@ export default function EventInfo({ event }: EventInfoProps) {
           <h1 className='mb-2 font-semibold'>{event?.name}</h1>
           <div className='flex gap-4'>
             <p>Attendance: {event.attendance}</p>
-            {/* <p>{formatDate(event.startDate, event.endDate)}</p> */}
+            <p>{formatDate(event.startDate, event.endDate)}</p>
           </div>
         </div>
       </div>
