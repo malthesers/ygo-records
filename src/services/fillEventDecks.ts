@@ -19,8 +19,8 @@ const missingDeck: IDeck = {
       name: 'YCS',
       slug: 'ycs',
     },
-    year: 2023,
-    date: 'December 9-10',
+    startDate: '2023-12-09T00:00:00.000Z',
+    endDate: '2023-12-10T00:00:00.000Z',
     location: 'Bologna, Italy',
     attendance: 2488,
     winner: {
