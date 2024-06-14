@@ -1,7 +1,10 @@
+import formatDate from '@/services/formatDate'
+
 interface DateCellProps {
-  date: string
+  startDate: string
+  endDate: string
 }
 
-export default function DateCell({ date }: DateCellProps) {
-  return <td className='hidden md:table-cell'>{date}</td>
+export default function DateCell({ startDate, endDate }: DateCellProps) {
+  return <td className='hidden md:table-cell'>{formatDate(startDate, endDate)}</td>
 }

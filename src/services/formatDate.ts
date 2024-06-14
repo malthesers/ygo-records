@@ -5,7 +5,7 @@
  * @param endDateStr End date of an event in a string convertable to a Date object.
  * @returns A readable string of the events duration using long form of month.
  */
-export default function formatDate(startDateStr: Date, endDateStr: Date) {
+export default function formatDate(startDateStr: string, endDateStr: string) {
   const startDate = new Date(startDateStr)
   const endDate = new Date(endDateStr)
 
