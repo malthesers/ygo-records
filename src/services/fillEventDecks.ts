@@ -60,7 +60,7 @@ export default function fillEventDecks(decks: IDeck[] | unknown, topcut: TopCut)
     return [missingDeck]
   }
 
-  console.log(decks, topcut)
+  // console.log(decks, topcut)
 
   const topcutDecks = {}
 

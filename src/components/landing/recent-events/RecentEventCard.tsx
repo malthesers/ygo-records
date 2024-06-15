@@ -8,8 +8,6 @@ interface RecentEventCardProps {
 }
 
 export default function RecentEventCard({ event }: RecentEventCardProps) {
-  console.log(event.startDate, event.endDate)
-
   return (
     <Link href={`/events/${event.type.slug}/${event.slug}`} className='no-underline'>
       <article className='w-full max-w-[30rem] mx-auto grid grid-cols-12 grid-rows-7 pr-4 sm:pr-0 text-center'>

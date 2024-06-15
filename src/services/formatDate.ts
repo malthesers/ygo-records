@@ -9,8 +9,8 @@ export default function formatDate(startDateStr: string, endDateStr: string) {
   const startDate = new Date(startDateStr)
   const endDate = new Date(endDateStr)
 
-  // console.log(startDate)
-  // console.log(endDate)
+  console.log('Start date:', startDate)
+  console.log('End date:', endDate)
 
   const startMonth = new Intl.DateTimeFormat('en-GB', { month: 'long' }).format(startDate)
   const endMonth = new Intl.DateTimeFormat('en-GB', { month: 'long' }).format(endDate)

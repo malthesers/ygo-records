@@ -8,8 +8,6 @@ interface TournamentTableProps {
 }
 
 export default function TournamentTable({ events }: TournamentTableProps) {
-  console.log(events)
-
   return (
     <section>
       <table>
