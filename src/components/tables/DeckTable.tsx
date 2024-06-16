@@ -1,7 +1,6 @@
-'use client'
-
 import { IDeck } from '@/interfaces/deck'
 import { DateCell, DeckCell, EnginesCell, EventCell, PlacementCell, PlayerCell } from './cells'
+import NoData from '../layout/NoData'
 
 interface DeckTableProps {
   decks: IDeck[]
@@ -12,6 +11,8 @@ interface DeckTableProps {
 }
 
 export default function DeckTable({ decks, showEvent, showPlayer, showDeck, showEngines }: DeckTableProps) {
+  if (decks.length === 0) return <NoData>No decks found</NoData>
+
   return (
     <section>
       <table>

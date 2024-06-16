@@ -1,13 +1,14 @@
-'use client'
-
 import { IEvent } from '@/interfaces/event'
 import { DateCell, DeckCell, EventCell, PlayerCell, AttendanceCell } from './cells'
+import NoData from '../layout/NoData'
 
 interface TournamentTableProps {
   events: IEvent[]
 }
 
 export default function TournamentTable({ events }: TournamentTableProps) {
+  if (events.length === 0) return <NoData>No tournaments found</NoData>
+
   return (
     <section>
       <table>

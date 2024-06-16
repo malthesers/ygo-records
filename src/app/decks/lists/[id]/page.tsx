@@ -3,6 +3,7 @@ import getData from '@/services/getData'
 import DecklistInfo from './DecklistInfo'
 import CardBox from './CardBox'
 import filterByCardType from '@/services/filterByCardType'
+import NoData from '@/components/layout/NoData'
 
 export default async function DeckListPage({ params }: { params: { id: string } }) {
   const deck = await getData<IDeck>(`decks/${params.id}`)
@@ -23,9 +24,7 @@ export default async function DeckListPage({ params }: { params: { id: string } 
           </div>
         </section>
       ) : (
-        <section className='bg-sky-800 p-4'>
-          <p className='text-2xl text-center'>No decklist available</p>
-        </section>
+        <NoData>No decklist available</NoData>
       )}
     </main>
   )
