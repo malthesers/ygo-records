@@ -29,7 +29,8 @@ export default function DeckTable({ decks, showEvent, showPlayer, showDeck, show
         <tbody>
           {decks?.map((deck, index) => (
             <tr key={index}>
-              {showEvent && <DateCell startDate={deck.event.startDate} endDate={deck.event.endDate} />}
+              {/* {showEvent && <DateCell startDate={deck.event.startDate} endDate={deck.event.endDate} />} */}
+              {showEvent && <DateCell event={deck.event} />}
               {showEvent && <EventCell event={deck.event} />}
               <PlacementCell placement={deck.placement} />
               {showPlayer && <PlayerCell player={deck.player} />}

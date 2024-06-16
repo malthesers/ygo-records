@@ -24,7 +24,8 @@ export default function TournamentTable({ events }: TournamentTableProps) {
         <tbody>
           {events?.map((event, index) => (
             <tr key={index}>
-              <DateCell startDate={event.startDate} endDate={event.endDate} />
+              {/* <DateCell startDate={event.startDate} endDate={event.endDate} /> */}
+              <DateCell event={event} />
               <EventCell event={event} />
               <AttendanceCell attendance={event.attendance} isTeamYCS={event.type.slug === 'team-ycs'} />
               <PlayerCell
