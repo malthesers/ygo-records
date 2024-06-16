@@ -6,13 +6,14 @@
  * @returns A readable string of the events duration using long form of month.
  */
 export default function formatDate(startDateStr: string, endDateStr: string) {
-  console.log(startDateStr, endDateStr)
-
   const startDate = new Date(startDateStr)
   const endDate = new Date(endDateStr)
 
-  console.log('Start date:', startDate)
-  console.log('End date:', endDate)
+  if (!(startDate instanceof Date) || !(endDate instanceof Date)) {
+    console.log('Start date:', startDate)
+    console.log('End date:', endDate)
+    return 'Unknown date'
+  }
 
   const startMonth = new Intl.DateTimeFormat('en-GB', { month: 'long' }).format(startDate)
   const endMonth = new Intl.DateTimeFormat('en-GB', { month: 'long' }).format(endDate)
