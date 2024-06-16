@@ -1,4 +1,4 @@
-import AWSImage from '@/components/layout/AWSImage'
+import S3Image from '@/components/layout/S3Image'
 import { IEvent } from '@/interfaces/event'
 import formatDate from '@/services/formatDate'
 import Image from 'next/image'
@@ -10,7 +10,7 @@ interface EventInfoProps {
 export default function EventInfo({ event }: EventInfoProps) {
   return (
     <section className='relative min-h-[20rem] p-0 grid grid-cols-1 grid-rows-1 *:grid-center'>
-      <AWSImage
+      <S3Image
         src={`locations/${event.thumbnail}.jpg`}
         alt={`${event.name} splash image`}
         className='-z-10 object-cover'
