@@ -13,17 +13,17 @@ export default function formatDate(startDateStr: string, endDateStr: string) {
     console.log('Start date:', startDate)
     console.log('End date:', endDate)
     return 'Unknown date'
-  }
-
-  const startMonth = new Intl.DateTimeFormat('en-GB', { month: 'long' }).format(startDate)
-  const endMonth = new Intl.DateTimeFormat('en-GB', { month: 'long' }).format(endDate)
-  const startDay = new Intl.DateTimeFormat('en-GB', { day: 'numeric' }).format(startDate)
-  const endDay = new Intl.DateTimeFormat('en-GB', { day: 'numeric' }).format(endDate)
-  const year = new Intl.DateTimeFormat('en-GB', { year: 'numeric' }).format(startDate)
-
-  if (startMonth === endMonth) {
-    return `${startMonth} ${startDay}-${endDay}, ${year}`
   } else {
-    return `${startMonth} ${startDay} - ${endMonth} ${endDay}, ${year}`
+    const startMonth = new Intl.DateTimeFormat('en-GB', { month: 'long' }).format(startDate)
+    const endMonth = new Intl.DateTimeFormat('en-GB', { month: 'long' }).format(endDate)
+    const startDay = new Intl.DateTimeFormat('en-GB', { day: 'numeric' }).format(startDate)
+    const endDay = new Intl.DateTimeFormat('en-GB', { day: 'numeric' }).format(endDate)
+    const year = new Intl.DateTimeFormat('en-GB', { year: 'numeric' }).format(startDate)
+
+    if (startMonth === endMonth) {
+      return `${startMonth} ${startDay}-${endDay}, ${year}`
+    } else {
+      return `${startMonth} ${startDay} - ${endMonth} ${endDay}, ${year}`
+    }
   }
 }
