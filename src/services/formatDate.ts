@@ -9,7 +9,7 @@ export default function formatDate(startDateStr: string, endDateStr: string) {
   const startDate = new Date(startDateStr)
   const endDate = new Date(endDateStr)
 
-  if (!(startDate instanceof Date) || !(endDate instanceof Date)) {
+  if (!startDate || !endDate) {
     console.log('Start date:', startDate)
     console.log('End date:', endDate)
     return 'Unknown date'
