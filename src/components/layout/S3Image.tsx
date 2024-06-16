@@ -1,5 +1,5 @@
-import getS3CardImage from '@/services/getS3CardImage'
-import getS3Image from '@/services/getS3Image'
+import getS3CardImage from '@/services/aws/getS3CardImage'
+import getS3Image from '@/services/aws/getS3Image'
 import Image from 'next/image'
 
 interface S3ImageProps {

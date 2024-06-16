@@ -1,4 +1,4 @@
-import getS3CardImage from '@/services/getS3CardImage'
+import getS3CardImage from '@/services/aws/getS3CardImage'
 import Image from 'next/image'
 
 interface S3CardRenderProps {
