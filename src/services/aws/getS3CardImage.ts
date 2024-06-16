@@ -4,6 +4,12 @@ import s3Client from './s3Client'
 import getYGOProImageUrl from './getYGOProImageUrl'
 import artworkPlaceholder from '~/images/placeholders/artwork.jpg'
 
+/**
+ *
+ * @param passcode Passcode of the card in a string.
+ * @param type Type of image being the artwork or the render.
+ * @returns Signed url for the resource or placeholder if error.
+ */
 export default async function getS3CardImage(passcode: string, type: 'artwork' | 'render') {
   const s3Params = {
     Bucket: process.env.AWS_BUCKET_NAME,
