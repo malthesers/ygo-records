@@ -2,6 +2,7 @@ import { ITopDeckType } from '@/interfaces/deck'
 import Image from 'next/image'
 import MostSuccesfulBox from './MostSuccesfulBox'
 import DeckPerformanceBox from './DeckPerformanceBox'
+import S3CardArtwork from '@/components/layout/S3CardArtwork'
 
 interface TopDeckCardProps {
   topDeck: ITopDeckType
@@ -11,12 +12,12 @@ export default function TopDeckCard({ topDeck }: TopDeckCardProps) {
   return (
     <article className='bg-sky-900 max-w-[30rem] w-full mx-auto grid grid-cols-[1fr_2fr] shadow-2xl'>
       <div className='relative'>
-        <Image
-          priority
-          src={`/images/placeholders/${topDeck.thumbnail}.jpg`}
+        <S3CardArtwork
+          passcode={topDeck.thumbnail}
           alt={topDeck.name}
           width={350}
           height={350}
+          priority
           className='size-full object-cover'
         />
       </div>

@@ -1,6 +1,6 @@
+import S3CardArtwork from '@/components/layout/S3CardArtwork'
 import { IDeck } from '@/interfaces/deck'
 import formatPlacement from '@/services/formatPlacement'
-import Image from 'next/image'
 import Link from 'next/link'
 
 interface DecklistInfoProps {
@@ -10,10 +10,10 @@ interface DecklistInfoProps {
 export default function DecklistInfo({ deck }: DecklistInfoProps) {
   return (
     <section className='relative min-h-[15rem] p-0 grid grid-cols-1 grid-rows-1 *:grid-center'>
-      <Image
+      <S3CardArtwork
+        passcode={deck.deckType.thumbnail}
+        alt={`${deck.deckType.name} splash image`}
         className='-z-10 object-cover'
-        src={`/images/placeholders/${deck?.deckType.thumbnail}.jpg`}
-        alt={`${deck?.deckType.name} splash image`}
         priority
         fill
       />
