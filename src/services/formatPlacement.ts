@@ -19,5 +19,17 @@ const placements = {
  * @returns The top cut placement formatted to ordinal numbers as a string.
  */
 export default function formatPlacement(placement: Placement) {
+  if (typeof placement !== 'number') {
+    throw new Error('Invalid placement value. Must be a number.')
+  }
+
+  if (isNaN(placement)) {
+    throw new Error('Invalid placement value. Must be a number.')
+  }
+
+  if (!placements.hasOwnProperty(placement.toString())) {
+    throw new Error(`Invalid placement value: ${placement}. Must be one of the following: ${Object.keys(placements)}.`)
+  }
+
   return placements[placement]
 }
