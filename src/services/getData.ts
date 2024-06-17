@@ -1,3 +1,5 @@
+import { notFound } from 'next/navigation'
+
 /**
  * Fetches data from the YGO API and returns data.
  *
@@ -8,7 +10,7 @@ export default async function getData<T>(endpoint: string): Promise<T> {
   const response = await fetch(`https://ygo-records-api.onrender.com/${endpoint}`)
 
   if (!response.ok) {
-    throw new Error('Failed to fetch data')
+    notFound()
   }
 
   return response.json()

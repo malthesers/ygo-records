@@ -8,7 +8,7 @@ export default function Header() {
     <header className='bg-sky-900'>
       <nav className='flex flex-row justify-between p-2'>
         <Link href='/' className='flex flex-row items-center gap-2 no-underline'>
-          <Image src={logo} alt='YGO Records logo' width={50} />
+          <Image src={logo} alt='YGO Records logo' width={50} priority />
           <span className='font-bold text-xl md:text-2xl'>YGO RECORDS</span>
         </Link>
         <div className='hidden md:flex self-center gap-4 '>

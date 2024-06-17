@@ -29,7 +29,8 @@
     @apply text-base;
   }
 
-  a {
+  a,
+  button {
     @apply text-lg underline underline-offset-2 duration-200 hover:opacity-70;
   }
 
