@@ -14,3 +14,5 @@ export interface ICardBase {
   description: string
   decks?: IDeck[]
 }
+
+export type ImageType = 'artwork' | 'render'
