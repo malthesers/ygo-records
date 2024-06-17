@@ -18,7 +18,7 @@ const invalidDataType: any[] = [
   false, // Boolean: false
   null, // null
   undefined, // undefined
-  NaN, // NaN
+  NaN, // NaN - returns number with typeof
   [1], // Array of valid placement
 ]
 const invalidPlacement: number[] = [
