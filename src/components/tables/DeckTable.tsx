@@ -3,7 +3,7 @@ import { DateCell, DeckCell, EnginesCell, EventCell, PlacementCell, PlayerCell }
 import NoData from '../layout/NoData'
 
 interface DeckTableProps {
-  decks: IDeck[]
+  decks: IDeck[] | undefined
   showEvent?: boolean
   showPlayer?: boolean
   showDeck?: boolean
@@ -11,7 +11,7 @@ interface DeckTableProps {
 }
 
 export default function DeckTable({ decks, showEvent, showPlayer, showDeck, showEngines }: DeckTableProps) {
-  if (decks.length === 0) return <NoData>No decks found</NoData>
+  if (decks?.length === 0 || !decks) return <NoData>No decks found</NoData>
 
   return (
     <section>

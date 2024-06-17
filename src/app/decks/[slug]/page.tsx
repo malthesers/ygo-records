@@ -9,7 +9,7 @@ export default async function DeckTypePage({ params }: { params: { slug: string 
   return (
     <main>
       {deckType && <DeckInfo deckType={deckType} />}
-      {deckType.decks && <DeckTable decks={deckType.decks} showPlayer showEngines showEvent />}
+      {deckType.decks && <DeckTable decks={deckType.decks} showEvent showPlayer showDeck showEngines />}
     </main>
   )
 }

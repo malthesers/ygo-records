@@ -10,8 +10,6 @@ export default function formatDate(startDateStr: string, endDateStr: string) {
   const endDate = new Date(endDateStr)
 
   if (!startDate || !endDate) {
-    console.log('Start date:', startDate)
-    console.log('End date:', endDate)
     return 'Unknown date'
   } else {
     const startMonth = new Intl.DateTimeFormat('en-GB', { month: 'long' }).format(startDate)

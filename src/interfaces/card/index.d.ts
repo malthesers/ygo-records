@@ -1,3 +1,4 @@
+import { IDeck } from '../deck'
 import { IMonsterCard } from './monster'
 import { ISpellCard } from './spell'
 import { ITrapCard } from './trap'
@@ -11,4 +12,5 @@ export interface ICardBase {
   name: string
   frame: string
   description: string
+  decks?: IDeck[]
 }
