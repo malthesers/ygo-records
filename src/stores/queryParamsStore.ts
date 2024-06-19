@@ -7,7 +7,7 @@ interface useQueryParamsStoreProps {
 }
 
 const useQueryParamsStore = create<useQueryParamsStoreProps>((set) => ({
-  queryParams: { name: 'dante' },
+  queryParams: {},
   updateQueryParams: (params) => set({ queryParams: params }),
 }))
 

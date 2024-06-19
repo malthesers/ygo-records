@@ -1,4 +1,3 @@
-import useCardsQueryParams from '@/hooks/useCardsQueryParams'
 import { ICardsQueryParams } from '@/interfaces/query-params'
 import useQueryParamsStore from '@/stores/queryParamsStore'
 import { FormEvent, useState } from 'react'
