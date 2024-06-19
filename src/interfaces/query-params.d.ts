@@ -10,11 +10,11 @@ export interface ICardsQueryParams {
   monsterCardType?: MonsterTypes.MonsterCardType
   attribute?: MonsterTypes.Attribute
   atk?: MonsterTypes.Atk
-  atkMin?: number
-  atkMax?: number
+  atkMin?: string
+  atkMax?: string
   def?: MonsterTypes.Def
-  defMin?: number
-  defMax?: number
+  defMin?: string
+  defMax?: string
   level?: MonsterTypes.Level
   levelMin?: MonsterTypes.Level
   levelMax?: MonsterTypes.Level

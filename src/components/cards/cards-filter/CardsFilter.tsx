@@ -1,13 +1,13 @@
-import { ICardsQueryParams } from '@/interfaces/query-params'
 import useQueryParamsStore from '@/stores/queryParamsStore'
-import { FormEvent, useState } from 'react'
+import { FormEvent } from 'react'
+import NameInput from './inputs/NameInput'
+import DescriptionInput from './inputs/DescriptionInput'
+import ATKInput from './inputs/ATKInput'
+import DEFInput from './inputs/DEFInput'
+import CardTypeInput from './inputs/CardTypeInput'
 
 export default function CardsFilter() {
-  const { updateQueryParams } = useQueryParamsStore()
-
-  const [formValues, setFormValues] = useState<ICardsQueryParams>({
-    name: '',
-  })
+  const { queryParams, formValues, updateQueryParams } = useQueryParamsStore()
 
   function searchCards(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
@@ -15,16 +15,16 @@ export default function CardsFilter() {
     updateQueryParams(formValues)
   }
 
+  console.log(queryParams)
+
   return (
-    <aside className='min-w-60 h-fit p-4 bg-sky-900'>
-      <form onSubmit={searchCards}>
-        <label htmlFor='name'>name</label>
-        <input
-          id='name'
-          type='text'
-          value={formValues.name}
-          onChange={(e) => setFormValues({ name: e.target.value })}
-        />
+    <aside className='max-w-sm w-full h-fit p-4 bg-sky-900'>
+      <form onSubmit={searchCards} className='space-y-4'>
+        <NameInput />
+        <DescriptionInput />
+        <CardTypeInput />
+        <ATKInput />
+        <DEFInput />
         <button>Search</button>
       </form>
     </aside>
