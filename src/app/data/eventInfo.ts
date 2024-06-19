@@ -15,11 +15,11 @@ interface EventInfo {
   title: string
 }
 
-const eventInfoData: Record<EventSlug, EventInfo> = {
+const eventInfo: Record<EventSlug, EventInfo> = {
   wcq: { splash: splashWcq, logo: logoWcq, title: 'WCQ' },
   ycs: { splash: splashYcs, logo: logoYcs, title: 'YCS' },
   'team-ycs': { splash: splashTeamYcs, logo: logoTeamYcs, title: 'TEAM YCS' },
   'remote-ycs': { splash: splashRemoteYcs, logo: logoRemoteYcs, title: 'Remote YCS' },
 }
 
-export default eventInfoData
+export default eventInfo
