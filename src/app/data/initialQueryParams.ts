@@ -1,19 +1,20 @@
+import { CardType } from '@/interfaces/card'
 import { ICardsQueryParams } from '@/interfaces/query-params'
 
-const defaultQueryParams: ICardsQueryParams = {
+const initialQueryParams: ICardsQueryParams = {
   // id: '',
-  // name: '',
-  // description: '',
-  // cardType: '',
-  // type: Type,
+  name: '',
+  description: '',
+  cardType: '' as CardType,
+  // type: ,
   // monsterCardType: MonsterTypes.MonsterCardType,
   // attribute: MonsterTypes.Attribute,
   // atk: MonsterTypes.Atk,
   // atkMin: number,
   // atkMax: number,
   // def: MonsterTypes.Def,
-  // defMin: number,
-  // defMax: number,
+  defMin: '',
+  defMax: '',
   // level: MonsterTypes.Level,
   // levelMin: MonsterTypes.Level,
   // levelMax: MonsterTypes.Level,
@@ -30,4 +31,4 @@ const defaultQueryParams: ICardsQueryParams = {
   // pendulumDescription: string
 }
 
-export default defaultQueryParams
+export default initialQueryParams

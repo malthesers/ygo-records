@@ -5,7 +5,7 @@ export interface ICardsQueryParams {
   id?: string
   name?: string
   description?: string
-  cardType?: CardType
+  cardType?: CardType | ''
   type?: Type
   monsterCardType?: MonsterTypes.MonsterCardType
   attribute?: MonsterTypes.Attribute

@@ -1,3 +1,4 @@
+import initialQueryParams from '@/app/data/initialQueryParams'
 import { CardType } from '@/interfaces/card'
 import { ICardsQueryParams } from '@/interfaces/query-params'
 import { create } from 'zustand'
@@ -5,21 +6,15 @@ import { create } from 'zustand'
 interface useQueryParamsStoreProps {
   formValues: ICardsQueryParams
   queryParams: ICardsQueryParams
+  resetFormValues: () => void
   updateFormValues: (values: ICardsQueryParams) => void
   updateQueryParams: (params: ICardsQueryParams) => void
 }
 
 const useQueryParamsStore = create<useQueryParamsStoreProps>((set) => ({
-  formValues: {
-    name: '',
-    description: '',
-    cardType: '' as CardType,
-    atkMin: '',
-    atkMax: '',
-    defMin: '',
-    defMax: '',
-  },
+  formValues: initialQueryParams,
   queryParams: {},
+  resetFormValues: () => set({ formValues: initialQueryParams }),
   updateFormValues: (values) => set({ formValues: values }),
   updateQueryParams: (params) => set({ queryParams: params }),
 }))

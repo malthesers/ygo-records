@@ -34,10 +34,6 @@
     @apply text-lg underline underline-offset-2 duration-200 hover:opacity-70;
   }
 
-  button {
-    @apply w-full py-2 px-3 bg-sky-950 border-white border-2 duration-200 hover:opacity-70;
-  }
-
   input:not([type='checkbox']),
   label:has(input[type='checkbox']) {
     @apply w-full bg-sky-950 border-2 border-white py-1 px-2 text-lg focus-within:outline-none;
