@@ -1,39 +1,17 @@
-import { useState } from 'react'
-import { CardType, Type } from '@/interfaces/card'
-import * as MonsterTypes from '@/interfaces/card/monster'
-
-interface ICardsQueryParams {
-  id?: string
-  name?: string
-  description?: string
-  cardType?: CardType
-  type?: Type
-  monsterCardType?: MonsterTypes.MonsterCardType
-  attribute?: MonsterTypes.Attribute
-  atk?: MonsterTypes.Atk
-  atkMin?: number
-  atkMax?: number
-  def?: MonsterTypes.Def
-  defMin?: number
-  defMax?: number
-  level?: MonsterTypes.Level
-  levelMin?: MonsterTypes.Level
-  levelMax?: MonsterTypes.Level
-  rank?: MonsterTypes.Rank
-  rankMin?: MonsterTypes.Rank
-  rankMax?: MonsterTypes.Rank
-  rating?: MonsterTypes.Rating
-  ratingMin?: MonsterTypes.Rating
-  ratingMax?: MonsterTypes.Rating
-  arrows?: MonsterTypes.LinkArrows
-  properties?: MonsterTypes.Property[]
-  pendulum?: boolean
-  pendulumScale?: MonsterTypes.Scale
-  pendulumDescription?: string
-}
+import { ICardsQueryParams } from '@/interfaces/query-params'
+import { useEffect, useState } from 'react'
+import queryString from 'query-string'
 
 export default function useCardsQueryParams() {
-  const [queryParams, setQueryParams] = useState<ICardsQueryParams>({})
+  const [queryParamsString, setQueryParamsString] = useState<string>('')
+  const [queryParams, setQueryParams] = useState<ICardsQueryParams>({
+    name: 'dante',
+  })
+
+  useEffect(() => {
+    console.log(queryParams)
+    setQueryParamsString(queryString.stringify(queryParams))
+  }, [queryParams])
 
   /**
    * Updates queryParams state with new query params.
@@ -41,11 +19,14 @@ export default function useCardsQueryParams() {
    * @param newParams New query params to apply.
    */
   function updateQueryParams(newParams: ICardsQueryParams) {
-    setQueryParams({
-      ...queryParams,
-      ...newParams,
-    })
+    const qpString = queryString.stringify(newParams)
+    console.log(qpString)
+    setQueryParamsString(qpString)
+    // setQueryParams({
+    //   ...queryParams,
+    //   ...newParams,
+    // })
   }
 
-  return { queryParams, updateQueryParams }
+  return { queryParams, queryParamsString, updateQueryParams }
 }

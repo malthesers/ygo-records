@@ -4,7 +4,7 @@ import useSWR from 'swr'
 import useCardsQueryParams from './useCardsQueryParams'
 import queryString from 'query-string'
 import { useEffect, useState } from 'react'
-import useQueryParamsStore from '@/stores/queryParamsStore'
+import { ICardsQueryParams } from '@/interfaces/query-params'
 
 const baseURL = 'https://ygo-records-api.onrender.com'
 
@@ -22,22 +22,23 @@ interface ICardsResponse {
   cards: ICard[]
 }
 
-export default function useCards() {
-  // // const { queryParams } = useCardsQueryParams()
-  // const [queryParamsString, setQueryParamsString] = useState<string>('')
+export default function useAPI() {
+  const [queryParams, setQueryParams] = useState<ICardsQueryParams>({
+    name: 'dante',
+  })
 
-  const queryParams = useQueryParamsStore((state) => state.queryParams)
+  /**
+   * Updates queryParams state with new query params.
+   *
+   * @param newParams New query params to apply.
+   */
+  function updateQueryParams(newParams: ICardsQueryParams) {
+    setQueryParams({
+      ...queryParams,
+      ...newParams,
+    })
+  }
 
-  // useEffect(() => {
-  //   console.log(queryParams)
-  //   setQueryParamsString(queryString.stringify(queryParams))
-  // }, [queryParams])
-
-  // const { data, error, isLoading } = useSWR<ICardsResponse>(
-  //   [`/cards?${queryParamsString}`],
-  //   ([url, queryParams]) => fetcher(url, queryParams)
-  // )
-  // const { data, error, isLoading } = useSWR<ICardsResponse>(`/cards?${queryParamsString}`, fetcher)
   const { data, error, isLoading } = useSWR<ICardsResponse>(['/cards', queryParams], ([url, queryParams]) =>
     fetcher(url, queryParams)
   )
@@ -47,5 +48,6 @@ export default function useCards() {
     cards: data?.cards,
     isError: error,
     isLoading,
+    updateQueryParams,
   }
 }
