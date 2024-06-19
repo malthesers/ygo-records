@@ -6,6 +6,16 @@ export default function CardTypeInput() {
   const { formValues, updateFormValues } = useQueryParamsStore()
   const cardTypes: CardType[] = ['Monster', 'Spell', 'Trap']
 
+  function updateCardType(e: ChangeEvent<HTMLInputElement>) {
+    console.log(formValues.cardType, e.target.value)
+    if (formValues.cardType === e.target.value) {
+      console.log('empty')
+      updateFormValues({ ...formValues, cardType: '' as CardType })
+    } else {
+      updateFormValues({ ...formValues, cardType: e.target.value as CardType })
+    }
+  }
+
   return (
     <div className='grid grid-cols-3 gap-4 text-center'>
       {cardTypes.map((cardType) => (
@@ -13,10 +23,11 @@ export default function CardTypeInput() {
           <span>{cardType}</span>
           <input
             id={`input-${cardType}`}
-            type='radio'
+            type='checkbox'
             name='cardType'
             value={cardType}
-            onChange={(e) => updateFormValues({ ...formValues, cardType: e.target.value as CardType })}
+            checked={cardType === formValues.cardType}
+            onChange={(e) => updateCardType(e)}
           />
         </label>
       ))}

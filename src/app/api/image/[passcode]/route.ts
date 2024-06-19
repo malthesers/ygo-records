@@ -10,5 +10,5 @@ interface GETParams {
 export async function GET(request: NextRequest, { params }: GETParams) {
   const imageUrl = await getS3CardImage(params.passcode, 'render')
 
-  return NextResponse.json(imageUrl)
+  return Response.json(imageUrl)
 }

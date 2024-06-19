@@ -15,7 +15,7 @@ export default function CardsFilter() {
     updateQueryParams(formValues)
   }
 
-  console.log(queryParams)
+  console.log(formValues)
 
   return (
     <aside className='max-w-sm w-full h-fit p-4 bg-sky-900'>
