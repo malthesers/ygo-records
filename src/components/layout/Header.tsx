@@ -12,6 +12,7 @@ export default function Header() {
           <span className='font-bold text-xl md:text-2xl'>YGO RECORDS</span>
         </Link>
         <div className='hidden md:flex self-center gap-4 '>
+          <Link href='/cards'>Cards</Link>
           <Link href='/events/wcq'>WCQ</Link>
           <Link href='/events/ycs'>YCS</Link>
           <Link href='/events/team-ycs'>TEAM YCS</Link>

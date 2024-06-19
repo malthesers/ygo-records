@@ -12,7 +12,7 @@ export default async function PopularCards() {
           <PopularCard key={card.id} card={card} />
         ))}
       </div>
-      <Link href='/cards' className='text-sm font-semibold uppercase'>
+      <Link href='/cards/popular' className='text-sm font-semibold uppercase'>
         See all popular cards
       </Link>
     </section>
