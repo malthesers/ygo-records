@@ -5,6 +5,8 @@ import getYGOProImageUrl from './getYGOProImageUrl'
 import artworkPlaceholder from '~/images/placeholders/artwork.jpg'
 
 /**
+ * Fetches signed signed url for a card image and returns it.
+ * Fetches image from YGOPro and uploads it to S3 bucket if not there already.
  *
  * @param passcode Passcode of the card in a string.
  * @param type Type of image being the artwork or the render.
