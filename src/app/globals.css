@@ -40,8 +40,15 @@
   }
 
   input:not([type='checkbox']),
-  label:has(input[type='checkbox']) {
+  label:has(input[type='checkbox']),
+  select,
+  option {
     @apply w-full bg-sky-950 border-2 border-white py-1 px-2 focus-within:outline-none;
+  }
+
+  select,
+  option {
+    @apply py-[5px];
   }
 
   label:has(input[type='checkbox']) {
