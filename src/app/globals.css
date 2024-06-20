@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-sky-950 text-white text-lg;
+    @apply bg-sky-950 text-white;
   }
 
   main {
@@ -34,9 +34,14 @@
     @apply text-lg underline underline-offset-2 duration-200 hover:opacity-70;
   }
 
+  label,
+  input {
+    @apply text-base;
+  }
+
   input:not([type='checkbox']),
   label:has(input[type='checkbox']) {
-    @apply w-full bg-sky-950 border-2 border-white py-1 px-2 text-lg focus-within:outline-none;
+    @apply w-full bg-sky-950 border-2 border-white py-1 px-2 focus-within:outline-none;
   }
 
   label:has(input[type='checkbox']) {
