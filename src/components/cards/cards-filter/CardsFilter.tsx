@@ -2,10 +2,11 @@ import type { FormEvent } from 'react'
 import useQueryParamsStore from '@/stores/queryParamsStore'
 import NameInput from './inputs/NameInput'
 import DescriptionInput from './inputs/DescriptionInput'
-import ATKInput from './inputs/ATKInput'
-import DEFInput from './inputs/DEFInput'
 import CardTypeInput from './inputs/CardTypeInput'
 import Button from '@/components/layout/Button'
+import MonsterFilters from './MonsterFilters'
+import SpellFilters from './SpellFilters'
+import TrapFilters from './TrapFilters'
 
 export default function CardsFilter() {
   const { queryParams, formValues, resetFormValues, updateQueryParams } = useQueryParamsStore()
@@ -24,8 +25,9 @@ export default function CardsFilter() {
         <NameInput />
         <DescriptionInput />
         <CardTypeInput />
-        <ATKInput />
-        <DEFInput />
+        {formValues.cardType === 'Monster' && <MonsterFilters />}
+        {formValues.cardType === 'Spell' && <SpellFilters />}
+        {formValues.cardType === 'Trap' && <TrapFilters />}
         <button type='submit' className='hidden'></button>
       </form>
       <Button onClick={() => resetFormValues()}>Reset</Button>

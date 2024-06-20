@@ -20,21 +20,32 @@ export default function RangeInputTemplate({
 }: RangeInputTemplateProps) {
   const { formValues, updateFormValues } = useQueryParamsStore()
 
+  function shorten(value: string) {
+    return value.length > 4 ? value.substring(0, 4) : value
+  }
+
   return (
     <div className='grid grid-cols-2 gap-4'>
+      {/* <input
+        type='number'
+        name={fieldName}
+        placeholder={placeholder}
+        value={formValues[fieldName] as number}
+        onChange={(e) => updateFormValues({ ...formValues, [fieldName]: shorten(e.target.value) })}
+      /> */}
       <input
         type='number'
         name={fieldNameMin}
         placeholder={placeholderMin}
-        value={formValues[fieldNameMin] as string}
-        onChange={(e) => updateFormValues({ ...formValues, [fieldNameMin]: e.target.value })}
+        value={formValues[fieldNameMin] as number}
+        onChange={(e) => updateFormValues({ ...formValues, [fieldNameMin]: shorten(e.target.value) })}
       />
       <input
         type='number'
         name={fieldNameMax}
         placeholder={placeholderMax}
-        value={formValues[fieldNameMax] as string}
-        onChange={(e) => updateFormValues({ ...formValues, [fieldNameMax]: e.target.value })}
+        value={formValues[fieldNameMax] as number}
+        onChange={(e) => updateFormValues({ ...formValues, [fieldNameMax]: shorten(e.target.value) })}
       />
     </div>
   )

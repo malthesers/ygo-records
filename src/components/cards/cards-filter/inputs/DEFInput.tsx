@@ -6,7 +6,7 @@ export default function DEFInput() {
       fieldName='def'
       fieldNameMin='defMin'
       fieldNameMax='defMax'
-      placeholder='def'
+      placeholder='DEF'
       placeholderMin='Min. DEF'
       placeholderMax='Max. DEF'
     />

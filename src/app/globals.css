@@ -43,7 +43,10 @@
     @apply appearance-none cursor-pointer duration-200 hover:bg-white hover:text-sky-950 has-[:checked]:bg-white has-[:checked]:text-sky-950;
   }
 
-  input[type='checkbox'] {
+  input::-webkit-inner-spin-button,
+  input::-webkit-outer-spin-button,
+  input[type='checkbox'],
+  input[type='number'] {
     @apply appearance-none;
   }
 
