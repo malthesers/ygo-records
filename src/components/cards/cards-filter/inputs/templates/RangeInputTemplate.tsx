@@ -31,21 +31,21 @@ export default function RangeInputTemplate({
         name={fieldName}
         placeholder={placeholder}
         value={formValues[fieldName] as number}
-        onChange={(e) => updateFormValues({ ...formValues, [fieldName]: shorten(e.target.value) })}
+        onChange={(e) => updateFormValues({  [fieldName]: shorten(e.target.value) })}
       /> */}
       <input
         type='number'
         name={fieldNameMin}
         placeholder={placeholderMin}
         value={formValues[fieldNameMin] as number}
-        onChange={(e) => updateFormValues({ ...formValues, [fieldNameMin]: shorten(e.target.value) })}
+        onChange={(e) => updateFormValues({ [fieldNameMin]: shorten(e.target.value) })}
       />
       <input
         type='number'
         name={fieldNameMax}
         placeholder={placeholderMax}
         value={formValues[fieldNameMax] as number}
-        onChange={(e) => updateFormValues({ ...formValues, [fieldNameMax]: shorten(e.target.value) })}
+        onChange={(e) => updateFormValues({ [fieldNameMax]: shorten(e.target.value) })}
       />
     </div>
   )

@@ -15,7 +15,7 @@ export default function StringInputTemplate({ fieldName, placeholder }: StringIn
       name={fieldName}
       placeholder={placeholder}
       value={formValues[fieldName] as string}
-      onChange={(e) => updateFormValues({ ...formValues, [fieldName]: e.target.value })}
+      onChange={(e) => updateFormValues({ [fieldName]: e.target.value })}
     />
   )
 }

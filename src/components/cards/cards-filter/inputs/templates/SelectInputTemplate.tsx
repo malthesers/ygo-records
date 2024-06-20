@@ -11,7 +11,7 @@ export default function SelectInputTemplate<T>({ field, options }: SelectInputTe
   const { formValues, updateFormValues } = useQueryParamsStore()
 
   return (
-    <select onChange={(e) => updateFormValues({ ...formValues, [field]: e.target.value })}>
+    <select onChange={(e) => updateFormValues({ [field]: e.target.value })}>
       <option value=''></option>
       {options.map((option) => (
         <option key={option.type as string} value={option.type as string}>

@@ -15,7 +15,7 @@ const useQueryParamsStore = create<useQueryParamsStoreProps>((set) => ({
   formValues: initialQueryParams,
   queryParams: {},
   resetFormValues: () => set({ formValues: initialQueryParams }),
-  updateFormValues: (values) => set({ formValues: values }),
+  updateFormValues: (values) => set((state) => ({ formValues: { ...state.formValues, ...values } })),
   updateQueryParams: (params) => set({ queryParams: params }),
 }))
 

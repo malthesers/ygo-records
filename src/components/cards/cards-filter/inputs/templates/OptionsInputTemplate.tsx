@@ -15,9 +15,9 @@ export default function OptionsInputTemplate<T>({ field, options, columns }: Opt
 
   function updateToggleableField(e: ChangeEvent<HTMLInputElement>) {
     if (formValues[field] === e.target.value) {
-      updateFormValues({ ...formValues, [field]: '' })
+      updateFormValues({ [field]: '' })
     } else {
-      updateFormValues({ ...formValues, [field]: e.target.value })
+      updateFormValues({ [field]: e.target.value })
     }
   }
 
