@@ -18,15 +18,30 @@ const config: Config = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      animation: {
+        'spin-y': 'spin-y 1s linear infinite',
+      },
+      keyframes: {
+        'spin-y': {
+          '0%': {
+            transform: 'rotateY(0deg)',
+          },
+          '100%': {
+            transform: 'rotateY(360deg)',
+          },
+        },
+      },
     },
   },
   plugins: [
     ({ addUtilities }: PluginAPI) => {
-      addUtilities({
-        '.grid-center': {
-          'grid-area': '1/1/1/1',
+      addUtilities([
+        {
+          '.grid-center': {
+            'grid-area': '1/1/1/1',
+          },
         },
-      })
+      ])
     },
   ],
 }
