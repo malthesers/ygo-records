@@ -1,4 +1,5 @@
 import { CardType, Type } from '@/interfaces/card'
+import { Attribute } from '@/interfaces/card/monster'
 import { ICardsQueryParams } from '@/interfaces/query-params'
 
 const initialQueryParams: ICardsQueryParams = {
@@ -8,7 +9,7 @@ const initialQueryParams: ICardsQueryParams = {
   cardType: '' as CardType,
   type: '' as Type,
   // monsterCardType: MonsterTypes.MonsterCardType,
-  // attribute: MonsterTypes.Attribute,
+  attribute: '' as Attribute,
   // atk: MonsterTypes.Atk,
   atkMin: '',
   atkMax: '',
