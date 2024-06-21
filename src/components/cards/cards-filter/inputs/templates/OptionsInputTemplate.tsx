@@ -1,4 +1,4 @@
-import { TypeList } from '@/interfaces/input'
+import { IconList } from '@/interfaces/input'
 import { ICardsQueryParams } from '@/interfaces/query-params'
 import useQueryParamsStore from '@/stores/queryParamsStore'
 import Image from 'next/image'
@@ -6,7 +6,7 @@ import { ChangeEvent } from 'react'
 
 interface OptionsInputTemplateProps<T> {
   field: keyof ICardsQueryParams
-  options: TypeList<T>[]
+  options: IconList<T>[]
   columns: number
 }
 

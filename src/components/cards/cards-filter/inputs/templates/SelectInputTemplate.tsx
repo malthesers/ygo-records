@@ -1,11 +1,11 @@
-import { TypeList } from '@/interfaces/input'
+import { IconList } from '@/interfaces/input'
 import { ICardsQueryParams } from '@/interfaces/query-params'
 import useQueryParamsStore from '@/stores/queryParamsStore'
 import Image from 'next/image'
 
 interface SelectInputTemplateProps<T> {
   field: keyof ICardsQueryParams
-  options: TypeList<T>[]
+  options: IconList<T>[]
   defaultValue: string
 }
 

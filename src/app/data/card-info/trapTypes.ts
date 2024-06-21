@@ -1,9 +1,9 @@
 import { TrapType } from '@/interfaces/card/trap'
-import { TypeList } from '@/interfaces/input'
+import { IconList } from '@/interfaces/input'
 import ContinuousIcon from '~/images/spell-trap-icons/continuous.webp'
 import CounterIcon from '~/images/spell-trap-icons/counter.webp'
 
-export const trapTypes: TypeList<TrapType>[] = [
+export const trapTypes: IconList<TrapType>[] = [
   {
     type: 'Normal',
   },

@@ -1,6 +1,6 @@
 import { StaticImageData } from 'next/image'
 
-export interface TypeList<T> {
+export interface IconList<T> {
   type: T
   icon?: StaticImageData
 }
