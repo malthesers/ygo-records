@@ -13,10 +13,11 @@ export default function Header() {
         </Link>
         <div className='hidden md:flex self-center gap-4 '>
           <Link href='/cards'>Cards</Link>
-          <Link href='/events/wcq'>WCQ</Link>
+          <Link href='/events'>Events</Link>
+          {/* <Link href='/events/wcq'>WCQ</Link>
           <Link href='/events/ycs'>YCS</Link>
           <Link href='/events/team-ycs'>TEAM YCS</Link>
-          <Link href='/events/remote-ycs'>Remote YCS</Link>
+          <Link href='/events/remote-ycs'>Remote YCS</Link> */}
           {/* <Link href='/worlds'>Worlds</Link> */}
         </div>
       </nav>
