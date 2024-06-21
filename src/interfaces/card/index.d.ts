@@ -18,3 +18,11 @@ export interface ICardBase {
 }
 
 export type ImageType = 'artwork' | 'render'
+
+export interface IPopularCard {
+  details: ICard
+  deckCount: number
+  totalCount: number
+  percentage: number
+  totalDecks: number
+}
