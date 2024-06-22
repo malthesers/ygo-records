@@ -23,8 +23,8 @@ export default function Header() {
           <span className='hidden sm:block font-bold text-xl md:text-2xl'>YGO RECORDS</span>
         </Link>
         <div className='hidden sm:flex self-center gap-4 '>
-          <Link href='/cards'>Cards</Link>
           <Link href='/decks'>Decks</Link>
+          <Link href='/cards/popular'>Cards</Link>
           <Link href='/events'>Events</Link>
         </div>
         <div className='sm:hidden my-auto'>
@@ -38,8 +38,8 @@ export default function Header() {
         }
       >
         <div className='flex flex-col *:p-2'>
-          <Link href='/cards/popular'>Cards</Link>
           <Link href='/decks'>Decks</Link>
+          <Link href='/cards/popular'>Cards</Link>
           <Link href='/events'>Events</Link>
         </div>
       </nav>

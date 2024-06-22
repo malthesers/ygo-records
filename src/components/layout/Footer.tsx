@@ -15,10 +15,10 @@ export default function Footer() {
           </div>
           <div className='flex flex-col'>
             <p className='text-xl font-semibold'>Links</p>
-            <Link href='/cards'>Card database</Link>
-            <Link href='/cards/popular'>Popular cards</Link>
             <Link href='/decks'>Popular decks</Link>
+            <Link href='/cards/popular'>Popular cards</Link>
             <Link href='/events'>All events</Link>
+            <Link href='/cards'>Card search</Link>
           </div>
           <div className='flex flex-col'>
             <p className='text-xl font-semibold'>Events</p>
