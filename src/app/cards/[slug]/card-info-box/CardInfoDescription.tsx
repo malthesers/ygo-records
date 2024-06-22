@@ -1,12 +1,13 @@
 import CardInfoBoxTemplate from './CardInfoBox'
 
 interface CardInfoDescriptionProps {
+  property: string
   description: string
 }
 
-export default function CardInfoDescription({ description }: CardInfoDescriptionProps) {
+export default function CardInfoDescription({ property, description }: CardInfoDescriptionProps) {
   return (
-    <CardInfoBoxTemplate property='Description' className='whitespace-pre-wrap'>
+    <CardInfoBoxTemplate property={property} className='whitespace-pre-wrap'>
       {description}
     </CardInfoBoxTemplate>
   )
