@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   creator: 'Malthesers',
   openGraph: {
     title: 'YGO Records',
-    description: 'Discover the newest and most effective decks',
+    description: 'Discover the newest and most effective decks.',
     url: 'https://ygo-tops.vercel.app/',
   },
 }

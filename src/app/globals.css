@@ -29,6 +29,10 @@
     @apply text-base;
   }
 
+  nav a {
+    @apply no-underline;
+  }
+
   a,
   .button-link {
     @apply text-lg underline underline-offset-2 duration-200 hover:opacity-70;
