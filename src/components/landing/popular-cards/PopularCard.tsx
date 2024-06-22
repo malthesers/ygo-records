@@ -15,7 +15,7 @@ export default function PopularCard({ card, index }: PopularCardProps) {
         <div className='row-start-1 row-end-3 bg-sky-900 p-1 mx-auto size-12 grid place-content-center rounded-full z-10'>
           <span className='text-xl font-bold'>{index + 1}</span>
         </div>
-        <div className='row-start-2 row-end-4 bg-sky-800 p-2 pt-6'>
+        <div className='row-start-2 row-end-4 bg-hieroglyphs bg-cover p-2 pt-6'>
           <p>{card.percentage.toFixed(0)}%</p>
         </div>
       </div>
