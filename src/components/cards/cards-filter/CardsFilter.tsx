@@ -9,15 +9,13 @@ import SpellFilters from './SpellFilters'
 import TrapFilters from './TrapFilters'
 
 export default function CardsFilter() {
-  const { queryParams, formValues, resetFormValues, updateQueryParams } = useQueryParamsStore()
+  const { formValues, resetFormValues, updateQueryParams } = useQueryParamsStore()
 
   function searchCards(e?: FormEvent<HTMLFormElement>) {
     if (e) e.preventDefault()
 
     updateQueryParams(formValues)
   }
-
-  console.log(formValues)
 
   return (
     <aside className='max-w-sm w-full h-fit space-y-4 p-4 bg-sky-900'>

@@ -1,5 +1,6 @@
 {
   "name": "ygo-records",
+  "description": "YGO Records | Yu-Gi-Oh! event, tournament and player database",
   "version": "0.1.0",
   "private": true,
   "scripts": {

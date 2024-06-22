@@ -4,6 +4,13 @@ import DecklistInfo from './DecklistInfo'
 import CardBox from './CardBox'
 import filterByCardType from '@/services/filterByCardType'
 import NoData from '@/components/layout/NoData'
+import formatMetadata, { Metadata } from '@/services/formatMetadata'
+
+export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
+  const deck = await getData<IDeck>(`decks/${params.id}`)
+
+  return formatMetadata(`${deck.deckType.name} by ${deck.player.name} at ${deck.event.name}`, 'decklist')
+}
 
 export default async function DeckListPage({ params }: { params: { id: string } }) {
   const deck = await getData<IDeck>(`decks/${params.id}`)
