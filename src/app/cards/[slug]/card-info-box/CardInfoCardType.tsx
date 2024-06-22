@@ -1,10 +1,10 @@
 import { CardType } from '@/interfaces/card'
-import CardInfoBox from './CardInfoBox'
+import CardInfoBoxTemplate from './CardInfoBox'
 
 interface CardInfoCardTypeProps {
   cardType: CardType
 }
 
 export default function CardInfoCardType({ cardType }: CardInfoCardTypeProps) {
-  return <CardInfoBox property='Card type'>{cardType}</CardInfoBox>
+  return <CardInfoBoxTemplate property='Card type'>{cardType}</CardInfoBoxTemplate>
 }

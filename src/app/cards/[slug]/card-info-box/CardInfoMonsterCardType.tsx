@@ -1,4 +1,4 @@
-import CardInfoBox from './CardInfoBox'
+import CardInfoBoxTemplate from './CardInfoBox'
 import { MonsterCardType } from '@/interfaces/card/monster'
 
 interface CardInfoMonsterCardTypeProps {
@@ -7,8 +7,8 @@ interface CardInfoMonsterCardTypeProps {
 
 export default function CardInfoMonsterCardType({ monsterCardType }: CardInfoMonsterCardTypeProps) {
   return (
-    <CardInfoBox property='Monster type'>
+    <CardInfoBoxTemplate property='Monster type'>
       <p>{monsterCardType}</p>
-    </CardInfoBox>
+    </CardInfoBoxTemplate>
   )
 }

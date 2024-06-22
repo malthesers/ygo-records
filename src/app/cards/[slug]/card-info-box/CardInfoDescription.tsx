@@ -1,4 +1,4 @@
-import CardInfoBox from './CardInfoBox'
+import CardInfoBoxTemplate from './CardInfoBox'
 
 interface CardInfoDescriptionProps {
   description: string
@@ -6,8 +6,8 @@ interface CardInfoDescriptionProps {
 
 export default function CardInfoDescription({ description }: CardInfoDescriptionProps) {
   return (
-    <CardInfoBox property='Description' className='whitespace-pre-wrap'>
+    <CardInfoBoxTemplate property='Description' className='whitespace-pre-wrap'>
       {description}
-    </CardInfoBox>
+    </CardInfoBoxTemplate>
   )
 }

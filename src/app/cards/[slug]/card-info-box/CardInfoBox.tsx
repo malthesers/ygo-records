@@ -1,12 +1,12 @@
 import React from 'react'
 
-interface CardInfoBoxProps {
+interface CardInfoBoxTemplateProps {
   property: string
   className?: string
   children: React.ReactNode
 }
 
-export default function CardInfoBox({ property, className, children }: CardInfoBoxProps) {
+export default function CardInfoBoxTemplate({ property, className, children }: CardInfoBoxTemplateProps) {
   return (
     <div className={'bg-sky-950 p-2 ' + className}>
       <p className='text-sm italic mb-1'>{property}</p>
