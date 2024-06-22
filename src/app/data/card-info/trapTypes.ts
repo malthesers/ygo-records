@@ -1,5 +1,5 @@
 import { TrapType } from '@/interfaces/card/trap'
-import { IconList } from '@/interfaces/input'
+import { IconList } from '@/interfaces/icons'
 import ContinuousIcon from '~/images/spell-trap-icons/continuous.webp'
 import CounterIcon from '~/images/spell-trap-icons/counter.webp'
 

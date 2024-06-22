@@ -1,5 +1,5 @@
 import { MonsterType } from '@/interfaces/card/monster'
-import { IconList } from '@/interfaces/input'
+import { IconList } from '@/interfaces/icons'
 
 export const monsterTypes: IconList<MonsterType>[] = [
   { type: 'Aqua' },

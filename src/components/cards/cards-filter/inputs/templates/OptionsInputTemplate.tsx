@@ -1,4 +1,4 @@
-import { IconList } from '@/interfaces/input'
+import { IconList } from '@/interfaces/icons'
 import { ICardsQueryParams } from '@/interfaces/query-params'
 import useQueryParamsStore from '@/stores/queryParamsStore'
 import Image from 'next/image'
