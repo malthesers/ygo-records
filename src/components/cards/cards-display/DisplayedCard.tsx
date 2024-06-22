@@ -15,9 +15,7 @@ export default function DisplayedCard({ card }: DisplayedCardProps) {
   useEffect(() => {
     fetch(`/api/image/${card.id}`)
       .then((res) => res.json())
-      .then((url) => {
-        setImageUrl(url)
-      })
+      .then((url) => setImageUrl(url))
   }, [])
 
   return (

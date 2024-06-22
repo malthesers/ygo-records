@@ -10,7 +10,7 @@ export default function EventsBanner() {
       <p className='text-lg text-center font-semibold'>Events and their winners sorted by recency.</p>
       <div className='grid grid-cols-2 md:grid-cols-4 gap-4'>
         {eventTypes.map((key) => (
-          <Link href={`/events/${key}`} className='grid place-content-center'>
+          <Link key={key} href={`/events/${key}`} className='grid place-content-center'>
             <Image key={key} src={eventInfo[key].logo} alt={eventInfo[key].title} className='w-36' />
           </Link>
         ))}

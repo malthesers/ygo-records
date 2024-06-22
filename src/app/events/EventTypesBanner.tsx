@@ -6,6 +6,7 @@ export default function EventTypesBanner() {
     <section className='p-0 grid md:grid-cols-4 gap-4'>
       {eventTypes.map((key) => (
         <LogoBanner
+          key={key}
           splash={eventInfo[key].splash}
           logo={eventInfo[key].logo}
           alt='Yu-Gi-Oh! Championship Series'
