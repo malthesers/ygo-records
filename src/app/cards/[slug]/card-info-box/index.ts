@@ -7,6 +7,7 @@ import SpellType from './CardInfoSpellType'
 import Attribute from './CardInfoAttribute'
 import TrapType from './CardInfoTrapType'
 import CardType from './CardInfoCardType'
+import Arrows from './CardInfoArrows'
 import Rating from './CardInfoRating'
 import Scale from './CardInfoScale'
 import Level from './CardInfoLevel'
@@ -24,6 +25,7 @@ const CardInfo = {
   Attribute,
   TrapType,
   CardType,
+  Arrows,
   Rating,
   Scale,
   Level,

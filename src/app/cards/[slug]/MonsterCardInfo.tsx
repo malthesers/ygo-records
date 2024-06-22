@@ -26,6 +26,7 @@ export default function MonsterCardInfo({ card }: MonsterCardInfoProps) {
         <CardInfo.Scale card={card} />
         <CardInfo.ATK atk={card.atk} />
         {!isLink && <CardInfo.DEF def={card.def} />}
+        {isLink && <CardInfo.Arrows arrows={card.arrows} />}
       </div>
     </div>
   )
