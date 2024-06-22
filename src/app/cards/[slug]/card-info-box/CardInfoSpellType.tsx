@@ -1,4 +1,3 @@
-import { Attribute } from '@/interfaces/card/monster'
 import CardInfoBox from './CardInfoBox'
 import Image from 'next/image'
 import { spellTypeIconsMap } from '@/app/data/card-info/spellTypes'
