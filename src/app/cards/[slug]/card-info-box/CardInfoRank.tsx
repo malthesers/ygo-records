@@ -1,5 +1,7 @@
-import CardInfoBoxTemplate from './CardInfoBox'
 import { Rank } from '@/interfaces/card/monster'
+import CardInfoBoxTemplate from './CardInfoBox'
+import rankStar from '~/images/frame-assets/rank.webp'
+import Image from 'next/image'
 
 interface CardInfoRankProps {
   rank: Rank
@@ -8,7 +10,10 @@ interface CardInfoRankProps {
 export default function CardInfoRank({ rank }: CardInfoRankProps) {
   return (
     <CardInfoBoxTemplate property='Rank'>
-      <p>{rank}</p>
+      <div className='flex flex-row gap-2 items-center'>
+        <Image src={rankStar} alt='Level icon' width={16} className='size-4' />
+        <p>{rank}</p>
+      </div>
     </CardInfoBoxTemplate>
   )
 }
