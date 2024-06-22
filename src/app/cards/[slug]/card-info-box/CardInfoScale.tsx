@@ -1,14 +1,16 @@
+import { IMonsterCard } from '@/interfaces/card/monster'
 import CardInfoBoxTemplate from './CardInfoBox'
-import { Scale } from '@/interfaces/card/monster'
 
 interface CardInfoScaleProps {
-  scale: Scale
+  card: IMonsterCard
 }
 
-export default function CardInfoScale({ scale }: CardInfoScaleProps) {
+export default function CardInfoScale({ card }: CardInfoScaleProps) {
+  if (!card.pendulum?.scale) return null
+
   return (
     <CardInfoBoxTemplate property='Scale'>
-      <p>{scale}</p>
+      <p>{card.pendulum.scale}</p>
     </CardInfoBoxTemplate>
   )
 }

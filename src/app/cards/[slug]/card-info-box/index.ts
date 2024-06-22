@@ -1,4 +1,6 @@
 import MonsterCardType from './CardInfoMonsterCardType'
+import PendulumEffect from './CardInfoPendulumEffect'
+import MonsterEffect from './CardInfoMonsterEffect'
 import MonsterType from './CardInfoMonsterType'
 import Description from './CardInfoDescription'
 import SpellType from './CardInfoSpellType'
@@ -14,6 +16,8 @@ import DEF from './CardInfoDEF'
 
 const CardInfo = {
   MonsterCardType,
+  PendulumEffect,
+  MonsterEffect,
   MonsterType,
   Description,
   SpellType,
