@@ -38,6 +38,8 @@
     @apply text-lg underline underline-offset-2 duration-200 hover:opacity-70;
   }
 
+  /* ----- Forms ----- */
+
   label,
   input {
     @apply text-base;
@@ -71,6 +73,8 @@
     @apply bg-white text-sky-950;
   }
 
+  /* ----- Tables ----- */
+
   section:has(> table) {
     @apply bg-sky-900;
   }
@@ -80,7 +84,11 @@
   }
 
   thead {
-    @apply hidden md:table-header-group bg-sky-950 border-b-2 border-white;
+    @apply bg-sky-950 border-b-2 border-white;
+  }
+
+  thead tr {
+    @apply grid md:table-row;
   }
 
   tr {

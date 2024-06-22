@@ -18,8 +18,8 @@ export default function DeckTable({ decks, showEvent, showPlayer, showDeck, show
       <table>
         <thead>
           <tr>
-            {showEvent && <th>Date</th>}
             {showEvent && <th>Tournament</th>}
+            {showEvent && <th>Date</th>}
             <th>Placement</th>
             {showPlayer && <th>Player</th>}
             {showDeck && <th>Deck</th>}
@@ -29,8 +29,8 @@ export default function DeckTable({ decks, showEvent, showPlayer, showDeck, show
         <tbody>
           {decks?.map((deck, index) => (
             <tr key={index}>
-              {showEvent && <DateCell startDate={deck.event.startDate} endDate={deck.event.endDate} />}
               {showEvent && <EventCell event={deck.event} />}
+              {showEvent && <DateCell startDate={deck.event.startDate} endDate={deck.event.endDate} />}
               <PlacementCell placement={deck.placement} />
               {showPlayer && <PlayerCell player={deck.player} />}
               {showDeck && <DeckCell deck={deck} />}
