@@ -5,7 +5,7 @@ import Image from 'next/image'
 export default function Footer() {
   return (
     <footer className='bg-sky-900'>
-      <div className='py-16 px-3 text-center'>
+      <div className='py-12 px-3 text-center'>
         <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-4'>
           <div className='sm:col-span-2 md:col-span-1'>
             <Link href='/' className='no-underline'>
@@ -28,7 +28,7 @@ export default function Footer() {
             <Link href='/events/remote-ycs'>Remote YCS</Link>
           </div>
         </div>
-        <p className='mt-8'>a</p>
+        <p className='mt-8 text-sm'>Copyright © 2024. YGO Records. All rights reserved.</p>
       </div>
     </footer>
   )
