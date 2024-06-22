@@ -1,3 +1,5 @@
+'use client'
+
 import type { FormEvent } from 'react'
 import useQueryParamsStore from '@/stores/queryParamsStore'
 import NameInput from './inputs/NameInput'
