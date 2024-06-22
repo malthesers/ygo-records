@@ -3,11 +3,11 @@ import MonsterCardInfo from './MonsterCardInfo'
 import SpellCardInfo from './SpellCardInfo'
 import TrapCardInfo from './TrapCardInfo'
 
-interface CardInfoProps {
+interface CardInfoPanelProps {
   card: ICard
 }
 
-export default function CardInfo({ card }: CardInfoProps) {
+export default function CardInfoPanel({ card }: CardInfoPanelProps) {
   return (
     <div className='w-full bg-sky-900 my-4 p-4 border-y-2 border-white shadow-2xl space-y-2'>
       <h1 className='text-xl font-semibold text-left mb-0'>{card.name}</h1>

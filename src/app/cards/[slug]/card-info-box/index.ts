@@ -12,7 +12,7 @@ import Rank from './CardInfoRank'
 import ATK from './CardInfoATK'
 import DEF from './CardInfoDEF'
 
-const CardInfoBox = {
+const CardInfo = {
   MonsterCardType,
   MonsterType,
   Description,
@@ -28,4 +28,4 @@ const CardInfoBox = {
   DEF,
 }
 
-export default CardInfoBox
+export default CardInfo
