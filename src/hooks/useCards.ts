@@ -7,7 +7,17 @@ interface ICardsResponse {
   cards: ICard[]
 }
 
-export default function useCards() {
+/**
+ * Custom hook for fetching cards from the API based on query parameters.
+ *
+ * @returns An object of length, cards and the booleans isError and isLoading,
+ */
+export default function useCards(): {
+  length: number | undefined
+  cards: ICard[] | undefined
+  isError: boolean
+  isLoading: boolean
+} {
   const queryParams = useQueryParamsStore((state) => state.queryParams)
   const { data, isError, isLoading } = useAPI<ICardsResponse>('cards', queryParams)
 
