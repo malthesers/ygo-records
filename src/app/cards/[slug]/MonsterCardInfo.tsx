@@ -1,7 +1,9 @@
 import { ICard } from '@/interfaces/card'
 import CardInfoDescription from './card-info-box/CardInfoDescription'
 import CardInfoAttribute from './card-info-box/CardInfoAttribute'
-import CardInfoType from './card-info-box/CardInfoCardType'
+import CardInfoCardType from './card-info-box/CardInfoCardType'
+import CardInfoMonsterType from './card-info-box/CardInfoMonsterType'
+import CardInfoMonsterCardType from './card-info-box/CardInfoMonsterCardType'
 
 interface MonsterCardInfoProps {
   card: ICard
@@ -17,7 +19,9 @@ export default function MonsterCardInfo({ card }: MonsterCardInfoProps) {
     <div className='space-y-2'>
       <CardInfoDescription description={card.description} />
       <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2'>
-        <CardInfoType cardType={card.cardType} />
+        <CardInfoCardType cardType={card.cardType} />
+        <CardInfoMonsterCardType monsterCardType={card.monsterCardType} />
+        <CardInfoMonsterType type={card.type} />
         <CardInfoAttribute attribute={card.attribute} />
       </div>
     </div>

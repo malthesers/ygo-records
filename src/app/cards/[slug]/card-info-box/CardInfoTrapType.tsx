@@ -4,15 +4,15 @@ import { trapTypeIconsMap } from '@/app/data/card-info/trapTypes'
 import { TrapType } from '@/interfaces/card/trap'
 
 interface CardInfoTrapTypeProps {
-  trapType: TrapType
+  type: TrapType
 }
 
-export default function CardInfoTrapType({ trapType }: CardInfoTrapTypeProps) {
+export default function CardInfoTrapType({ type }: CardInfoTrapTypeProps) {
   return (
-    <CardInfoBox property='Trap type'>
+    <CardInfoBox property='Type'>
       <div className='flex flex-row gap-2'>
-        <Image src={trapTypeIconsMap[trapType]} alt={`${trapType} attribute icon`} width={20} className='size-6' />
-        <p>{trapType}</p>
+        <Image src={trapTypeIconsMap[type]} alt={`${type} attribute icon`} width={20} className='size-6' />
+        <p>{type}</p>
       </div>
     </CardInfoBox>
   )

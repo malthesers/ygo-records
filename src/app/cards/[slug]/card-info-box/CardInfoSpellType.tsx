@@ -4,15 +4,15 @@ import { spellTypeIconsMap } from '@/app/data/card-info/spellTypes'
 import { SpellType } from '@/interfaces/card/spell'
 
 interface CardInfoSpellTypeProps {
-  spellType: SpellType
+  type: SpellType
 }
 
-export default function CardInfoSpellType({ spellType }: CardInfoSpellTypeProps) {
+export default function CardInfoSpellType({ type }: CardInfoSpellTypeProps) {
   return (
-    <CardInfoBox property='Spell type'>
+    <CardInfoBox property='Type'>
       <div className='flex flex-row gap-2'>
-        <Image src={spellTypeIconsMap[spellType]} alt={`${spellType} attribute icon`} width={20} className='size-6' />
-        <p>{spellType}</p>
+        <Image src={spellTypeIconsMap[type]} alt={`${type} attribute icon`} width={20} className='size-6' />
+        <p>{type}</p>
       </div>
     </CardInfoBox>
   )

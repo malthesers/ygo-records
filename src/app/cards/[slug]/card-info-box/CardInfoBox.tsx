@@ -10,7 +10,7 @@ export default function CardInfoBox({ property, className, children }: CardInfoB
   return (
     <div className={'bg-sky-950 p-2 ' + className}>
       <p className='text-sm italic mb-1'>{property}</p>
-      <p>{children}</p>
+      {children}
     </div>
   )
 }
