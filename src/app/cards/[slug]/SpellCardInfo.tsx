@@ -1,7 +1,5 @@
 import { ICard } from '@/interfaces/card'
-import CardInfoDescription from './card-info-box/CardInfoDescription'
-import CardInfoCardType from './card-info-box/CardInfoCardType'
-import CardInfoSpellType from './card-info-box/CardInfoSpellType'
+import CardInfo from './card-info-box'
 
 interface SpellCardInfoProps {
   card: ICard
@@ -12,10 +10,10 @@ export default function SpellCardInfo({ card }: SpellCardInfoProps) {
 
   return (
     <div className='space-y-2'>
-      <CardInfoDescription property='Spell effect' description={card.description} />
+      <CardInfo.Description property='Spell effect' description={card.description} />
       <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2'>
-        <CardInfoCardType cardType={card.cardType} />
-        <CardInfoSpellType type={card.type} />
+        <CardInfo.CardType cardType={card.cardType} />
+        <CardInfo.SpellType type={card.type} />
       </div>
     </div>
   )
