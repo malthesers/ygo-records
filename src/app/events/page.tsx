@@ -5,8 +5,6 @@ import getData from '@/services/getData'
 export default async function EventsPage() {
   const events = await getData<IEvent[]>('events')
 
-  console.log(events)
-
   return (
     <main>
       <h1>Events</h1>

@@ -3,14 +3,15 @@ import S3CardRender from '../layout/S3CardRender'
 
 interface CardRenderProps {
   card: ICard
+  className?: string
 }
 
-export default function CardRender({ card }: CardRenderProps) {
+export default function CardRender({ card, className }: CardRenderProps) {
   return (
     <S3CardRender
       passcode={card.id}
       alt={`Card render of ${card.name}`}
-      className='w-full max-w-96 shadow-2xl'
+      className={'w-full max-w-96 shadow-2xl ' + className}
       width={640}
       height={933}
       priority
