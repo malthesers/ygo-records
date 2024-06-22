@@ -11,7 +11,7 @@ export default function CardRender({ card, className }: CardRenderProps) {
     <S3CardRender
       passcode={card.id}
       alt={`Card render of ${card.name}`}
-      className={'w-full max-w-96 shadow-2xl ' + className}
+      className={'w-full h-fit max-w-96 shadow-2xl aspect-[640/933] ' + className}
       width={640}
       height={933}
       priority

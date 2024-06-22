@@ -10,7 +10,7 @@ export default async function CardPage({ params }: { params: { slug: string } })
   return (
     <main>
       <section className='flex flex-col lg:flex-row '>
-        {card && <CardRender card={card} className='mx-auto' />}
+        {card && <CardRender card={card} className='m-auto' />}
         {card && <CardInfoPanel card={card} />}
       </section>
       {card && <DeckTable decks={card.decks} showEvent showPlayer showDeck />}
