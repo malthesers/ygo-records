@@ -4,6 +4,8 @@ import CardInfoAttribute from './card-info-box/CardInfoAttribute'
 import CardInfoCardType from './card-info-box/CardInfoCardType'
 import CardInfoMonsterType from './card-info-box/CardInfoMonsterType'
 import CardInfoMonsterCardType from './card-info-box/CardInfoMonsterCardType'
+import CardInfoATK from './card-info-box/CardInfoATK'
+import CardInfoDEF from './card-info-box/CardInfoDEF'
 
 interface MonsterCardInfoProps {
   card: ICard
@@ -23,6 +25,8 @@ export default function MonsterCardInfo({ card }: MonsterCardInfoProps) {
         <CardInfoMonsterCardType monsterCardType={card.monsterCardType} />
         <CardInfoMonsterType type={card.type} />
         <CardInfoAttribute attribute={card.attribute} />
+        <CardInfoATK atk={card.atk} />
+        {!isLink && <CardInfoDEF def={card.def} />}
       </div>
     </div>
   )
