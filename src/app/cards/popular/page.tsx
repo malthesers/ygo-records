@@ -1,5 +1,4 @@
 import TextBanner from '@/components/TextBanner'
-import splash from '~/images/splash/hieroglyphs-blue.png'
 import PopularCard from '@/components/landing/popular-cards/PopularCard'
 import { IPopularCard } from '@/interfaces/card'
 import getData from '@/services/getData'
@@ -9,7 +8,7 @@ export default async function PopularCardsPage() {
 
   return (
     <main>
-      <TextBanner splash={splash} alt='hieroglyphs splash image'>
+      <TextBanner>
         <h1 className='mb-2 font-semibold'>Most Popular Cards</h1>
         <p className='text-lg text-center font-semibold'>Cards ranked by the percentage of decks they occur in.</p>
       </TextBanner>

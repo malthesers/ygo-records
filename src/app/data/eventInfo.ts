@@ -15,6 +15,8 @@ interface EventInfo {
   title: string
 }
 
+export const eventTypes: EventSlug[] = ['wcq', 'ycs', 'team-ycs', 'remote-ycs']
+
 const eventInfo: Record<EventSlug, EventInfo> = {
   wcq: { splash: splashWcq, logo: logoWcq, title: 'WCQ' },
   ycs: { splash: splashYcs, logo: logoYcs, title: 'YCS' },
