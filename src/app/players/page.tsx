@@ -1,4 +1,4 @@
-import TextBanner from '@/components/TextBanner'
+import TextBanner from '@/components/banners/TextBanner'
 import { IPlayer } from '@/interfaces/player'
 import getData from '@/services/getData'
 import { Metadata } from 'next'

@@ -1,4 +1,4 @@
-import TextBanner from '@/components/TextBanner'
+import TextBanner from '@/components/banners/TextBanner'
 import Image from 'next/image'
 import eventInfo, { eventTypes } from '../data/eventInfo'
 import Link from 'next/link'

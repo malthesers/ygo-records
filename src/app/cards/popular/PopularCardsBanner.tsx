@@ -1,4 +1,4 @@
-import TextBanner from '@/components/TextBanner'
+import TextBanner from '@/components/banners/TextBanner'
 
 export default function PopularCardsBanner() {
   return (

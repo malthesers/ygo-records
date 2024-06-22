@@ -1,7 +1,7 @@
 import { EventSlug, IEvent } from '@/interfaces/event'
 import { notFound } from 'next/navigation'
 import TournamentTable from '@/components/tables/TournamentTable'
-import LogoBanner from '@/components/LogoBanner'
+import LogoBanner from '@/components/banners/LogoBanner'
 import eventInfo from '@/app/data/eventInfo'
 import getData from '@/services/getData'
 import formatMetadata, { Metadata } from '@/services/formatMetadata'
