@@ -7,8 +7,8 @@ interface CardInfoDescriptionProps {
 
 export default function CardInfoDescription({ property, description }: CardInfoDescriptionProps) {
   return (
-    <CardInfoBoxTemplate property={property} className='whitespace-pre-wrap'>
-      {description}
+    <CardInfoBoxTemplate property={property}>
+      <p className='whitespace-pre-wrap'>{description}</p>
     </CardInfoBoxTemplate>
   )
 }

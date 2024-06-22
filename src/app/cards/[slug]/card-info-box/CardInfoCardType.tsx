@@ -6,5 +6,9 @@ interface CardInfoCardTypeProps {
 }
 
 export default function CardInfoCardType({ cardType }: CardInfoCardTypeProps) {
-  return <CardInfoBoxTemplate property='Card type'>{cardType}</CardInfoBoxTemplate>
+  return (
+    <CardInfoBoxTemplate property='Card type'>
+      <p>{cardType}</p>
+    </CardInfoBoxTemplate>
+  )
 }

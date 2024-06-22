@@ -12,7 +12,7 @@ export default function TrapCardInfo({ card }: TrapCardInfoProps) {
 
   return (
     <div className='space-y-2'>
-      <CardInfoDescription description={card.description} />
+      <CardInfoDescription property='Card text' description={card.description} />
       <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2'>
         <CardInfoCardType cardType={card.cardType} />
         <CardInfoTrapType type={card.type} />
