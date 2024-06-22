@@ -9,7 +9,7 @@ interface ICardsResponse {
 
 export default function useCards() {
   const queryParams = useQueryParamsStore((state) => state.queryParams)
-  const { data, isError, isLoading } = useAPI<ICardsResponse>('/cards', queryParams)
+  const { data, isError, isLoading } = useAPI<ICardsResponse>('cards', queryParams)
 
   return {
     length: data?.length,
