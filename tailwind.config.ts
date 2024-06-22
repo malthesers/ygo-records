@@ -15,8 +15,7 @@ const config: Config = {
         'link-rating': ['var(--font-link-rating)'],
       },
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        hieroglyphs: 'url("/images/splash/hieroglyphs-blue.png")',
       },
       animation: {
         'spin-y': 'spin-y 1s linear infinite',
