@@ -1,13 +1,13 @@
 import Image, { StaticImageData } from 'next/image'
 
-interface SplashBannerProps {
+interface LogoBannerProps {
   splash: StaticImageData
   logo: StaticImageData
   alt: string
   clear?: boolean
 }
 
-export default function SplashBanner({ splash, logo, alt, clear }: SplashBannerProps) {
+export default function LogoBanner({ splash, logo, alt, clear }: LogoBannerProps) {
   return (
     <section className='grid grid-cols-1 grid-rows-1 *:grid-center *:m-auto h-[15rem] overflow-hidden p-0'>
       <Image src={splash} alt={`${alt} splash banner`} className='size-full object-cover' priority />

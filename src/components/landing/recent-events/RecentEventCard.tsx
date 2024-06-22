@@ -10,7 +10,7 @@ interface RecentEventCardProps {
 
 export default function RecentEventCard({ event }: RecentEventCardProps) {
   return (
-    <Link href={`/events/${event.type.slug}/${event.slug}`} className='no-underline'>
+    <Link href={`/events/${event.type.slug}/${event.slug}`} className='w-full no-underline'>
       <article className='w-full max-w-[30rem] mx-auto grid grid-cols-12 grid-rows-7 pr-4 sm:pr-0 text-center'>
         <Image
           className='col-start-1 col-end-6 row-start-1 row-end-8 z-10 object-cover w-32 m-auto'

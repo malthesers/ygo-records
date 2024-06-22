@@ -1,7 +1,7 @@
 import { EventSlug, IEvent } from '@/interfaces/event'
 import { notFound } from 'next/navigation'
 import TournamentTable from '@/components/tables/TournamentTable'
-import SplashBanner from '@/components/SplashBanner'
+import LogoBanner from '@/components/LogoBanner'
 import eventInfo from '@/app/data/eventInfo'
 import getData from '@/services/getData'
 
@@ -14,7 +14,7 @@ export default async function EventTypePage({ params }: { params: { eventType: E
 
   return (
     <main>
-      <SplashBanner
+      <LogoBanner
         splash={eventInfo[params.eventType].splash}
         logo={eventInfo[params.eventType].logo}
         alt='Yu-Gi-Oh! Championship Series'
