@@ -13,7 +13,7 @@ export default function manifest(): Manifest {
   return {
     name: 'YGO Records',
     short_name: 'YGO Records',
-    description: 'YGO Records | Discover the newest and most effective decks',
+    description: 'YGO Records | Yu-Gi-Oh! deck, event and player database',
     start_url: '/',
     display: 'standalone',
     background_color: '#082F49',

@@ -5,11 +5,11 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'YGO Records',
-  description: 'YGO Records | Yu-Gi-Oh! event, deck and player database',
+  description: 'YGO Records | Yu-Gi-Oh! deck, event and player database',
   keywords: ['Yu-Gi-Oh!', 'Yugioh'],
   openGraph: {
     title: 'YGO Records',
-    description: 'YGO Records | Yu-Gi-Oh! event, deck and player database',
+    description: 'YGO Records | Yu-Gi-Oh! deck, event and player database',
   },
 }
 
