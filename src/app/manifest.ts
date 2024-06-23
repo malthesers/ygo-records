@@ -41,13 +41,50 @@ export default function manifest(): Manifest {
         sizes: '512x512',
         type: 'image/png',
       },
-      // {
-      //   src: '/maskable-icon.png',
-      //   sizes: '192x192',
-      //   type: 'image/png',
-      //   purpose: 'maskable',
-      // },
+      {
+        src: '/maskable-icon.png',
+        sizes: '192x192',
+        type: 'image/png',
+        purpose: 'maskable',
+      },
     ],
-    screenshots: [],
+    screenshots: [
+      {
+        src: '/screenshots/mobile1.jpg',
+        type: 'image/png',
+        sizes: '828x1792',
+        form_factor: 'narrow',
+      },
+      {
+        src: '/screenshots/mobile2.jpg',
+        type: 'image/png',
+        sizes: '828x1792',
+        form_factor: 'narrow',
+      },
+      {
+        src: '/screenshots/mobile3.jpg',
+        type: 'image/png',
+        sizes: '828x1792',
+        form_factor: 'narrow',
+      },
+      {
+        src: '/screenshots/desktop1.jpg',
+        type: 'image/png',
+        sizes: '2004x1080',
+        form_factor: 'wide',
+      },
+      {
+        src: '/screenshots/desktop2.jpg',
+        type: 'image/png',
+        sizes: '2004x1080',
+        form_factor: 'wide',
+      },
+      {
+        src: '/screenshots/desktop3.jpg',
+        type: 'image/png',
+        sizes: '2004x1080',
+        form_factor: 'wide',
+      },
+    ],
   }
 }

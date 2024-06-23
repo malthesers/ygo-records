@@ -15,8 +15,8 @@ export default function TopDeckCard({ topDeck }: TopDeckCardProps) {
         <S3CardArtwork
           passcode={topDeck.thumbnail}
           alt={topDeck.name}
-          width={350}
-          height={350}
+          width={160}
+          height={160}
           priority
           className='size-full object-cover'
         />
