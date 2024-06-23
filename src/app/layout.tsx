@@ -3,6 +3,7 @@ import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import { Inter } from 'next/font/google'
 import localFont from 'next/font/local'
+import { Metadata } from 'next'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -20,6 +21,10 @@ const linkRating = localFont({
   display: 'swap',
   variable: '--font-link-rating',
 })
+
+export const metadata: Metadata = {
+  metadataBase: new URL('https://ygo-records.vercel.app'),
+}
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
