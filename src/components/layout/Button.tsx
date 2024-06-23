@@ -12,7 +12,8 @@ export default function Button({ children, className, onClick }: ButtonProps) {
   return (
     <button
       className={
-        className + ' w-full py-2 px-3 bg-sky-950 border-white border-2 duration-200 hover:bg-white hover:text-sky-950'
+        'w-full py-2 px-3 bg-sky-950 border-white border-2 duration-200 hover:bg-white hover:text-sky-950 ' +
+        (className || '')
       }
       onClick={onClick}
     >
