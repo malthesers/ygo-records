@@ -7,6 +7,7 @@ const nextConfig = {
         hostname: 'ygo-images.s3.eu-north-1.amazonaws.com',
       },
     ],
+    minimumCacheTTL: 900,
   },
   logging: {
     fetches: {
