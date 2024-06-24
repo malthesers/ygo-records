@@ -1,10 +1,14 @@
 'use client'
 
 import DisplayedCard from './DisplayedCard'
-import useCards from '@/hooks/useCards'
+import useQueryParamsStore from '@/stores/queryParamsStore'
+import Button from '@/components/layout/Button'
+import useInfiniteCards from '@/hooks/useInfiniteCards'
 
 export default function CardsDisplay() {
-  const { cards, isLoading, isError } = useCards()
+  const queryParams = useQueryParamsStore((state) => state.queryParams)
+  // const { cards, isLoading, isError } = useCards()
+  const { results, size, setSize, isError, isLoading } = useInfiniteCards()
 
   if (isLoading) return <p>Loading</p>
   if (isError) return <p>Error</p>
@@ -12,12 +16,11 @@ export default function CardsDisplay() {
   return (
     <div className='w-full h-fit p-4 bg-sky-900'>
       <div className='grid gap-4 grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6'>
-        {/* <div className='flex flex-col'> */}
-        {cards?.map((card) => (
-          // <p key={card.id}>{card.name}</p>
-          <DisplayedCard key={card.id} card={card} />
-        ))}
+        {results?.map((res) => res.cards?.map((card) => <DisplayedCard key={card.id} card={card} />))}
       </div>
+      <Button className='mt-4' onClick={() => setSize(size + 1)}>
+        Load more
+      </Button>
     </div>
   )
 }

@@ -7,8 +7,6 @@ interface ButtonProps {
 }
 
 export default function Button({ children, className, onClick }: ButtonProps) {
-  function handleClick() {}
-
   return (
     <button
       className={
