@@ -20,7 +20,9 @@ export default async function getS3Image(src: string) {
 
   try {
     await s3Client.send(headCommand)
-    return getSignedUrl(s3Client, getCommand)
+    return getSignedUrl(s3Client, getCommand, {
+      expiresIn: 3600,
+    })
   } catch (error) {
     return hieroglyphicsBlue.src
   }

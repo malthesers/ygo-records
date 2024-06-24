@@ -24,7 +24,9 @@ export default async function getS3CardImage(passcode: string, type: 'artwork' |
   try {
     await s3Client.send(headCommand)
 
-    return getSignedUrl(s3Client, getCommand)
+    return getSignedUrl(s3Client, getCommand, {
+      expiresIn: 3600,
+    })
   } catch (error: any) {
     if (error.name === 'NotFound') {
       try {
@@ -37,7 +39,9 @@ export default async function getS3CardImage(passcode: string, type: 'artwork' |
 
         await s3Client.send(putCommand)
 
-        return await getSignedUrl(s3Client, getCommand)
+        return await getSignedUrl(s3Client, getCommand, {
+          expiresIn: 3600,
+        })
       } catch (uploadError) {
         console.error(uploadError)
 

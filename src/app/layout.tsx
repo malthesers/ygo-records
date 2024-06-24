@@ -5,6 +5,8 @@ import { Inter } from 'next/font/google'
 import localFont from 'next/font/local'
 import { Metadata } from 'next'
 
+export const revalidate = 3600
+
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
