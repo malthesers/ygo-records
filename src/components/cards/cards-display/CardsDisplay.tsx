@@ -1,13 +1,10 @@
 'use client'
 
 import DisplayedCard from './DisplayedCard'
-import useQueryParamsStore from '@/stores/queryParamsStore'
 import Button from '@/components/layout/Button'
 import useInfiniteCards from '@/hooks/useInfiniteCards'
 
 export default function CardsDisplay() {
-  const queryParams = useQueryParamsStore((state) => state.queryParams)
-  // const { cards, isLoading, isError } = useCards()
   const { results, size, setSize, isError, isLoading } = useInfiniteCards()
 
   if (isLoading) return <p>Loading</p>
