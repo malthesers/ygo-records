@@ -24,6 +24,14 @@ const linkRating = localFont({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://ygo-records.vercel.app'),
+  title: 'YGO Records',
+  description: 'YGO Records | Yu-Gi-Oh! deck, event and player database',
+  keywords: ['Yu-Gi-Oh!', 'Yugioh'],
+  openGraph: {
+    title: 'YGO Records',
+    description: 'YGO Records | Yu-Gi-Oh! deck, event and player database',
+    images: '/opengraph-image.png',
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
