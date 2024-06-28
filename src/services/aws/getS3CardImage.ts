@@ -2,6 +2,7 @@ import { HeadObjectCommand, PutObjectCommand } from '@aws-sdk/client-s3'
 import s3Client from './s3Client'
 import getYGOProImageUrl from './getYGOProImageUrl'
 import artworkPlaceholder from '~/images/placeholders/artwork.jpg'
+import renderPlaceholder from '~/images/placeholders/render.jpg'
 
 /**
  * Fetches signed signed url for a card image and returns it.
@@ -12,6 +13,7 @@ import artworkPlaceholder from '~/images/placeholders/artwork.jpg'
  * @returns Signed url for the resource or placeholder if error.
  */
 export default async function getS3CardImage(passcode: string, type: 'artwork' | 'render') {
+  const placeholderUrl = type === 'render' ? renderPlaceholder.src : artworkPlaceholder.src
   const baseUrl = process.env.CLOUDFRONT_URL
   const imageUrl = `${baseUrl}/cards/${type}/${passcode}.jpg`
   const s3Params = {
@@ -41,10 +43,10 @@ export default async function getS3CardImage(passcode: string, type: 'artwork' |
       } catch (uploadError) {
         console.error(uploadError)
 
-        return artworkPlaceholder.src
+        return placeholderUrl
       }
     }
 
-    return artworkPlaceholder.src
+    return placeholderUrl
   }
 }
