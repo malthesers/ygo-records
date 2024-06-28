@@ -2,8 +2,9 @@ import axios from 'axios'
 import queryString from 'query-string'
 import useSWRInfinite from 'swr/infinite'
 
-async function fetcher(endpoint: string, query?: any) {
-  return (await axios.get(`https://ygo-api.vercel.app/${endpoint}`)).data
+async function fetcher(endpoint: string) {
+  const baseUrl = process.env.YGOAPI_URL
+  return (await axios.get(`${baseUrl}/${endpoint}`)).data
 }
 
 /**

@@ -3,7 +3,9 @@ import queryString from 'query-string'
 import useSWR from 'swr'
 
 async function fetcher(endpoint: string, query?: any) {
-  return (await axios.get(`https://ygo-api.vercel.app/${endpoint}?${query}`)).data
+  const baseUrl = process.env.YGOAPI_URL
+
+  return (await axios.get(`${baseUrl}/${endpoint}?${query}`)).data
 }
 
 /**
