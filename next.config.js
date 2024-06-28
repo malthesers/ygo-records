@@ -4,7 +4,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'ygo-images.s3.eu-north-1.amazonaws.com',
+        hostname: 'd226phivga1jdo.cloudfront.net',
       },
     ],
     minimumCacheTTL: 900,

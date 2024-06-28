@@ -1,5 +1,4 @@
-import { GetObjectCommand, HeadObjectCommand } from '@aws-sdk/client-s3'
-import { getSignedUrl } from '@aws-sdk/s3-request-presigner'
+import { HeadObjectCommand } from '@aws-sdk/client-s3'
 import s3Client from './s3Client'
 import hieroglyphicsBlue from '~/images/splash/hieroglyphs-blue.png'
 
@@ -10,20 +9,22 @@ import hieroglyphicsBlue from '~/images/splash/hieroglyphs-blue.png'
  * @returns Signed url for the resource or placeholder if error.
  */
 export default async function getS3Image(src: string) {
+  const baseUrl = process.env.CLOUDFRONT_URL
+  const imageUrl = `${baseUrl}/${src}`
   const s3Params = {
     Bucket: process.env.AWS_BUCKET_NAME,
     Key: src,
   }
 
   const headCommand = new HeadObjectCommand(s3Params)
-  const getCommand = new GetObjectCommand(s3Params)
 
   try {
     await s3Client.send(headCommand)
-    return getSignedUrl(s3Client, getCommand, {
-      expiresIn: 3600,
-    })
+
+    return imageUrl
   } catch (error) {
+    console.error(error)
+
     return hieroglyphicsBlue.src
   }
 }
