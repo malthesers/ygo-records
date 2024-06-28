@@ -14,7 +14,7 @@ import renderPlaceholder from '~/images/placeholders/render.jpg'
  */
 export default async function getS3CardImage(passcode: string, type: 'artwork' | 'render') {
   const placeholderUrl = type === 'render' ? renderPlaceholder.src : artworkPlaceholder.src
-  const baseUrl = process.env.CLOUDFRONT_URL
+  const baseUrl = 'https://d226phivga1jdo.cloudfront.net'
   const imageUrl = `${baseUrl}/cards/${type}/${passcode}.jpg`
   const s3Params = {
     Bucket: process.env.AWS_BUCKET_NAME,

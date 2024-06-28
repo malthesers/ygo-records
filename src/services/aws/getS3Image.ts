@@ -9,7 +9,7 @@ import hieroglyphicsBlue from '~/images/splash/hieroglyphs-blue.png'
  * @returns Signed url for the resource or placeholder if error.
  */
 export default async function getS3Image(src: string) {
-  const baseUrl = process.env.CLOUDFRONT_URL
+  const baseUrl = 'https://d226phivga1jdo.cloudfront.net'
   const imageUrl = `${baseUrl}/${src}`
   const s3Params = {
     Bucket: process.env.AWS_BUCKET_NAME,
