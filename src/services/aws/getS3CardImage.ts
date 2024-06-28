@@ -21,6 +21,8 @@ export default async function getS3CardImage(passcode: string, type: 'artwork' |
     Key: `cards/${type}/${passcode}.jpg`,
   }
 
+  console.log(baseUrl)
+
   const headCommand = new HeadObjectCommand(s3Params)
 
   try {
