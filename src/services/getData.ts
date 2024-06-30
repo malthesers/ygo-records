@@ -7,7 +7,7 @@ import { notFound } from 'next/navigation'
  * @returns Data from API.
  */
 export default async function getData<T>(endpoint: string): Promise<T> {
-  const baseUrl = process.env.YGOAPI_URL
+  const baseUrl = 'https://ygo-api.vercel.app'
   const response = await fetch(`${baseUrl}/${endpoint}`, { next: { revalidate: 3600 } })
 
   if (!response.ok) {
