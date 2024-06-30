@@ -1,52 +1,17 @@
-import { IDeck } from '@/interfaces/deck'
+import missingDeck from '@/app/data/missingDeck'
+import { IDeck, Placement } from '@/interfaces/deck'
 import { TopCut } from '@/interfaces/event'
 
-const missingDeck: IDeck = {
-  _id: '1',
-  placement: 1,
-  deckType: {
-    _id: '1',
-    name: 'Runick Bystial',
-    slug: 'runick-bystial',
-    engines: ['Runick', 'Bystial'],
-    thumbnail: '92107604',
-  },
-  event: {
-    _id: '1',
-    name: 'YCS Bologna 2023',
-    slug: 'bologna-2023',
-    type: {
-      name: 'YCS',
-      slug: 'ycs',
-    },
-    startDate: '2023-12-09T00:00:00.000Z',
-    endDate: '2023-12-10T00:00:00.000Z',
-    location: 'Bologna, Italy',
-    attendance: 2488,
-    winner: {
-      player: {
-        _id: '0',
-        name: 'Joshua Schmidt',
-        slug: 'joshua-schmidt',
-        nationality: 'DE',
-      },
-      deck: {
-        _id: '1',
-        name: 'Runick Bystial',
-        slug: 'runick-bystial',
-        engines: ['Runick', 'Bystial'],
-        thumbnail: '92107604',
-      },
-    },
-    thumbnail: '',
-    topcut: 64,
-  },
-  player: {
-    _id: '1',
-    name: 'Unknown',
-    slug: '',
-    nationality: 'DE',
-  },
+const topcutLimits: { [key in Placement]: number } = {
+  1: 1,
+  2: 1,
+  4: 2,
+  8: 4,
+  16: 8,
+  32: 16,
+  64: 32,
+  128: 64,
+  256: 128,
 }
 
 /**
@@ -55,31 +20,40 @@ const missingDeck: IDeck = {
  * @param topcut The total amount of topcut places.
  * @returns An array of decks filled out to the number of topcut places.
  */
-export default function fillEventDecks(decks: IDeck[] | unknown, topcut: TopCut) {
-  if (!decks) {
+export default function fillEventDecks(decks: IDeck[] | [], topcut: TopCut) {
+  if (!Array.isArray(decks)) {
     return [missingDeck]
   }
 
-  // console.log(decks, topcut)
+  const deckCount: { [key in Placement]?: number } = {}
+  const filledDecks: IDeck[] = [...decks]
 
-  const topcutDecks = {}
+  // Initialise deckCount with 0 for each placement in topcut
+  for (const placement in topcutLimits) {
+    const key = parseInt(placement) as Placement
 
-  const possiblePlacements: number[] = [1, 2, 4, 8, 16, 32, 64, 128, 256]
-  const topcutPlacements: number[] = possiblePlacements.filter((placement) => placement <= topcut)
+    if (key <= topcut) {
+      deckCount[key] = 0
+    }
+  }
 
-  // const missingDecks = topcut - decks.length
+  // Add existing deck count
+  decks.forEach((deck) => {
+    deckCount[deck.placement] = (deckCount[deck.placement] || 0) + 1
+  })
 
-  // for (let i = 0; i < missingDecks; i++) {}
+  // Add remaining missing decks
+  for (const placement in deckCount) {
+    const key = parseInt(placement) as Placement
 
-  // topcutPlacements.forEach((placement) => {
-  //   let existingDecks = 0;
+    // Total count, existing count and amount to fill
+    const requiredCount = topcutLimits[key]
+    const currentCount = deckCount[key] || 0
+    const missingCount = requiredCount - currentCount
 
-  //   decks.forEach((deck) => {
-  //     if (deck.placement === placement) {
+    // Add missing decks with new placement
+    Array.from({ length: missingCount }).forEach((n) => filledDecks.push({ ...missingDeck, placement: key }))
+  }
 
-  //     }
-  //   })
-  // })
-
-  return decks
+  return filledDecks
 }

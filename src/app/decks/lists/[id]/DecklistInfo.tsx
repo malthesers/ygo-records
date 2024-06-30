@@ -27,15 +27,15 @@ export default function DecklistInfo({ deck }: DecklistInfoProps) {
               </Link>
             ))}
           </div>
-          <div className='flex flex-row gap-1'>
+          <p className='text-lg'>
             <span className='font-semibold'>{formatPlacement(deck.placement)}</span>
-            <span>at</span>
+            <span> at </span>
             <Link href={`/events/${deck.event.type.slug}/${deck.event.slug}`}>{deck.event.name}</Link>
-          </div>
-          <div className='flex flex-row gap-1'>
-            <span>Piloted by</span>
+          </p>
+          <p className='text-lg'>
+            <span>Piloted by </span>
             <Link href={`/players/${deck.player.slug}`}>{deck.player.name}</Link>
-          </div>
+          </p>
         </div>
       </div>
     </section>
